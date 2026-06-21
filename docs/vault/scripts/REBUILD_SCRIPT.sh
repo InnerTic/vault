@@ -222,8 +222,8 @@ fi
 echo ""
 echo "=== STEP 9: Verify Scripts..."
 for script in ~/.local/bin/llama-loader \
-              ~/dotfiles/scripts/llama-server.sh \
-              ~/dotfiles/scripts/forge-start.sh; do
+              ~/infra/services/llama-server.sh \
+              ~/infra/services/forge-start.sh; do
     if [[ -f $script ]]; then
         echo "  ✓ $(basename $script)"
     else

@@ -7,7 +7,7 @@
 # after a system rebuild. The underlying scripts are at:
 #   ~/.local/bin/llama-loader          (llm → interactive model selector)
 #   ~/.openclaw/workspace/scripts/     (textgen-start.sh, llama-start.sh)
-#   ~/dotfiles/scripts/llama-server.sh (llama-server wrapper with CUDA paths)
+#   ~/infra/services/llama-server.sh (llama-server wrapper with CUDA paths, was ~/dotfiles/scripts/llama-server.sh)
 # To recreate aliases, add to ~/.zshrc:
 #   alias llm='~/.local/bin/llama-loader'
 #   alias llmcheck='curl -s http://127.0.0.1:8080/v1/models | jq -r .data[].id'
