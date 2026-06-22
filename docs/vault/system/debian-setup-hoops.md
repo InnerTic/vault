@@ -213,8 +213,8 @@ sed -i 's/huggingface-hub/huggingface-hub<0.25/' requirements_versions.txt
 | `scripts/healthcheck.sh` | `pacman -Q` → `dpkg -l` |
 | `scripts/live-env-setup.sh` | Full rewrite: `pacman` → `apt`, `arch-chroot` → `chroot` |
 | `scripts/forge-start.sh` | New file, uses venv python |
-| `docs/system_backup/REBUILD_SCRIPT.sh` | Full Debian rewrite |
-| `docs/system_backup/pkglist-apps.txt` | Debian package names |
+| `docs/vault/scripts/REBUILD_SCRIPT.sh` | Full Debian rewrite |
+| `docs/vault/software/packages/pkglist-debian.txt` | Debian package names |
 
 ## 9. SSH
 
@@ -238,7 +238,7 @@ This makes GitHub auth work from any shell.
 - [x] Run `sudo apt-get install -y libcairo2-dev pkg-config python3-dev`
 - [x] Run forge once, let it install preprocessor deps (svglib warning is non-critical)
 - [x] Install `sentencepiece` + `joblib` in forge venv
-- [ ] Install remaining desktop apps from `docs/system_backup/pkglist-apps.txt` (alacritty, btop, nvtop, fastfetch, virt-manager, etc.)
+- [ ] Install remaining desktop apps from `docs/vault/software/packages/pkglist-debian.txt` (alacritty, btop, nvtop, fastfetch, virt-manager, etc.)
 - [ ] Download SDXL base models from within Forge UI at http://127.0.0.1:7860
 - [ ] Test `llm` alias with actual inference (start llama-server, point textgen at it)
 - [ ] Optionally serve `gpt-oss-20b-hermes` on port 8081 (Tesla P40, `--main-gpu 1`)
