@@ -58,7 +58,7 @@ CUDA_VISIBLE_DEVICES=1 /mnt/workspace/llama.cpp/build/bin/llama-server \
   --port 8080 --host 0.0.0.0 -ngl 99 -c 131072
 
 # Start Forge
-~/infra/services/forge-start.sh
+~/infra/forge-start.sh
 ```
 
 ## Session 2026-05-10

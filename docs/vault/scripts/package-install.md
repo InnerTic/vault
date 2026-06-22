@@ -4,7 +4,7 @@
 #!/bin/bash
 # Extracted from: live-env-setup.sh (Step 2) + REBUILD_SCRIPT.sh (Step 1)
 # Single purpose: install system + app packages from pkglist
-# Usage: sudo ./package-install.sh [/path/to/pkglist-apps.txt]
+# Usage: sudo ./package-install.sh [/path/to/pkglist-debian.txt]
 
 set -euo pipefail
 
@@ -12,7 +12,7 @@ set -euo pipefail
 #  CONFIG — change these to match your system
 # ═══════════════════════════════════════════════════════════
 
-PKGLIST="${1:-$HOME/dotfiles/docs/system_backup/pkglist-apps.txt}"
+PKGLIST="${1:-$HOME/vault/docs/vault/software/packages/pkglist-debian.txt}"
 PKG_MANAGER="apt"         # <-- swap: apt (Debian) or pacman (CachyOS)
 DISTRO_PKGS=(             # <-- swap: base packages for your distro
   ntfs-3g btrfs-progs xfsprogs
@@ -40,7 +40,7 @@ if [[ -f "$PKGLIST" ]]; then
     grep -v '^\s*#' "$PKGLIST" | grep -v '^\s*$' | sudo xargs pacman -S --needed 2>/dev/null || true
   fi
 else
-  echo "pkglist-apps.txt not found at $PKGLIST, skipping."
+  echo "Package list not found at $PKGLIST, skipping."
 fi
 
 echo "Package install complete."

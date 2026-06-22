@@ -30,7 +30,7 @@ A convenience wrapper `scripts/toggle-gpu-profile.sh` detects the current mode a
 
 Both scripts require passwordless sudo. Configure with:
 ```bash
-echo "ken ALL=(ALL) NOPASSWD: /home/ken/infra/system/toggle-p40.sh" | sudo tee /etc/sudoers.d/toggle-p40
+echo "ken ALL=(ALL) NOPASSWD: /home/ken/infra/toggle-p40.sh" | sudo tee /etc/sudoers.d/toggle-p40
 ```
 
 The script edits `KERNEL_CMDLINE[default]+="..."` in `/etc/default/limine` (the `limine-entry-tool` template, not `/boot/limine.conf` directly).

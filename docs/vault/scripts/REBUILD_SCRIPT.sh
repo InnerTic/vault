@@ -36,9 +36,10 @@ sudo apt install -y \
   ntfs-3g btrfs-progs xfsprogs \
   build-essential cmake git
 
-if [[ -f ~/dotfiles/docs/system_backup/pkglist-apps.txt ]]; then
-  echo "  Installing app packages from pkglist-apps.txt..."
-  grep -v '^\s*#' ~/dotfiles/docs/system_backup/pkglist-apps.txt | grep -v '^\s*$' | sudo xargs apt install -y 2>/dev/null || true
+PKGLIST="${PKGLIST:-$HOME/vault/docs/vault/software/packages/pkglist-debian.txt}"
+if [[ -f $PKGLIST ]]; then
+  echo "  Installing app packages from $PKGLIST..."
+  grep -v '^\s*#' "$PKGLIST" | grep -v '^\s*$' | sudo xargs apt install -y 2>/dev/null || true
 fi
 
 # =============================================================================
@@ -222,8 +223,8 @@ fi
 echo ""
 echo "=== STEP 9: Verify Scripts..."
 for script in ~/.local/bin/llama-loader \
-              ~/infra/services/llama-server.sh \
-              ~/infra/services/forge-start.sh; do
+              ~/infra/llama-server.sh \
+              ~/infra/forge-start.sh; do
     if [[ -f $script ]]; then
         echo "  ✓ $(basename $script)"
     else
@@ -256,6 +257,6 @@ echo "  ocl / oclw       - opencode TUI/Web with local models"
 echo "  textgen          - Start TextGen WebUI (port 7861)"
 echo "  forge            - Start SD Forge (port 7860)"
 echo ""
-echo "Full ref:     ~/dotfiles/docs/commands.txt"
-echo "LLaMA setup:  ~/dotfiles/docs/gpu/llama-setup.md"
-echo "Context:      ~/dotfiles/docs/context/system-memory.md"
+echo "Full ref:     ~/vault/docs/vault/reference/commands.md"
+echo "LLaMA setup:  ~/vault/docs/vault/software/ai-tools/llama-setup.md"
+echo "Context:      ~/vault/docs/vault/system/system-memory.md"

@@ -85,7 +85,7 @@ The dotfiles script at `scripts/llama-server.sh` uses `/mnt/workspace/textgen/ve
 
 For testing with a model:
 ```bash
-~/infra/services/llama-server.sh ~/Downloads/llm_models/qwen-14b.Q4_K_M.gguf
+~/infra/llama-server.sh ~/Downloads/llm_models/qwen-14b.Q4_K_M.gguf
 ```
 
 ## 6. SD WebUI Forge Neo
@@ -200,7 +200,7 @@ sed -i 's/huggingface-hub/huggingface-hub<0.25/' requirements_versions.txt
 
 ## 7. Shell Configs
 
-- `shell/.zshrc` — CachyOS `source` lines commented out. `sdxl` alias → `~/infra/services/forge-start.sh` (was `~/dotfiles/scripts/forge-start.sh`)
+- `shell/.zshrc` — CachyOS `source` lines commented out. `sdxl` alias → `~/infra/forge-start.sh` (was `~/dotfiles/scripts/forge-start.sh`)
 - `shell/config.fish` — CachyOS source lines commented out.
 - `~/.bashrc` — AI aliases added directly (backup for bash sessions).
 - `~/.local/bin/` — symlinks: `llama-loader`, `forge-start`, `healthcheck`, `llama-server.sh`.
