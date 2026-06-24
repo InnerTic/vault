@@ -17,7 +17,7 @@ Confidence score: 100 = verified, 75 = mostly verified, 50 = partially verified,
 A full nested copy of the old docs exists at `docs/docs/`. These 44 files shadow the real vault and pollute grep/search results. They are **not** linked from any INDEX.
 
 **Files duplicated:**
-`commands.txt`, `context/`, `gpu-config-notes.md`, `gw2-multibox-wine-setup.md`, `INDEX.md`, `llama-loader-integrity-contract.md`, `llama-setup.md`, `lspci-akuma-output.md`, `lspci-reference.md`, `quartz-setup.md`, `quick-commands.txt`, `rebuild-notes.md`, `reference/`, `system_backup`, `temporary-hacks.md`, `tesla-p40-vfio-passthrough.md`, `vault/`, `workspace-symlink-strategy.md`
+`commands.txt`, `context/`, `gpu-config-notes.md`, `gw2-multibox-wine-setup.md`, `INDEX.md`, `llama-loader-integrity-contract.md`, `llama-setup.md`, `lspci-akuma-output.md`, `lspci-reference.md`, `quartz-setup.md`, `quick-commands.txt`, `rebuild-notes.md`, `reference/`, `archive/`, `temporary-hacks.md`, `tesla-p40-vfio-passthrough.md`, `vault/`, `workspace-symlink-strategy.md`
 
 ### 2. GPU Driver Version
 
@@ -151,7 +151,7 @@ Likely same story — different distros ship different CUDA toolkit versions. Th
 | File | Score | Notes |
 |------|-------|-------|
 | `docs/vault/scripts/README.md` | **75** | Script index. References `build-gold-lxc.sh`, `lxc-provision.sh`, `lxc-bootstrap.sh` — all exist. |
-| `docs/vault/scripts/REBUILD_SCRIPT.md` | **75** | Rebuild reference. Points to `system_backup/REBUILD_SCRIPT.sh` which exists. |
+| `docs/vault/scripts/REBUILD_SCRIPT.md` | **75** | Rebuild reference. Points to `dotfiles/pkglist/debian.txt` for package install. |
 | `docs/vault/system/drives-and-mounts.md` | **75** | Drive/mount reference. UUIDs unverifiable from non-root. |
 | `docs/vault/system/dual-boot-recovery.md` | **75** | Boot recovery — Debian/MX Linux dual boot. |
 
@@ -186,9 +186,9 @@ Likely same story — different distros ship different CUDA toolkit versions. Th
 
 | File | Score | Notes |
 |------|-------|-------|
-| `docs/system_backup/cachyos-steam-nvidia-input-log.md` | **75** | CachyOS boot reference — intentionally kept. |
-| `docs/system_backup/storage_layout_plan.md` | **75** | CachyOS boot reference — intentionally kept. |
-| `docs/system_backup/implementation_workflow.md` | **75** | CachyOS boot reference — intentionally kept. |
+| `docs/archive/cachyos-steam-nvidia-input-log.md` | **75** | CachyOS boot reference — archived. |
+| `docs/archive/storage_layout_plan.md` | **75** | CachyOS boot reference — archived. |
+| `docs/archive/implementation_workflow.md` | **75** | CachyOS boot reference — archived. |
 
 ### Renamed / Legacy
 
@@ -231,5 +231,5 @@ Likely same story — different distros ship different CUDA toolkit versions. Th
 
 - CachyOS reinstall guides (`reinstall-guides/cachyos/`)
 - CachyOS GPU docs (`gpu/llama-setup-cachyos.md`)
-- System backup artifacts (`system_backup/`)
+- System backup artifacts (`archive/`)
 - CachyOS libvirt bridge (`vault/reference/libvirt-bridge-setup.md`)

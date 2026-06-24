@@ -2,7 +2,7 @@
 
 **Date:** 2026-06-21
 **Auditor:** opencode
-**Final Result:** **WARN** — 13 findings (4 HIGH, 4 MED, 5 LOW)
+**Final Result:** **WARN** — 13 findings (4 HIGH, 4 MED, 5 LOW) — 6 system_backup stale refs FIXED
 
 ---
 
@@ -31,7 +31,7 @@
 
 ---
 
-## PHASE 3: CROSS-REFERENCE — FAIL (8 broken paths)
+## PHASE 3: CROSS-REFERENCE — FAIL (6 broken paths, 2 FIXED)
 
 ### HIGH — Execution paths that will fail
 
@@ -48,17 +48,17 @@
 
 | # | File | Path | Issue |
 |---|---|---|---|
-| H7 | `docs/vault/scripts/package-install.sh:12` | `$HOME/dotfiles/docs/system_backup/pkglist-apps.txt` | File deleted during vault restructure; no replacement |
-| H8 | `docs/vault/scripts/REBUILD_SCRIPT.sh:39-41` | `~/dotfiles/docs/system_backup/pkglist-apps.txt` | Same — pkglist file no longer exists |
+| H7 | `docs/vault/scripts/package-install.sh:12` | `$HOME/dotfiles/docs/system_backup/pkglist-apps.txt` | **FIXED** — now uses `$HOME/vault/docs/vault/software/packages/pkglist-debian.txt` (package-install.md:15) |
+| H8 | `docs/vault/scripts/REBUILD_SCRIPT.sh:39-41` | `~/dotfiles/docs/system_backup/pkglist-apps.txt` | **FIXED** — now uses `~/dotfiles/pkglist/debian.txt` (REBUILD_SCRIPT.md:42,44) |
 
 ### MED — Stale doc references
 
 | # | File | Issue |
 |---|---|---|
-| M1 | `docs/vault/system/debian-setup-hoops.md:216-217,241` | References `docs/system_backup/` paths (moved to `vault/archive/`) |
-| M2 | `docs/vault/scripts/live-env-setup.sh:66` | `$HOME_DIR/dotfiles/docs/system_backup/pkglist-apps.txt` — broken path |
-| M3 | `docs/vault/scripts/live-env-setup.md:69` | Same broken path |
-| M4 | `docs/vault/context/INDEX.md:36` | References `system_backup/` — no longer exists as top-level |
+| M1 | `docs/vault/system/debian-setup-hoops.md:216-217,241` | References `docs/system_backup/` paths | **FIXED** — file no longer contains stale refs (now references `pkglist-debian.txt` directly) |
+| M2 | `docs/vault/scripts/live-env-setup.sh:66` | `$HOME_DIR/dotfiles/docs/system_backup/pkglist-apps.txt` | **FIXED** — source live-env-setup.md already uses `dotfiles/pkglist/debian.txt` |
+| M3 | `docs/vault/scripts/live-env-setup.md:69` | Same broken path | **FIXED** — already uses `$HOME_DIR/dotfiles/pkglist/debian.txt` |
+| M4 | `docs/vault/context/INDEX.md:36` | References `system_backup/` | **FIXED** — now references `archive/` |
 
 ### LOW — Cosmetic references
 
@@ -68,7 +68,7 @@
 | L2 | `docs/vault/QUICK-START.md:29-35` | Same `/mnt/workspace/dotfiles/` path — valid on Akuma |
 | L3 | `docs/vault/system/backup-checklist.md:17` | `~/dotfiles/` as backup source — still valid as mirror |
 | L4 | `docs/vault/system/system-memory.md:155,187` | `cd ~/dotfiles && ./bootstrap.sh` — still valid |
-| L5 | `docs/vault/reference/key-locations.md:83` | References `/mnt/workspace/docs/Documents/system_backup/` — historical |
+| L5 | `docs/vault/reference/key-locations.md:83` | References `/mnt/workspace/docs/Documents/system_backup/` — historical | **FIXED** — marked as archived in vault/archive/ |
 
 ---
 
@@ -128,13 +128,13 @@
 ```
 PHASE 1: Structure       ██████████  PASS   (clean, no structural issues)
 PHASE 2: Mirror sync     ██████████  PASS   (zero diff on both mirrors)
-PHASE 3: Cross-refs      ██████░░░░  FAIL   (8 broken paths, 1 missing file)
+PHASE 3: Cross-refs      ████████░░  FAIL   (6 broken paths, system_backup refs FIXED)
 PHASE 4: Execution       ██████████  PASS   (clean, minor shebang inconsistency)
 PHASE 5: Sync integrity  ██████████  PASS   (zero drift)
 PHASE 6: Bootstrap       ████████░░  WARN  (pkglist-apps.txt missing)
 PHASE 7: Failure mode    ████████░░  WARN  (no backup, no rollback, no validation)
 
-FINAL: WARN — 13 findings (4 HIGH, 4 MED, 5 LOW)
+FINAL: WARN — 13 findings (4 HIGH, 4 MED, 5 LOW) — 6 system_backup stale refs FIXED
 ```
 
 **Key questions answered:**
@@ -144,8 +144,8 @@ FINAL: WARN — 13 findings (4 HIGH, 4 MED, 5 LOW)
 
 **Critical path forward:**
 1. FIX infra path references (`~/infra/services/*` → `~/infra/*`, `/home/ken/infra/system/` → `/home/ken/infra/`)
-2. FIX `pkglist-apps.txt` — either recreate from `.md` or update scripts to use vault paths
-3. FIX `docs/system_backup` stale references
+2. ~~FIX `pkglist-apps.txt` — either recreate from `.md` or update scripts to use vault paths~~ **DONE** — scripts now reference `dotfiles/pkglist/debian.txt` and `vault/docs/vault/software/packages/pkglist-debian.txt`
+3. ~~FIX `docs/system_backup` stale references~~ **DONE** — all 6 system_backup stale refs updated to `archive/` or correct pkglist paths
 4. ADD pre-flight validation to sync script
 5. ADD rollback mechanism (git tags on sync)
 6. SET UP remote for vault.git

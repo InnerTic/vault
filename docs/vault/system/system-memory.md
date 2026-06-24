@@ -68,21 +68,21 @@
 | `llm` | `llama-loader` — interactive model selector |
 | `llmk` | `kill-llama` — kill llama-server |
 | `llmcheck` | `curl -s http://127.0.0.1:8080/v1/models \| jq -r .data[].id` |
-| `llmstart` | `~/.openclaw/workspace/scripts/llama-start.sh` |
+| `llmstart` | `~/infra/llama-server.sh` |
 
 Models in `~/Downloads/llm_models/` (.gguf). GPU offload: `-ngl 35` (7B-8B fits 12GB VRAM).
 
 ### SDXL/Forge (sd-webui-forge-neo, port 7860)
 | Alias | Command |
 |-------|---------|
-| `sdxl` | `~/.openclaw/workspace/scripts/forge-start.sh` |
+| `sdxl` | `~/infra/forge-start.sh` |
 | `sdxlkill` | `pkill -f "launch.py\|webui.py"` |
 | URL | `http://172.16.5.1:7860` |
 
 ### TextGen WebUI (port 7861)
 | Alias | Command |
 |-------|---------|
-| `textgen` | `~/.openclaw/workspace/scripts/textgen-start.sh` |
+| `textgen` | `~/infra/textgen-start.sh` |
 | `textkill` | `pkill -f "server.py"` |
 | URL | `http://172.16.5.1:7861` (Web) / `:5000` (API) |
 
@@ -99,8 +99,8 @@ Models in `~/Downloads/llm_models/` (.gguf). GPU offload: `-ngl 35` (7B-8B fits 
 | Alias | Command |
 |-------|---------|
 | `oc` | `opencode` |
-| `ocl` | `~/.openclaw/workspace/scripts/opencode-local.sh tui` |
-| `oclw` | `~/.openclaw/workspace/scripts/opencode-local.sh web` |
+| `ocl` | `~/.openclaw/workspace/scripts/opencode-local.sh tui` (not yet migrated to ~/infra/) |
+| `oclw` | `~/.openclaw/workspace/scripts/opencode-local.sh web` (not yet migrated to ~/infra/) |
 
 ### OpenClaw Model Switching
 ```
@@ -165,13 +165,13 @@ Always use venv — never system Python. `pip freeze > requirements.txt`.
 
 ## Key Scripts Directory
 
-`~/.openclaw/workspace/scripts/` — contains `llama-start.sh`, `forge-start.sh`, `textgen-start.sh`, `opencode-local.sh`, `mega-push.sh`, `mega-pull.sh`.
+`~/infra/` — contains `llama-server.sh`, `forge-start.sh`, `textgen-start.sh`, `forge-llm.sh`. Legacy scripts (`mega-push.sh`, `mega-pull.sh`) no longer maintained. `opencode-local.sh` not yet migrated.
 
 ## Backup Strategy
 
 - MEGA via rclone (`~/.local/bin/rclone`)
-- Push: `~/.openclaw/workspace/scripts/mega-push.sh`
-- Pull: `~/.openclaw/workspace/scripts/mega-pull.sh`
+- Push: `~/.openclaw/workspace/scripts/mega-push.sh` [LEGACY — no longer maintained]
+- Pull: `~/.openclaw/workspace/scripts/mega-pull.sh` [LEGACY — no longer maintained]
 - pihole backup (cron, 3am): `/Backups/pihole-configs/` on MEGA
 
 ## System File Patches (not in dotfiles)

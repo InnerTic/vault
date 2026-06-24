@@ -212,9 +212,13 @@ pct snapshot 301 first-sync-working
 - No hardcoded IPs in markdown content
 - Container serves wiki, does not initiate connections to host
 
+## Resolved Decisions
+
+1. **Content sync** — rsync, NOT symlink. Symlink produced recursive loops. See [[projects/quartz-wiki-architecture]].
+2. **DNS** — Static ARP + Pi-hole local DNS record for `wiki.home.arpa`.
+3. **Trigger** — Start manual, add git hook in Phase 3.
+
 ## Open Questions
 
-1. **Vault content path** — Obsidian vault is `~/dotfiles/docs/`, content dir is `/srv/quartz/content/`. Rsync or symlink?
-2. **Trigger method** — Manual script, systemd path unit, or git hook?
-3. **DNS** — OPNsense reservation or `/etc/hosts` on Akuma?
-4. **Push deploy** — Host-side `deploy-quartz` script to rsync + ssh trigger, or container pulls?
+1. **Trigger method** — Manual script, systemd path unit, or git hook?
+2. **Push deploy** — Host-side `deploy-quartz` script to rsync + ssh trigger, or container pulls?

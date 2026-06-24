@@ -1,7 +1,7 @@
 ---
 tags: [reference, ai-tools, commands]
 aliases: [ai-commands, ai-tools, command-reference]
-updated: 2026-06-15
+updated: 2026-06-22
 ---
 
 # AI Tools — Command Reference
@@ -15,13 +15,15 @@ llm                    # Interactive model selector
                        # Lists all .gguf in ~/Downloads/llm_models/
                        # Pick by number, starts llama-server
 
+test-llm               # Test model loader variant (~/.local/bin/test-llma-loader)
+
 llmcheck               # Check which model is running
                        # curl http://127.0.0.1:8080/v1/models
 
 llmk                   # Kill llama-server
                        # Manual: pkill -f llama-server
 
-llmstart               # Alternative alias for llm
+llmstart               # Start llama-server (~/infra/llama-server.sh)
 ```
 
 **Ports:**
@@ -45,6 +47,8 @@ sdxl                   # Start Forge WebUI (port 7860)
 
 sdxlkill               # Kill Forge
                        # Manual: pkill -f "launch.py\|webui.py"
+
+llsd                   # Forge LLM on port 8081 (P40)
 
 URL: http://172.16.5.1:7860
 ```
@@ -77,6 +81,8 @@ ocl                    # OpenCode TUI with local llama.cpp
                        # Uses local models from ~/Downloads/llm_models/
 
 oclw                   # OpenCode Web UI with local models
+
+opencode -c            # OpenCode chat from stdin (piped input)
 ```
 
 **Model Switching in OpenCode TUI:**
@@ -115,7 +121,7 @@ ls ~/Downloads/llm_models/ | grep .gguf
 ## Quick Help
 
 ```bash
-quickhelp              # Show all AI aliases + network info
+quickhelp              # Show all aliases + hosts + network info (cat ~/dotfiles/docs/quick-commands.txt)
 ```
 
 ---

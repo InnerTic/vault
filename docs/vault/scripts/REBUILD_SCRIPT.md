@@ -39,9 +39,9 @@ sudo apt install -y \
   ntfs-3g btrfs-progs xfsprogs \
   build-essential cmake git
 
-if [[ -f ~/dotfiles/docs/system_backup/pkglist-apps.txt ]]; then
-  echo "  Installing app packages from pkglist-apps.txt..."
-  grep -v '^\s*#' ~/dotfiles/docs/system_backup/pkglist-apps.txt | grep -v '^\s*$' | sudo xargs apt install -y 2>/dev/null || true
+if [[ -f ~/dotfiles/pkglist/debian.txt ]]; then
+  echo "  Installing app packages from pkglist/debian.txt..."
+  grep -v '^\s*#' ~/dotfiles/pkglist/debian.txt | grep -v '^\s*$' | sudo xargs apt install -y 2>/dev/null || true
 fi
 
 # =============================================================================
@@ -234,8 +234,7 @@ for script in ~/.local/bin/llama-loader \
     fi
 done
 
-for script in ~/.openclaw/workspace/scripts/llama-start.sh \
-              ~/.openclaw/workspace/scripts/textgen-start.sh; do
+for script in ~/infra/textgen-start.sh; do
     if [[ -f $script ]]; then
         echo "  ✓ $(basename $script)"
     else

@@ -13,7 +13,7 @@
 - **Online provider**: `opencode` with `big-pickle` model (free, Zen API key)
 - Default model: `opencode/big-pickle`
 - Key lesson: models go in `models.providers["opencode"].models[]` not just `agents.defaults.models` — "Unknown model" error otherwise
-- Config file: `~/.openclaw/openclaw.json`
+- Config file: `~/.config/opencode/opencode.json` (migrated from `~/.openclaw/openclaw.json`)
 - API key in `~/.zshrc` as `OPENCODE_ZEN_API_KEY`
 
 ### Hermes 20B Server

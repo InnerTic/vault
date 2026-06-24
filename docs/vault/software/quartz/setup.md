@@ -19,11 +19,12 @@ cp quartz.config.default.yaml quartz.config.yaml
 # Edit baseUrl, theme, plugins as needed
 ```
 
-## Content Symlink
+## Content Sync
+
+rsync, NOT symlink. Symlink produced recursive loops.
 
 ```bash
-# Link your Obsidian vault
-ln -sf ~/dotfiles/docs ~/quartz/content
+rsync -av --delete ~/dotfiles/docs/ ~/quartz/content/
 ```
 
 ## Plugin Installation

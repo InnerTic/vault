@@ -1,20 +1,17 @@
 # =============================================================================
 # QUICK REFERENCE COMMANDS
-# Last updated: 2026-06-09
+# Last updated: 2026-06-22
+# Source of truth: vault/dotfiles/docs/quick-commands.txt
+# Quick view: quickhelp (cat ~/dotfiles/docs/quick-commands.txt)
 # =============================================================================
 #
-# NOTE: These aliases are NOT in shell rc files — they need to be re-created
-# after a system rebuild. The underlying scripts are at:
+# Aliases defined in all three shells (.bashrc, .zshrc, config.fish)
+# Canonical source: vault/dotfiles/shell/.{bashrc,zshrc,config.fish}
+# Synced to: ~/dotfiles/shell/ → symlinked to ~/.{bashrc,zshrc,config.fish}
+# Underlying scripts at:
 #   ~/.local/bin/llama-loader          (llm → interactive model selector)
-#   ~/.openclaw/workspace/scripts/     (textgen-start.sh, llama-start.sh)
-#   vault/dotfiles/scripts/llama-server.sh (llama-server wrapper with CUDA paths)
-# To recreate aliases, add to ~/.zshrc:
-#   alias llm='~/.local/bin/llama-loader'
-#   alias llmcheck='curl -s http://127.0.0.1:8080/v1/models | jq -r .data[].id'
-#   alias llmk='pkill -f llama-server'
-#   alias llmstart='~/.openclaw/workspace/scripts/llama-start.sh'
-#   alias textgen='~/.openclaw/workspace/scripts/textgen-start.sh'
-#   alias textkill='pkill -f "server.py"'
+#   ~/.local/bin/test-llma-loader      (test-llm → test model loader)
+#   ~/infra/     (textgen-start.sh, llama-server.sh, forge-start.sh, forge-llm.sh)
 # =============================================================================
 
 # =============================================================================
@@ -51,7 +48,7 @@ llmk                    # Kill llama-server (alias: llmk → does nothing curren
 # FORGE (SD WebUI) — Image Generation
 # =============================================================================
 sdxl                    # Start Forge WebUI on port 7860
-                        # Alias → ~/.openclaw/workspace/scripts/forge-start.sh
+                        # Alias → ~/infra/forge-start.sh
                         # Path: /workspace/sd-webui-forge-neo
 sdxlkill                # Kill Forge: pkill -f "launch.py\|webui.py"
 URL: http://172.16.5.1:7860
@@ -60,7 +57,7 @@ URL: http://172.16.5.1:7860
 # TEXT GENERATION WEBUI
 # =============================================================================
 textgen                 # Start TextGen WebUI on port 7861
-                        # Alias → ~/.openclaw/workspace/scripts/textgen-start.sh
+                        # Alias → ~/infra/textgen-start.sh
                         # Path: /workspace/textgen
 textkill                # Kill TextGen: pkill -f "server.py"
 URL: http://172.16.5.1:7861 (Web) / :5000 (API)
@@ -70,9 +67,9 @@ URL: http://172.16.5.1:7861 (Web) / :5000 (API)
 # =============================================================================
 oc                      # OpenCode TUI (alias for 'opencode')
 ocl                     # OpenCode with local models (auto-starts llama-server)
-                        # Alias → ~/.openclaw/workspace/scripts/opencode-local.sh tui
+                        # Alias → ~/.openclaw/workspace/scripts/opencode-local.sh tui (not yet migrated to ~/infra/)
 oclw                    # OpenCode Web with local models
-                        # Alias → ~/.openclaw/workspace/scripts/opencode-local.sh web
+                        # Alias → ~/.openclaw/workspace/scripts/opencode-local.sh web (not yet migrated to ~/infra/)
 
 # Models configured in opencode:
 #   llama.cpp/Qwen3-VL-8B-Instruct-abliterated-v2.Q5_K_M.gguf (primary)
@@ -99,17 +96,29 @@ quickhelp               # Show all AI-related aliases
 # See: github.com/romkatv/powerlevel10k/issues/1834
 
 # =============================================================================
+# SSH HOSTS (from ~/.ssh/config)
+# =============================================================================
+ssh proxmox     # Proxmox VE host (172.16.7.1)
+ssh quartz      # Quartz wiki LXC (172.16.12.17)
+ssh pihole      # Pi-hole DNS LXC (172.16.12.1)
+ssh openclawVM  # OpenClaw VM (172.16.12.12)
+
+# =============================================================================
+# FREQUENTLY USED COMMANDS (from shell history)
+# =============================================================================
+tmux            # Terminal multiplexer (tmux 3.5a)
+lsd             # Modern ls replacement (lsd -lah, lsd --tree)
+fastfetch       # System info (runs on terminal open)
+fish            # Default interactive shell
+batcat          # Cat with syntax highlighting (batcat)
+fdfind          # Fast file search (fdfind)
+
+# =============================================================================
 # NETWORK / SYSTEMS
 # =============================================================================
-# MikroTik Switch: 172.16.88.1
-# ZimaBoard (DNS): 172.16.1.1
-# Akuma PC: 172.16.5.1
-# pihole (LXC): 172.16.12.1
-
-# SSH shortcuts (from ~/.ssh/config):
-ssh zima        # ZimaBoard (Unbound + ad-block)
-ssh pihole      # pihole LXC (172.16.12.1)
-ssh mikrotik    # MikroTik switch
+# Akuma: 172.16.5.1   Proxmox: 172.16.7.1
+# pihole: 172.16.12.1 MikroTik: 172.16.88.1
+# Quartz: 172.16.12.17 ZimaBoard: 172.16.1.1
 
 # =============================================================================
 # PYTHON VENV (always use, never system Python)
@@ -120,11 +129,30 @@ pip install -r requirements.txt
 pip freeze > requirements.txt   # Save current state
 
 # =============================================================================
+# OS SYNC (between Debian 13 and CachyOS)
+# =============================================================================
+# Source of truth is vault.git. On each OS, to sync:
+#   cd ~/vault && git pull             # get latest from GitHub
+#   ~/vault/dotfiles/dotfiles-sync.sh --force  # push vault → dotfiles mirror
+#
+# Symlinks already in place (from bootstrap), so changes take effect immediately:
+#   ~/dotfiles/shell/.bashrc → ~/.bashrc          (both OS)
+#   ~/dotfiles/shell/.zshrc  → ~/.zshrc           (both OS)
+#   ~/dotfiles/shell/config.fish → ~/.config/fish/config.fish  (CachyOS default)
+#   ~/dotfiles/ssh/config    → ~/.ssh/config      (both OS)
+#
+# First-time setup on CachyOS (if not bootstrapped):
+#   git clone git@github.com:InnerTic/vault.git ~/vault
+#   cd ~/vault/dotfiles && ./dotfiles-sync.sh --force
+#   cd ~/vault/dotfiles && ./bootstrap-arch.sh    # creates symlinks
+
+# =============================================================================
 # GIT (dotfiles repo)
 # =============================================================================
 # Repo: git@github.com:InnerTic/dotfiles.git
 # Update: cd ~/dotfiles && git pull
 # Push changes: cd ~/dotfiles && git add -A && git commit -m "msg" && git push
+# NOTE: dotfiles.git is a mirror — edit in vault.git, not directly here
 
 # =============================================================================
 # DOCKER
@@ -135,8 +163,8 @@ pip freeze > requirements.txt   # Save current state
 # BACKUPS
 # =============================================================================
 # Mega (rclone): ~/.local/bin/rclone
-# Push: ~/.openclaw/workspace/scripts/mega-push.sh
-# Pull: ~/.openclaw/workspace/scripts/mega-pull.sh
+# Push: ~/.openclaw/workspace/scripts/mega-push.sh [LEGACY — no longer maintained]
+# Pull: ~/.openclaw/workspace/scripts/mega-pull.sh [LEGACY — no longer maintained]
 
 # =============================================================================
 # HISTORICAL — REMOVED / CHANGED

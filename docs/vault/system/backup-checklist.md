@@ -9,7 +9,7 @@
 □ HOME DIR FILES:
   ☐ ~/Downloads/llm_models/                    - All GGUF model files (6 models)
   ☐ ~/Documents/
-      ☐ system_backup/                          - This whole directory
+      ☐ system_backup/ (archived → vault/archive/)  - System backup reference (historical)
       ☐ QUICK_COMMANDS.txt                     - Quick ref (condensed)
       ☐ commands.txt                           - Full command ref
 
@@ -22,7 +22,7 @@
   ☐ /etc/fstab                                 - All drive mounts + bind mounts
 
 □ VENVS TO REBUILD:
-  ☐ ~/.openclaw/workspace/text-generation-webui/installer_files/env/  - TextGen venv
+  ☐ /workspace/textgen/venv/  - TextGen venv (migrated from ~/.openclaw/workspace/text-generation-webui/)
     (includes llama-server binary, oobabooga dependencies)
   ☐ ~/.venvs/openclaw/                         - OpenClaw venv (if used)
 

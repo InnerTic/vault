@@ -9,9 +9,10 @@ MODELS:
 
 # === LLAMA.CPP / LLAMA-SERVER ===
 LLAMA_SERVER_BIN:
-  ~/.openclaw/workspace/text-generation-webui/installer_files/env/lib/python3.13/site-packages/llama_cpp_binaries/bin/llama-server
+  /workspace/textgen/venv/lib/python3.13/site-packages/llama_cpp_binaries/bin/llama-server
   # NOTE: Not a standalone build. Comes from text-gen venv's llama_cpp_python package.
   # No separate ~/llama.cpp/ build exists currently.
+  # Migrated from ~/.openclaw/workspace/text-generation-webui/
 
 MODEL_SELECTOR:
   ~/.local/bin/llama-loader
@@ -21,14 +22,14 @@ MODEL_SELECTOR:
 # === FORGE (SD WebUI) ===
 FORGE:
   Path: /workspace/sd-webui-forge-neo
-  Script: ~/.openclaw/workspace/scripts/forge-start.sh
+  Script: ~/infra/forge-start.sh
   Port: 7860
 
 # === TEXT GEN WEBUI ===
 TEXTGEN:
   Path: /workspace/textgen
-  # Also duplicated at: ~/.openclaw/workspace/text-generation-webui/
-  Script: ~/.openclaw/workspace/scripts/textgen-start.sh
+  # (Previously duplicated at ~/.openclaw/workspace/text-generation-webui/ — migrated)
+  Script: ~/infra/textgen-start.sh
   Port: 7861
   API: :5000
 
@@ -40,10 +41,10 @@ OPENCODE:
   Plugins: 12 (listed in opencode.json)
   Provider: llama.cpp (local), OpenRouter (cloud)
 
-# === OPENCLAW ===
+# === OPENCLAW (MIGRATED) ===
 OPENCLAW:
-  Config: ~/.openclaw/openclaw.json
-  Workspace: ~/.openclaw/workspace/
+  Config: ~/.config/opencode/opencode.json (was ~/.openclaw/openclaw.json)
+  Workspace: migrated to ~/infra/ for scripts, ~/workspace/ for data
   Venv: ~/.venvs/openclaw/
   Status: NOT currently in PATH (venv exists but binary not found)
   # Needs reinstall if needed
@@ -80,7 +81,7 @@ WORKSPACE_DRIVE:
 # === DOCS / BACKUP ===
 DOCS:
   /mnt/workspace/docs/system_profile_summary.txt        # Current system profile
-  /mnt/workspace/docs/Documents/system_backup/           # This directory (backup refs)
+  /mnt/workspace/docs/Documents/system_backup/           # Archived to vault/archive/ (historical)
 
 # === HISTORICAL (old paths, no longer valid) ===
 # ~/llama.cpp/build/bin/llama-server  → Never built standalone

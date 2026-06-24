@@ -91,8 +91,8 @@ Defined in `shell/.zshrc` (auto-loaded via bootstrap):
 alias llm='~/.local/bin/llama-loader'
 alias llmcheck='curl -s http://127.0.0.1:8080/v1/models | jq -r .data[].id'
 alias llmk='pkill -f llama-server'
-alias llmstart='~/.openclaw/workspace/scripts/llama-start.sh'
-alias textgen='~/.openclaw/workspace/scripts/textgen-start.sh'
+alias llmstart='~/infra/llama-server.sh'
+alias textgen='~/infra/textgen-start.sh'
 alias textkill='pkill -f "server.py"'
 alias quickhelp='cat ~/dotfiles/docs/reference/quick-commands.txt'
 

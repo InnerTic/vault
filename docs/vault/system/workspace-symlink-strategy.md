@@ -28,7 +28,7 @@ Only 6 things are worth persisting — everything else regenerates fresh.
 |------|-----|
 | `~/.ssh` | SSH keys, `known_hosts`, `authorized_keys` — irreplaceable |
 | `~/.librewolf` | Browser profiles, bookmarks, sessions, extensions |
-| `~/.openclaw` | Custom LLM/agent tool config |
+| `~/.openclaw` | Legacy OpenClaw config (migrated to `~/.config/opencode/opencode.json`) |
 | `~/.opencode` | OpenCode IDE agent config and state |
 | `~/dotfiles` | This repo — shell configs, scripts, docs, gitconfig |
 | `~/openclaw` | OpenClaw project workspace directory |

@@ -112,5 +112,23 @@ cd /mnt/workspace/textgen
 
 ## Related
 
-- Launch script: `~/.openclaw/workspace/scripts/textgen-start.sh`
+- Launch script: `~/infra/textgen-start.sh`
 - llama.cpp build: [[ai-tools/llama-setup]]
+
+
+## P40/CUDA Fix
+
+Textgen bundles `llama_cpp_binaries` compiled for sm_75+ only (Turing+). The Tesla P40 (Pascal, sm_61) causes a PDL kernel crash on model load.
+
+**Fix:** Replace the bundled `libggml-cuda.so` with the local build's version:
+
+```bash
+BUNDLED_DIR="/mnt/workspace/textgen/venv/lib/python3.13/site-packages/llama_cpp_binaries/bin"
+LOCAL_DIR="/mnt/workspace/llama.cpp/build/bin"
+cp "$LOCAL_DIR/libggml-cuda.so.0" "$BUNDLED_DIR/libggml-cuda.so.0"
+cp "$LOCAL_DIR/libggml-cuda.so" "$BUNDLED_DIR/libggml-cuda.so"
+```
+
+**Why:** The local llama.cpp build at `/mnt/workspace/llama.cpp/build/bin/` was compiled with `CMAKE_CUDA_ARCHITECTURES="61;86"`. Replacing just the CUDA library swaps in sm_61 support while keeping the rest of the bundled binaries intact.
+
+**Fragile:** A textgen update will overwrite this. Re-apply after `pip install --upgrade llama-cpp-binaries`.

@@ -18,16 +18,30 @@ git clone git@github.com:InnerTic/dotfiles.git ~/dotfiles
 cd ~/dotfiles && ./bootstrap.sh
 ```
 
-Symlinks: `shell/.bashrc` → `~/.bashrc`, `shell/.zshrc` → `~/.zshrc`, `shell/config.fish` → `~/.config/fish/config.fish` (CachyOS only), `git/.gitconfig` → `~/.gitconfig`, `ssh/config` → `~/.ssh/config`.  
+Symlinks: `shell/.bashrc` → `~/.bashrc`, `shell/.zshrc` → `~/.zshrc`, `shell/config.fish` → `~/.config/fish/config.fish` (CachyOS), `git/.gitconfig` → `~/.gitconfig`, `ssh/config` → `~/.ssh/config`.  
 Scripts at `scripts/` are mirrored from `vault/dotfiles/scripts/` — also deployable via `~/infra/` (mirror of the same source).
+
+**CachyOS bootstrap** (fish default): `cd ~/vault/dotfiles && ./bootstrap-arch.sh`
+
+## OS Sync (Dual-Boot: Debian 13 ↔ CachyOS)
+
+After editing aliases, SSH configs, or [[quick-commands]] in vault:
+```bash
+cd ~/vault && git pull                    # get latest on THIS OS
+~/vault/dotfiles/dotfiles-sync.sh --force # push vault → dotfiles mirror
+```
+Then boot into the **other OS** and run the same two commands.  
+Symlinks take care of the rest — no manual file copying needed.
 
 ## Quick Ref
 
 | What | Command | Source |
 |------|---------|--------|
+| Start TextGen | `textgen` | `vault/dotfiles/scripts/textgen-start.sh` |
 | Start Forge | `sdxl` | `vault/dotfiles/scripts/forge-start.sh` |
-| Start Hermes | `llmstart` | `.bashrc`/`.zshrc`/`config.fish` |
-| Kill Hermes | `llmk` | `.bashrc`/`.zshrc`/`config.fish` |
+| Start [[llama-server]] | `llmstart` | `vault/dotfiles/scripts/llama-server.sh` |
+| Forge LLM (port 8081) | `llsd` | `vault/dotfiles/scripts/forge-llm.sh` |
+| Kill [[llama-server]] | `llmk` | `.bashrc`/`.zshrc`/`config.fish` |
 | Model picker | `llama-loader` | `vault/dotfiles/scripts/llama-loader/llama-loader.sh` |
 | Health check | `healthcheck` | `vault/dotfiles/scripts/healthcheck.sh` |
 

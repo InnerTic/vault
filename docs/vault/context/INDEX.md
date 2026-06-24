@@ -33,7 +33,7 @@ Files marked **HISTORICAL** are kept as reference but contain stale paths/layout
 
 | Location | Content |
 |----------|---------|
-| `system_backup/` | Full backup/restore reference directory |
+| `archive/` | Archived system backup reference directory |
 | `reference/commands.txt` | Full command reference with paths and hardware notes |
 | `reference/quick-commands.txt` | Condensed quick-reference command cheat sheet |
 | `/mnt/workspace/fixbot.ifixit.comchatc4c528.txt` | Full FixBot chat log (5269 lines, 300KB) — GW2 debugging |

@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "983630c02de1f60d",
+    "id": "e64b895902821d59",
     "type": "split",
     "children": [
       {
-        "id": "447b6247a51b8eac",
+        "id": "a1a0decc71af6246",
         "type": "tabs",
         "children": [
           {
-            "id": "99671395f9698343",
+            "id": "49bcc2ba6e66a0d9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/vault/software/prompt-hats/hat-architect.md",
-                "mode": "preview",
+                "file": "docs/CHANGELOG.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "hat-architect"
+              "title": "CHANGELOG"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "1e67c95f5f1f60bc",
+    "id": "edbbb2ef4e39a2e3",
     "type": "split",
     "children": [
       {
-        "id": "e064819077ddb369",
+        "id": "5c7a734bed53935e",
         "type": "tabs",
         "children": [
           {
-            "id": "b9dc18328c9c8752",
+            "id": "a2d067680022bd44",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,12 +48,12 @@
             }
           },
           {
-            "id": "45f2bdc853dc069a",
+            "id": "bb69411e5456613a",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:hats",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "81db58d40e53e9c2",
+            "id": "1ed40095299c3d18",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -74,28 +74,26 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
     "width": 300
   },
   "right": {
-    "id": "f62175abf5aeb32c",
+    "id": "5d3b505af63c1f5f",
     "type": "split",
     "children": [
       {
-        "id": "32490ccbe8601bfe",
+        "id": "3717a84d57d2cc2e",
         "type": "tabs",
         "children": [
           {
-            "id": "6a642a0257d42562",
+            "id": "67dc812bdde40913",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "dotfiles/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,25 +103,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "4d912e18d14ef0d8",
+            "id": "6c679ba3b7004007",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "dotfiles/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "d68d35434441b8ea",
+            "id": "ddc387912af4bd14",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -138,7 +135,7 @@
             }
           },
           {
-            "id": "9d783a2d1dcaa0da",
+            "id": "c9c74f04cf9e53a8",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -152,18 +149,17 @@
             }
           },
           {
-            "id": "96d6ea84cb981e19",
+            "id": "45c3529e24c96a71",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "dotfiles/README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline"
             }
           }
         ]
@@ -184,26 +180,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "99671395f9698343",
+  "active": "49bcc2ba6e66a0d9",
   "lastOpenFiles": [
-    "docs/vault/software/prompt-hats/INDEX.md",
-    "docs/vault/software/prompt-hats/experimental/INDEX.md",
-    "docs/vault/software/prompt-hats/hat-summarizer.md",
-    "docs/vault/projects/meta-scripts.md",
-    "docs/vault/software/ai-tools/llama-setup.md",
-    "docs/vault/software/ai-tools/ollama-notes.md",
-    "docs/vault/software/ai-tools/textgen-webui.md",
-    "reference/troubleshooting.md",
-    "docs/vault/software/ai-tools/commands.md",
-    "reference",
-    "CHANGELOG.md",
-    "dotfiles/README.md",
-    "dotfiles/AGENTS.md",
-    "docs/vault/reference/quick-commands.md",
+    "docs/CHANGELOG.raw.md",
     "docs/INDEX.md",
-    "infra/CONTRACT.md",
-    "docs/vault/context/INDEX.md",
-    "docs/vault/archive/cachyos-steam-nvidia-input-log.md",
-    "CHANGELOG.raw.md"
+    "script-reference/vault-restore-all.md",
+    "script-reference/vault-restore.md",
+    "script-reference/forge-llm.md",
+    "script-reference/check-fixes.md",
+    "script-reference/build-gold-lxc.md",
+    "script-reference/archive-script.md",
+    "dotfiles/README.md",
+    "infra/CONTRACT.md"
   ]
 }
