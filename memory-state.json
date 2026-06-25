@@ -1,0 +1,62 @@
+{
+  "entities": [
+    {
+      "name": "Akuma",
+      "entityType": "host",
+      "observations": [
+        "Dual-boot Debian 13 / CachyOS",
+        "RTX 3060 + Tesla P40",
+        "KDE Plasma 6",
+        "Ryzen 7 5700G (16 cores), 48 GB RAM",
+        "Debian boot: P40 uses nvidia driver directly (not vfio-pci)",
+        "PCI topology: 3060 and NVMe on CPU-direct lanes, P40/WiFi/NIC share chipset x4",
+        "Start commands: llmstart, sdxl, textgen, llama-loader, llsd, llmk, healthcheck",
+        "Two-repo: vault.git = source of truth, dotfiles.git = read-only mirror at ~/dotfiles, sync via dotfiles-sync.sh",
+        "Key paths: /workspace/textgen, /workspace/sd-webui-forge-neo, ~/infra/, ~/Downloads/llm_models/",
+        "Git identity: InnerTic / innertic@users.noreply.github.com"
+      ]
+    },
+    {
+      "name": "Tesla P40",
+      "entityType": "gpu",
+      "observations": [
+        "24GB sm_61 GPU 1, CUDA_VISIBLE_DEVICES=1",
+        "IOMMU group 10 \u2014 behind chipset sharing x4 upstream",
+        "VRAM: ~20GB usable",
+        "MoE does not save VRAM in llama.cpp"
+      ]
+    },
+    {
+      "name": "RTX 3060",
+      "entityType": "gpu",
+      "observations": [
+        "12GB sm_86 GPU 0, primary GPU for LLM and SD Forge",
+        "IOMMU group 9 \u2014 CPU-direct x16 lane, no contention",
+        "VRAM: ~9GB usable for LLM inference"
+      ]
+    },
+    {
+      "name": "Services",
+      "entityType": "infrastructure",
+      "observations": [
+        "llama-server port 8080 (llmstart/llmk), Forge port 8081 (llsd)",
+        "SD Forge port 7860 (sdxl), TextGen WebUI port 7861 (textgen)",
+        "SearXNG port 8888",
+        "healthcheck command available",
+        "llmcheck: curl -s http://127.0.0.1:8080/v1/models | jq -r .data[].id"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "from": "Akuma",
+      "to": "RTX 3060",
+      "relationType": "has GPU"
+    },
+    {
+      "from": "Akuma",
+      "to": "Tesla P40",
+      "relationType": "has GPU"
+    }
+  ]
+}
