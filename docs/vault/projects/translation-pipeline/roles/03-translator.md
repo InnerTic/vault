@@ -2,10 +2,6 @@
 title: "03 Translator"
 tags:
   - projects
-modified: 2026-06-26
-  - translation
-  - pipeline
-  - 03-translator
 ---
 
 # Literal Translator

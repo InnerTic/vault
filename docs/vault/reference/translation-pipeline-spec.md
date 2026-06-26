@@ -2,8 +2,6 @@
 title: "Translation Pipeline Spec"
 tags:
   - reference
-modified: 2026-06-26
-  - translation-pipeline-spec
 ---
 
 # Multi-Stage Translation Pipeline — System Spec, Roadmap & Orchestration

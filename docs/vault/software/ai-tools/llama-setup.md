@@ -2,9 +2,6 @@
 title: "Llama Setup"
 tags:
   - software
-modified: 2026-06-26
-  - ai
-  - llama-setup
 ---
 
 # llama.cpp

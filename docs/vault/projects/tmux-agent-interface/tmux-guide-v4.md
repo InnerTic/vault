@@ -2,9 +2,6 @@
 title: "Tmux Guide V4"
 tags:
   - projects
-modified: 2026-06-26
-  - tmux-agent-interface
-  - tmux-guide-v4
 ---
 
 # tmux — Complete Guide (v4)

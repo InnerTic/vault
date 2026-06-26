@@ -2,8 +2,6 @@
 title: "Translation Pipeline"
 tags:
   - projects
-modified: 2026-06-26
-  - translation-pipeline
 ---
 
 # Translation Pipeline v2.0

@@ -2,7 +2,6 @@
 title: "CHANGELOG"
 tags:
   - changelog
-modified: 2026-06-26
 ---
 
 # Changelog (Curated)

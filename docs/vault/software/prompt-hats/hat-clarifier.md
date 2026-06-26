@@ -1,7 +1,6 @@
 ---
-tags: [hat, clarifier, ambiguity, prompt]
+tags:
 aliases: [clarifier-hat, ambiguity-resolver]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

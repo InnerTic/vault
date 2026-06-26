@@ -2,10 +2,6 @@
 title: "00 Parser"
 tags:
   - projects
-modified: 2026-06-26
-  - translation
-  - pipeline
-  - 00-parser
 ---
 
 # Parser

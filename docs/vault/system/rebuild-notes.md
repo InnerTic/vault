@@ -2,8 +2,6 @@
 title: "Rebuild Notes"
 tags:
   - system
-modified: 2026-06-26
-  - rebuild-notes
 ---
 
 # Rebuild Notes

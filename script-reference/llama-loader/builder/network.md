@@ -5,9 +5,6 @@ checksum: 623e74345596310db1f81ac5b0712c77c9019ca421dd3699e01c739762a97eac
 last_verified: 2026-06-21
 tags:
   - llama-loader
-modified: 2026-06-26
-  - builder
-  - network
 ---
 
 # network.sh

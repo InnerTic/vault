@@ -2,10 +2,6 @@
 title: "09 Continuity Updater"
 tags:
   - projects
-modified: 2026-06-26
-  - translation
-  - pipeline
-  - 09-continuity-updater
 ---
 
 # Continuity Updater

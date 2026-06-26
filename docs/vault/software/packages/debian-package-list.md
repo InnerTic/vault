@@ -2,9 +2,6 @@
 title: "Debian Package List"
 tags:
   - software
-modified: 2026-06-26
-  - packages
-  - debian-package-list
 ---
 
 # Applications for reinstall — Debian

@@ -2,8 +2,6 @@
 title: "Multi Agent Gpu Orchestration"
 tags:
   - projects
-modified: 2026-06-26
-  - multi-agent-gpu-orchestration
 ---
 
 # Multi-Agent GPU Orchestration

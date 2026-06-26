@@ -1,7 +1,6 @@
 ---
-tags: [hat, orchestrator, meta, prompt]
+tags:
 aliases: [orchestrator-hat, meta-controller]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

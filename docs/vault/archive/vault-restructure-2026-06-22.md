@@ -2,8 +2,6 @@
 title: "Vault Restructure 2026 06 22"
 tags:
   - archive
-modified: 2026-06-26
-  - vault-restructure-2026-06-22
 ---
 
 # Vault Restructure — Migration Complete

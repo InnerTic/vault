@@ -2,9 +2,6 @@
 title: "Textgen Webui"
 tags:
   - software
-modified: 2026-06-26
-  - ai
-  - textgen-webui
 ---
 
 # TextGen WebUI (oobabooga)

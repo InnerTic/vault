@@ -2,9 +2,6 @@
 title: "Forge Neo"
 tags:
   - software
-modified: 2026-06-26
-  - ai
-  - forge-neo
 ---
 
 # SD WebUI Forge Neo

@@ -2,8 +2,6 @@
 title: "Multi Agent Gguf Switcher Overview"
 tags:
   - projects
-modified: 2026-06-26
-  - multi-agent-gguf-switcher
 ---
 
 Multi-Agent GGUF Runtime Switcher (MAGRS)

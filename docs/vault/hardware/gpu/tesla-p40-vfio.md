@@ -2,9 +2,6 @@
 title: "Tesla P40 Vfio"
 tags:
   - hardware
-modified: 2026-06-26
-  - gpu
-  - tesla-p40-vfio
 ---
 
 # Tesla P40 — VFIO Passthrough / GPU Isolation

@@ -5,9 +5,6 @@ checksum: 97ed357796a05e76127da51cdc1bce26428b842f301a149d02e526931458310a
 last_verified: 2026-06-21
 tags:
   - llama-loader
-modified: 2026-06-26
-  - lib
-  - common
 ---
 
 # common.sh

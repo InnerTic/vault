@@ -1,7 +1,6 @@
 ---
-tags: [hat, assistant, prompt]
+tags:
 aliases: [assistant-hat, default-hat, general-purpose]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

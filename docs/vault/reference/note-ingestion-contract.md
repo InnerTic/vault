@@ -2,8 +2,6 @@
 title: "Note Ingestion Contract"
 tags:
   - reference
-modified: 2026-06-26
-  - note-ingestion-contract
 ---
 
 # Note Ingestion Contract

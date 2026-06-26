@@ -1,7 +1,6 @@
 ---
-tags: [hat, automation, workflow, prompt]
+tags:
 aliases: [automation-hat, workflow-builder]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

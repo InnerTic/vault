@@ -1,7 +1,6 @@
 ---
-tags: [hat, problem-solver, prompt]
+tags:
 aliases: [problem-solver-hat, systems-thinking]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

@@ -2,9 +2,6 @@
 title: "Tmux Unified"
 tags:
   - projects
-modified: 2026-06-26
-  - tmux-agent-interface
-  - tmux-unified
 ---
 
 # tmux — Unified Reference (tmux 3.5+)

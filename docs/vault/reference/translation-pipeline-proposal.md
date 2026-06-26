@@ -2,8 +2,6 @@
 title: "Translation Pipeline Proposal"
 tags:
   - reference
-modified: 2026-06-26
-  - translation-pipeline-proposal
 ---
 
 # Proposal: Multi-Stage Machine Translation Pipeline for Japanese & Chinese Web Novels

@@ -2,9 +2,6 @@
 title: "Workarounds"
 tags:
   - software
-modified: 2026-06-26
-  - kde
-  - workarounds
 ---
 
 # KDE/Plasma Workarounds — Tracked Bugs

@@ -2,8 +2,6 @@
 title: "Dual Repo Workflow"
 tags:
   - reference
-modified: 2026-06-26
-  - dual-repo-workflow
 ---
 
 # Vault → Dotfiles Dual-Repo Workflow

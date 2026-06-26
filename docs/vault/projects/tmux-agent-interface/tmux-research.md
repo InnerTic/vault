@@ -2,9 +2,6 @@
 title: "Tmux Research"
 tags:
   - projects
-modified: 2026-06-26
-  - tmux-agent-interface
-  - tmux-research
 ---
 
 # Tmux — Research Notes

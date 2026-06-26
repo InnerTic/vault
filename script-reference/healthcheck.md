@@ -5,7 +5,6 @@ checksum: 476a3ae36b7034f128e78d15d86169236c259f0983f655c143927e3026d45685
 last_verified: 2026-06-21
 tags:
   - healthcheck
-modified: 2026-06-26
 ---
 
 # healthcheck.sh

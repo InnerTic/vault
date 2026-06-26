@@ -2,8 +2,6 @@
 title: "Tmux Agent Interface"
 tags:
   - projects
-modified: 2026-06-26
-  - tmux-agent-interface
 ---
 
 # tmux + Local Models — Collaborative Agent Interface

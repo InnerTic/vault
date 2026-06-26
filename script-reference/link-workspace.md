@@ -5,7 +5,6 @@ checksum: a21f3068de9df6bb9ec9ac0f4e0368fcc07e7cdb862ce2ba02dd27313dec2adf
 last_verified: 2026-06-21
 tags:
   - link-workspace
-modified: 2026-06-26
 ---
 
 # link-workspace.sh

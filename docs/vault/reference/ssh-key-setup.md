@@ -2,8 +2,6 @@
 title: "Ssh Key Setup"
 tags:
   - reference
-modified: 2026-06-26
-  - ssh-key-setup
 ---
 
 # SSH Key Setup for Fresh Rebuild

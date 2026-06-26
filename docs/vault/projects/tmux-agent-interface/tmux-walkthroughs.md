@@ -2,9 +2,6 @@
 title: "Tmux Walkthroughs"
 tags:
   - projects
-modified: 2026-06-26
-  - tmux-agent-interface
-  - tmux-walkthroughs
 ---
 
 # tmux Walkthroughs — Practical Guides

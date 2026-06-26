@@ -1,7 +1,6 @@
 ---
-tags: [hat, architect, engineer, prompt]
+tags:
 aliases: [architect-hat, system-designer]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

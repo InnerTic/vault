@@ -2,10 +2,6 @@
 title: "04 Editor"
 tags:
   - projects
-modified: 2026-06-26
-  - translation
-  - pipeline
-  - 04-editor
 ---
 
 # Editor

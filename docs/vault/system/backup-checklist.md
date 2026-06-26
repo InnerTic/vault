@@ -2,15 +2,15 @@
 title: "Backup Checklist"
 tags:
   - system
-modified: 2026-06-26
-  - backup-checklist
 ---
 
+```text
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                         BACKUP CHECKLIST                                     ║
 ║                    What to Save Before System Change                          ║
 ║                    CURRENT as of 2026-05-13                                   ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
+```
 
 ═══ CRITICAL - MUST BACKUP ======
 

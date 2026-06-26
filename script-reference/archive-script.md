@@ -5,7 +5,6 @@ checksum: ea9ae273264c37b71bbcfb02c5e9689a634dd62fc619fed7f8d9f16f658f0257
 last_verified: 2026-06-21
 tags:
   - archive-script
-modified: 2026-06-26
 ---
 
 # archive-script.sh

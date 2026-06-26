@@ -1,7 +1,6 @@
 ---
-tags: [hat, translator, prompt]
+tags:
 aliases: [translator-hat, meaning-preservation]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

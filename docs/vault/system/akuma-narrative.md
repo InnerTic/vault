@@ -2,8 +2,6 @@
 title: "Akuma Narrative"
 tags:
   - system
-modified: 2026-06-26
-  - akuma-narrative
 ---
 
 # Akuma Recovery Log — Narrative Summary

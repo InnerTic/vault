@@ -2,8 +2,6 @@
 title: "Vault Query Scripts"
 tags:
   - reference
-modified: 2026-06-26
-  - vault-query-scripts
 ---
 
 # Vault Query Scripts

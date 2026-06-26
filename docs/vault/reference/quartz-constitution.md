@@ -2,8 +2,6 @@
 title: "Quartz Constitution"
 tags:
   - reference
-modified: 2026-06-26
-  - quartz-constitution
 ---
 
 # AI Project Constitution: Obsidian Digital Garden Homelab Wiki

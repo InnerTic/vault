@@ -2,8 +2,6 @@
 title: "Bootstrap Configs"
 tags:
   - scripts
-modified: 2026-06-26
-  - bootstrap-configs
 ---
 
 # bootstrap-configs.sh

@@ -2,10 +2,6 @@
 title: "05 Script Checks"
 tags:
   - projects
-modified: 2026-06-26
-  - translation
-  - pipeline
-  - 05-script-checks
 ---
 
 # Step 5 — Script Checks (Deterministic Validation Gate)

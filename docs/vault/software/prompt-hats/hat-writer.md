@@ -1,7 +1,6 @@
 ---
-tags: [hat, writer, content, prompt]
+tags:
 aliases: [writer-hat, structured-content-engine]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

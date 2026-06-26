@@ -1,7 +1,6 @@
 ---
-tags: [hat, strategist, decision, prompt]
+tags:
 aliases: [strategist-hat, decision-optimizer]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

@@ -1,7 +1,6 @@
 ---
-tags: [hat, core, prompt]
+tags:
 aliases: [core, baseline-hat]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

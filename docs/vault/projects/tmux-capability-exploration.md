@@ -2,8 +2,6 @@
 title: "Tmux Capability Exploration"
 tags:
   - projects
-modified: 2026-06-26
-  - tmux-capability-exploration
 ---
 
 # tmux — Full Capability Exploration

@@ -2,8 +2,6 @@
 title: "System Memory"
 tags:
   - system
-modified: 2026-06-26
-  - system-memory
 ---
 
 # System Memory — Akuma

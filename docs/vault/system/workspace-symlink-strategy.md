@@ -2,8 +2,6 @@
 title: "Workspace Symlink Strategy"
 tags:
   - system
-modified: 2026-06-26
-  - workspace-symlink-strategy
 ---
 
 # Workspace Symlink Strategy

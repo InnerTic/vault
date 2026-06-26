@@ -2,8 +2,6 @@
 title: "Akuma Raw"
 tags:
   - system
-modified: 2026-06-26
-  - akuma-raw
 ---
 
 # Akuma Recovery Log — Raw Facts (Immutable Log)

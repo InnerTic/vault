@@ -5,7 +5,6 @@ checksum: f366210e38725441995f7d1b896ca6ae43ef3ca0d277150ed11856e687fb8fa8
 last_verified: 2026-06-21
 tags:
   - forge-start
-modified: 2026-06-26
 ---
 
 # forge-start.sh

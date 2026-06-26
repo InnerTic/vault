@@ -2,8 +2,6 @@
 title: "Research Wiki Structure"
 tags:
   - reference
-modified: 2026-06-26
-  - research-wiki-structure
 ---
 
 # Research Wiki Structure

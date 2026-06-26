@@ -2,8 +2,6 @@
 title: "Check Fixes"
 tags:
   - scripts
-modified: 2026-06-26
-  - check-fixes
 ---
 
 # check-fixes.sh

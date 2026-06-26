@@ -1,7 +1,6 @@
 ---
-tags: [hat, experimental, social, prompt]
+tags:
 aliases: [social-hat, mediator, coach]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

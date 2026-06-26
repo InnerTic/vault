@@ -2,9 +2,6 @@
 title: "Gw2 Multibox Wine Setup"
 tags:
   - software
-modified: 2026-06-26
-  - gaming
-  - gw2-multibox-wine-setup
 ---
 
 # GW2 Multi-Box Wine/Proton Setup

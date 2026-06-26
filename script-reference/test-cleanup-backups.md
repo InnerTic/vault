@@ -5,7 +5,6 @@ checksum: 3efec32aa2cdb5ac72335cc4f1fabcdb9740681da3948aea8be88a075bfb382e
 last_verified: 2026-06-21
 tags:
   - test-cleanup-backups
-modified: 2026-06-26
 ---
 
 # test-cleanup-backups.sh

@@ -2,9 +2,6 @@
 title: "System Cockpit"
 tags:
   - software
-modified: 2026-06-26
-  - conky
-  - system-cockpit
 ---
 
 # Conky System Cockpit — Unified Telemetry HUD

@@ -5,7 +5,6 @@ checksum: adc732064976fe6d91bd06cbc8b5aecd104aebefe3b3baa275865ece6316151f
 last_verified: 2026-06-21
 tags:
   - toggle-gpu-profile
-modified: 2026-06-26
 ---
 
 # toggle-gpu-profile.sh

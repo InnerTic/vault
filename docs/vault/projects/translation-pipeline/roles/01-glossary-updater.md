@@ -2,10 +2,6 @@
 title: "01 Glossary Updater"
 tags:
   - projects
-modified: 2026-06-26
-  - translation
-  - pipeline
-  - 01-glossary-updater
 ---
 
 # Glossary Candidate

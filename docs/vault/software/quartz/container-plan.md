@@ -2,9 +2,6 @@
 title: "Container Plan"
 tags:
   - software
-modified: 2026-06-26
-  - quartz
-  - container-plan
 ---
 
 # Quartz Container Plan — v2

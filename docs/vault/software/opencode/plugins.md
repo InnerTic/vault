@@ -2,9 +2,6 @@
 title: "Plugins"
 tags:
   - software
-modified: 2026-06-26
-  - opencode
-  - plugins
 ---
 
 # OpenCode Plugin & MCP Recommendations

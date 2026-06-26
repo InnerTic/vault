@@ -2,8 +2,6 @@
 title: "Fstab Bind Mounts"
 tags:
   - scripts
-modified: 2026-06-26
-  - fstab-bind-mounts
 ---
 
 # fstab-bind-mounts.sh

@@ -2,10 +2,6 @@
 title: "Ir Schema"
 tags:
   - projects
-modified: 2026-06-26
-  - llama-loader
-  - architecture
-  - ir-schema
 ---
 
 # IR Schema

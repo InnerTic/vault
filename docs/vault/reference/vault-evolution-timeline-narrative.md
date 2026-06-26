@@ -2,8 +2,6 @@
 title: "Vault Evolution Timeline Narrative"
 tags:
   - reference
-modified: 2026-06-26
-  - vault-evolution-timeline-narrative
 ---
 
 # Vault Evolution — Narrative Summary

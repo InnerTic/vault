@@ -2,8 +2,6 @@
 title: "Storage Layout Plan"
 tags:
   - archive
-modified: 2026-06-26
-  - storage-layout-plan
 ---
 
 # Storage Layout Plan for System Change

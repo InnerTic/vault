@@ -3,7 +3,6 @@ title: "Quick Commands"
 tags:
   - reference
   - quick-commands
-modified: 2026-06-26
 ---
 
 ```text

@@ -5,9 +5,6 @@ checksum: a4b1062a71fbced2b4fa0ea44823aa84a65015e69ea155e412a38f1f3350ddc8
 last_verified: 2026-06-21
 tags:
   - llama-loader
-modified: 2026-06-26
-  - presets
-  - 2-balanced
 ---
 
 # 2-balanced.sh

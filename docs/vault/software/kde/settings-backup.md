@@ -2,9 +2,6 @@
 title: "Settings Backup"
 tags:
   - software
-modified: 2026-06-26
-  - kde
-  - settings-backup
 ---
 
 # KDE/Plasma Settings Backup - Manual Restore Instructions

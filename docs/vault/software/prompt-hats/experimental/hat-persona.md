@@ -1,7 +1,6 @@
 ---
-tags: [hat, experimental, persona, prompt]
+tags:
 aliases: [persona-hat, deep-roleplay, immersion]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

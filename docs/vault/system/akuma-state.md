@@ -2,8 +2,6 @@
 title: "Akuma State"
 tags:
   - system
-modified: 2026-06-26
-  - akuma-state
 ---
 
 # Akuma Recovery Log — Derived State

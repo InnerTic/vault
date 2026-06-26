@@ -2,8 +2,6 @@
 title: "Lxc Ssh Access"
 tags:
   - scripts
-modified: 2026-06-26
-  - lxc-ssh-access
 ---
 
 # SSH Key Distribution for LXCs

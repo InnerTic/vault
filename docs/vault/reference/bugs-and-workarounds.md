@@ -1,7 +1,6 @@
 ---
-tags: [reference, bugs, workarounds]
+tags:
 aliases: [known-issues, bugs, workarounds, temporary-hacks]
-modified: 2026-06-26
 updated: 2026-06-15
 ---
 

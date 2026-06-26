@@ -2,9 +2,6 @@
 title: "Tmux Evolution"
 tags:
   - projects
-modified: 2026-06-26
-  - tmux-agent-interface
-  - tmux-evolution
 ---
 
 # tmux Notes — File Evolution

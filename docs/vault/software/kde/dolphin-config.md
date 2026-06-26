@@ -2,9 +2,6 @@
 title: "Dolphin Config"
 tags:
   - software
-modified: 2026-06-26
-  - kde
-  - dolphin-config
 ---
 
 # Dolphin Configuration — Reference Copy

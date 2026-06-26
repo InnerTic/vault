@@ -2,8 +2,6 @@
 title: "Debian Setup Hoops"
 tags:
   - system
-modified: 2026-06-26
-  - debian-setup-hoops
 ---
 
 # Debian 13 Trixie Setup — All the Hoops

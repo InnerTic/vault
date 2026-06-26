@@ -1,7 +1,6 @@
 ---
-tags: [hat, experimenter, hypothesis, prompt]
+tags:
 aliases: [experimenter-hat, hypothesis-engine]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

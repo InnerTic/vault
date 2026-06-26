@@ -1,7 +1,6 @@
 ---
-tags: [setup, cuda, nvidia, debian]
+tags:
 aliases: [cuda-setup, cuda-12.9, install-cuda]
-modified: 2026-06-26
 updated: 2026-06-17
 ---
 

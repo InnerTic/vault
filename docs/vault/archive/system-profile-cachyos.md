@@ -2,8 +2,6 @@
 title: "System Profile Cachyos"
 tags:
   - archive
-modified: 2026-06-26
-  - system-profile-cachyos
 ---
 
 

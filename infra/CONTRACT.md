@@ -2,8 +2,6 @@
 title: "CONTRACT"
 tags:
   - infra
-modified: 2026-06-26
-  - CONTRACT
 ---
 
 # INFRA PATH CONTRACT — Canonical Layout

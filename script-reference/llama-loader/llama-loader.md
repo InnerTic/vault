@@ -3,10 +3,8 @@ source: dotfiles/scripts/llama-loader/llama-loader.sh
 restorable: true
 checksum: 4b04902e9d4dafa11d10871d97aa463e123fa62601921e583fe0b7162b09bf1e
 last_verified: 2026-06-21
-  - llama-loader
 tags:
   - llama-loader
-modified: 2026-06-26
 ---
 
 # llama-loader.sh

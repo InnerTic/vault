@@ -1,7 +1,6 @@
 ---
-tags: [hat, debugger, failure, prompt]
+tags:
 aliases: [debugger-hat, failure-investigator]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

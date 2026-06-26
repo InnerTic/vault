@@ -1,7 +1,6 @@
 ---
-tags: [reference, ai-tools, commands]
+tags:
 aliases: [ai-commands, ai-tools, command-reference]
-modified: 2026-06-26
 updated: 2026-06-22
 ---
 

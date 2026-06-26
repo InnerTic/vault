@@ -2,10 +2,6 @@
 title: "02 Briefer"
 tags:
   - projects
-modified: 2026-06-26
-  - translation
-  - pipeline
-  - 02-briefer
 ---
 
 # Narrative Briefer

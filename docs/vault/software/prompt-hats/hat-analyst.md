@@ -1,7 +1,6 @@
 ---
-tags: [hat, analyst, diagnostic, prompt]
+tags:
 aliases: [analyst-hat, diagnostic-thinker]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

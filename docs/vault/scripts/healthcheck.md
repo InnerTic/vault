@@ -2,8 +2,6 @@
 title: "Healthcheck"
 tags:
   - scripts
-modified: 2026-06-26
-  - healthcheck
 ---
 
 # healthcheck.sh

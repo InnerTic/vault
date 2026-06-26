@@ -5,7 +5,6 @@ checksum: d4b7a6092fd944b439488f2806bc2910637dec6e8b51f27ee4ed2a24be360ca5
 last_verified: 2026-06-21
 tags:
   - textgen-start
-modified: 2026-06-26
 ---
 
 # textgen-start.sh

@@ -1,7 +1,6 @@
 ---
-tags: [hat, translator, linguist, prompt]
+tags:
 aliases: [translator-plus, context-aware-linguist]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

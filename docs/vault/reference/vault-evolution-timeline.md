@@ -2,8 +2,6 @@
 title: "Vault Evolution Timeline"
 tags:
   - reference
-modified: 2026-06-26
-  - vault-evolution-timeline
 ---
 
 # Vault Evolution Timeline — Index

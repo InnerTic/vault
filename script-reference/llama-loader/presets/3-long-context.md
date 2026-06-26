@@ -5,9 +5,6 @@ checksum: 8cf2c9ede8ae7ade92ad273868a032ae360938c3f9ddfeac6f6c88783a9b534e
 last_verified: 2026-06-21
 tags:
   - llama-loader
-modified: 2026-06-26
-  - presets
-  - 3-long-context
 ---
 
 # 3-long-context.sh

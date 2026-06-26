@@ -2,9 +2,6 @@
 title: "Vlm Research"
 tags:
   - software
-modified: 2026-06-26
-  - ai
-  - vlm-research
 ---
 
 # Local VLM Research

@@ -2,9 +2,6 @@
 title: "Tmux Research V3"
 tags:
   - projects
-modified: 2026-06-26
-  - tmux-agent-interface
-  - tmux-research-v3
 ---
 
 # Tmux — Research Notes (v3)

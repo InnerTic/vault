@@ -1,7 +1,6 @@
 ---
-tags: [hat, minimalist, compression, prompt]
+tags:
 aliases: [minimalist-hat, compression-efficiency]
-modified: 2026-06-26
 updated: 2026-06-20
 ---
 

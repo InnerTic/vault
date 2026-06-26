@@ -1,7 +1,6 @@
 ---
-tags: [project, scripts, automation, abandoned]
+tags:
 aliases: [meta-scripts, script-orchestrator]
-modified: 2026-06-26
 status: abandoned
 updated: 2026-06-21
 ---

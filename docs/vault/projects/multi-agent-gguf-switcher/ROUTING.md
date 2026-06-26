@@ -2,9 +2,6 @@
 title: "ROUTING"
 tags:
   - projects
-modified: 2026-06-26
-  - multi-agent-gguf-switcher
-  - ROUTING
 ---
 
 Runtime Switch Mechanisms

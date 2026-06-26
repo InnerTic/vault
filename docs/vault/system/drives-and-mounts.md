@@ -1,7 +1,6 @@
 ---
-tags: [system, storage, reference]
+tags:
 aliases: [drives, mounts, fstab, storage-layout]
-modified: 2026-06-26
 updated: 2026-06-15
 ---
 

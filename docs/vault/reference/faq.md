@@ -1,7 +1,6 @@
 ---
-tags: [reference, faq]
+tags:
 aliases: [faq, common-questions]
-modified: 2026-06-26
 updated: 2026-06-15
 ---
 
