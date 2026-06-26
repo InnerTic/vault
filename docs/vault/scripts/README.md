@@ -66,4 +66,4 @@ After subjects, run per-distro AI tool guides at `docs/reinstall-guides/{cachyos
 
 ## Roadmap
 
-- ~~[[archive/meta-scripts\|Meta Script Project]] (archived)~~ — abandoned. Goals achieved ad-hoc by individual scripts (lxc-bootstrap flags, llama-loader IR/dialect separation).
+- [[../projects/meta-scripts\|Meta Script Project]] — in progress. Script orchestration layer.

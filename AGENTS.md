@@ -43,6 +43,7 @@ Then boot the other OS and repeat.
 | `/workspace/textgen` | TextGen WebUI (`~/infra/textgen-start.sh`, port 7861) |
 | `/workspace/sd-webui-forge-neo` | SD Forge (`~/infra/forge-start.sh`, port 7860) |
 | `~/.local/bin/llama-loader` | Interactive model manager (selects GGUF, starts llama-server) |
+| `~/.local/bin/vault-attribution.py` | Citation pipeline: scan uncited files, compare against source repos, apply source: fields, AI audit |
 
 ## Conventions
 
@@ -52,6 +53,7 @@ Then boot the other OS and repeat.
 - Model inventory: `find ~/Downloads/llm_models/ -name '*.gguf' -printf '%f\t%s\n'` (filenames drift)
 - Git user: `InnerTic` / `innertic@users.noreply.github.com`
 - All vault .md files should have YAML frontmatter with `title:` and `tags:` — deterministic tag derivation from directory path + filename
+- **DO NOT archive `meta-scripts.md`** — it is an active, in-progress project. The file's original content erroneously read "Abandoned" (from vault import), causing a loop where agents kept moving it to `archive/`. Corrected 2026-06-26: content rewritten, cross-refs fixed, restored to `projects/`.
 
 ## Sessions
 

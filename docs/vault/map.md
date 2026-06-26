@@ -145,7 +145,7 @@ docs/                          ← Vault root (.obsidian/ lives here)
 │   │   ├── quartz-wiki-architecture.md  ← Quartz publishing architecture & rollout plan
 │   │   ├── multi-agent-gpu-orchestration.md
 │   │   ├── director-agent.md
-│   │   ├── archive/meta-scripts.md
+│   │   ├── meta-scripts.md             ← Active — script orchestration layer
 │   │   └── multi-agent-gguf-switcher/  ← (8 files: ARCH, ADVANCED, CHECKLIST, IMPL, META, PERSONAS, README, ROUTING)
 │   │
 │   ├── context/

@@ -60,7 +60,7 @@ milestone:
 
 - docs: add CachyOS/Arch libvirt bridge setup (nmcli, bridge-slave, DHCP fixes) to kvm-bridge-networking
 - scripts: add vm-bridge-setup.sh + vm-bridge-setup.fish (zero-touch br0 bootstrap)
-- project: add meta-scripts project doc (archived 2026-06-26) — modular script orchestrator blueprint
+- project: add meta-scripts project doc (archived 2026-06-26, reverted) — modular script orchestrator blueprint
 
 ## 2026-06-15
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dotfiles/docs/vault/map.md",
+                "file": "dotfiles/docs/vault/reference/knowledge-audit.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "map"
+              "title": "knowledge-audit"
             }
           }
         ]
@@ -180,8 +180,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "49bcc2ba6e66a0d9",
+  "active": "a2d067680022bd44",
   "lastOpenFiles": [
+    "docs/vault/projects/meta-scripts.md",
+    "docs/vault/projects/citation-attribution.md",
+    "dotfiles/docs/vault/reference/lxc-build-log.md",
+    "dotfiles/docs/vault/reference/memory-reasoning-execution-pipeline.md",
+    "dotfiles/docs/vault/reference/persona-monday.md",
+    "dotfiles/docs/vault/map.md",
     "dotfiles/docs/vault/index.md",
     "dotfiles/docs/vault/software/prompt-hats/core-baseline.md",
     "dotfiles/docs/vault/context/INDEX.md",
@@ -201,12 +207,6 @@
     "dotfiles/docs/vault/projects/translation-pipeline/roles/00-parser.md",
     "dotfiles/docs/vault/projects/ai-bubble-watchboard.md",
     "dotfiles/docs/vault/projects/ai-watchtower.md",
-    "dotfiles/docs/vault/projects/local-ai-control-tower.md",
-    "dotfiles/docs/vault/projects/local-ai-strategy.md",
-    "dotfiles/docs/vault/projects/meta-scripts.md",
-    "dotfiles/docs/vault/projects/README.md",
-    "dotfiles/docs/vault/projects/sd-webui-forge-neo.md",
-    "dotfiles/docs/vault/projects/translation-pipeline.md",
-    "dotfiles/docs/vault/software/opencode/plugins.md"
+    "dotfiles/docs/vault/projects/local-ai-control-tower.md"
   ]
 }

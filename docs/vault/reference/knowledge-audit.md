@@ -165,7 +165,7 @@ Likely same story — different distros ship different CUDA toolkit versions. Th
 | `docs/vault/projects/translation-pipeline.md` | **75** | Elaborate 10-role pipeline. Source path `/mnt/data/_translation-pipeline/` unverifiable. |
 | `docs/vault/projects/translation-pipeline/model-index.md` | **75** | Model capabilities for pipeline. |
 | `docs/vault/projects/sd-webui-forge-neo.md` | **25** | Forge reference. Source `/mnt/workspace/sd-webui-forge-neo/` does **not exist** on disk. P40 VAE offload spec unverifiable. |
-| `docs/vault/projects/meta-scripts.md` → `archive/meta-scripts.md` | **25** | Abandoned — moved to archive 2026-06-26. |
+| `docs/vault/projects/meta-scripts.md` | **25** | Active — script orchestration layer. |
 
 ### Prompt Hats
 
@@ -226,7 +226,7 @@ Likely same story — different distros ship different CUDA toolkit versions. Th
 
 ### Remaining
 
-3. **Abandoned project**: `vault/projects/meta-scripts.md` → `archive/meta-scripts.md` — archived 2026-06-26.
+3. ~~**Abandoned project**: `vault/projects/meta-scripts.md` → `archive/meta-scripts.md` — archived 2026-06-26.~~ **Reverted** — active project, restored to projects/. See entry above.
 4. **Missing forge path** — `/mnt/workspace/sd-webui-forge-neo/` does not exist on Debian boot. Either reinstall Forge or mark Debian forge docs as inactive.
 5. **Update AGENTS.md** — shell is `/bin/bash`, not fish. Driver version note refers to CachyOS — clarify or split by branch.
 
