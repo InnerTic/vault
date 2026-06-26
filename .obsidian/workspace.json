@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/CHANGELOG.md",
+                "file": "docs/vault/reference/vault-system-audit-2026-06-21.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CHANGELOG"
+              "title": "vault-system-audit-2026-06-21"
             }
           }
         ]
@@ -182,6 +182,9 @@
   },
   "active": "49bcc2ba6e66a0d9",
   "lastOpenFiles": [
+    "docs/vault/projects/quartz-wiki-architecture.md",
+    "docs/vault/hardware/gpu/config-notes.md",
+    "docs/CHANGELOG.md",
     "docs/vault/research/rag-yarn-long-context.md",
     "dotfiles/docs/vault/archive/scratchpad.md",
     "dotfiles/docs/vault/archive/implementation-workflow-backup.md",
@@ -204,9 +207,6 @@
     "dotfiles/docs/vault/system/backup-checklist.md",
     "dotfiles/docs/vault/system/debian-setup-hoops.md",
     "dotfiles/docs/vault/system/drives-and-mounts.md",
-    "dotfiles/docs/vault/system/dual-boot-recovery.md",
-    "dotfiles/docs/vault/software/ai-tools/commands.md",
-    "dotfiles/docs/vault/scripts/REBUILD_SCRIPT.md",
-    "dotfiles/docs/vault/scripts/shell-setup.md"
+    "dotfiles/docs/vault/system/dual-boot-recovery.md"
   ]
 }
