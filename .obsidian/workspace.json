@@ -182,6 +182,7 @@
   },
   "active": "49bcc2ba6e66a0d9",
   "lastOpenFiles": [
+    "docs/vault/research/rag-yarn-long-context.md",
     "dotfiles/docs/vault/archive/scratchpad.md",
     "dotfiles/docs/vault/archive/implementation-workflow-backup.md",
     "dotfiles/docs/vault/archive/implementation-workflow.md",
@@ -206,7 +207,6 @@
     "dotfiles/docs/vault/system/dual-boot-recovery.md",
     "dotfiles/docs/vault/software/ai-tools/commands.md",
     "dotfiles/docs/vault/scripts/REBUILD_SCRIPT.md",
-    "dotfiles/docs/vault/scripts/shell-setup.md",
-    "dotfiles/docs/vault/scripts/symlink-workspace.md"
+    "dotfiles/docs/vault/scripts/shell-setup.md"
   ]
 }

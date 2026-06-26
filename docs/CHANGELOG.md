@@ -15,6 +15,13 @@ modified: 2026-06-26
 - Breaking architectural shifts are marked as milestones.
 - Detailed implementation notes belong in Raw Changelog.
 
+## 2026-06-26
+
+- docs(vault): add research topic — RAG + YaRN context blowup (260k → 1M+)
+- docs(vault): add `modified:` dates to all 240 vault files, fix empty tags in CHANGELOG/INDEX
+- infra(dotfiles): sync `.gitignore` + auto-push after rsync
+- fix(quartz): rebuild with frontmatter dates — explorer + dates now correct
+
 ## 2026-06-19
 
 milestone:
