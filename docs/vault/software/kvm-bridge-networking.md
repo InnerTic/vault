@@ -1,6 +1,7 @@
 ---
 tags: [virtualization, kvm, networking]
 aliases: [kvm-bridge, bridge-networking, libvirt-setup]
+modified: 2026-06-26
 updated: 2026-06-19
 ---
 

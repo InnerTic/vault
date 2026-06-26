@@ -1,3 +1,12 @@
+---
+title: "Phase1 Plan"
+tags:
+  - archive
+modified: 2026-06-26
+  - migration
+  - phase1-plan
+---
+
 # Phase 1 — Dry Run Plan
 
 **Date:** 2026-06-21

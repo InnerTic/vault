@@ -1,3 +1,11 @@
+---
+title: "Research Wiki Structure"
+tags:
+  - reference
+modified: 2026-06-26
+  - research-wiki-structure
+---
+
 # Research Wiki Structure
 
 Proposed organization for an AI model research wiki. This is a living document — structure should evolve as the field does.

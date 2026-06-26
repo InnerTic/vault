@@ -1,3 +1,12 @@
+---
+title: "META"
+tags:
+  - projects
+modified: 2026-06-26
+  - multi-agent-gguf-switcher
+  - META
+---
+
 GGUF Metadata Schema Extension
 ===============================
 

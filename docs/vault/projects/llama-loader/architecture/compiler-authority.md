@@ -1,3 +1,13 @@
+---
+title: "Compiler Authority"
+tags:
+  - projects
+modified: 2026-06-26
+  - llama-loader
+  - architecture
+  - compiler-authority
+---
+
 # Compiler Authority
 
 **Type:** Architecture

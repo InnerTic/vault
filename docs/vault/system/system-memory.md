@@ -1,3 +1,11 @@
+---
+title: "System Memory"
+tags:
+  - system
+modified: 2026-06-26
+  - system-memory
+---
+
 # System Memory — Akuma
 
 **Host:** Akuma (Debian 13 Trixie — `deb` branch of dotfiles)

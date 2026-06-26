@@ -1,3 +1,11 @@
+---
+title: "Vault Evolution Timeline"
+tags:
+  - reference
+modified: 2026-06-26
+  - vault-evolution-timeline
+---
+
 # Vault Evolution Timeline — Index
 
 This document is split into 3 layers per the secretary rule: no derived statement without reference to raw input.

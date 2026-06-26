@@ -1,6 +1,7 @@
 ---
 tags: [hat, experimental, unfiltered, prompt]
 aliases: [unfiltered-hat, uncensored, no-rules]
+modified: 2026-06-26
 updated: 2026-06-20
 ---
 

@@ -1,3 +1,13 @@
+---
+title: "07 Consistency Checker"
+tags:
+  - projects
+modified: 2026-06-26
+  - translation
+  - pipeline
+  - 07-consistency-checker
+---
+
 # Consistency Checker
 
 **Port:** 8087 | **GPU:** P40 (CUDA1) | **Context:** 8192

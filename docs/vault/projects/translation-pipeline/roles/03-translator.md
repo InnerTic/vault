@@ -1,3 +1,13 @@
+---
+title: "03 Translator"
+tags:
+  - projects
+modified: 2026-06-26
+  - translation
+  - pipeline
+  - 03-translator
+---
+
 # Literal Translator
 
 **Port:** 8083 | **GPU:** P40 (CUDA1) | **Context:** 4096

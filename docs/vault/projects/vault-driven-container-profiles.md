@@ -1,3 +1,11 @@
+---
+title: "Vault Driven Container Profiles"
+tags:
+  - projects
+modified: 2026-06-26
+  - vault-driven-container-profiles
+---
+
 # Vault-Driven Container Profiles
 
 **Type:** Architecture · **Updated:** 2026-06-21

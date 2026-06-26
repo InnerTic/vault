@@ -1,6 +1,7 @@
 ---
 tags: [hat, homelab, infrastructure, prompt]
 aliases: [homelab-hat, homelab-engineer]
+modified: 2026-06-26
 updated: 2026-06-20
 ---
 

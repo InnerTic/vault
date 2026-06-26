@@ -1,3 +1,11 @@
+---
+title: "REBUILD SCRIPT"
+tags:
+  - scripts
+modified: 2026-06-26
+  - REBUILD-SCRIPT
+---
+
 # REBUILD_SCRIPT.sh
 
 ```bash

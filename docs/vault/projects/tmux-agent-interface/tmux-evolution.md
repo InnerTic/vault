@@ -1,3 +1,12 @@
+---
+title: "Tmux Evolution"
+tags:
+  - projects
+modified: 2026-06-26
+  - tmux-agent-interface
+  - tmux-evolution
+---
+
 # tmux Notes — File Evolution
 
 This documents how six tmux note files were created, each building on the prior. The progression went from bare research notes → structured walkthroughs → consolidated reference.

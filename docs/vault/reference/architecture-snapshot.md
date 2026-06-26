@@ -1,6 +1,7 @@
 ---
 tags: [reference, architecture, network, proxmox, lxc]
 aliases: [architecture-snapshot, current-architecture, homelab-architecture]
+modified: 2026-06-26
 updated: 2026-06-20
 ---
 

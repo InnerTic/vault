@@ -1,3 +1,12 @@
+---
+title: "ADVANCED"
+tags:
+  - projects
+modified: 2026-06-26
+  - multi-agent-gguf-switcher
+  - ADVANCED
+---
+
 Advanced Features
 =================
 

@@ -1,3 +1,12 @@
+---
+title: "Vlm Research"
+tags:
+  - software
+modified: 2026-06-26
+  - ai
+  - vlm-research
+---
+
 # Local VLM Research
 
 Vision-language models suitable for an "image judge / prompt refiner / controller eye" layer in an SDXL pipeline on dual-GPU (RTX 3060 + Tesla P40).

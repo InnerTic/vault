@@ -1,3 +1,10 @@
+---
+title: "CHANGELOG.Raw"
+tags:
+  - .raw
+modified: 2026-06-26
+---
+
 # Changelog (Raw / Verbose)
 
 ## Changelog Policy

@@ -1,3 +1,12 @@
+---
+title: "Free Models"
+tags:
+  - software
+modified: 2026-06-26
+  - ai
+  - free-models
+---
+
 # Free Online Models Reference
 **Generated: 2026-05-13**
 **Source:** OpenCode Zen API + OpenRouter API (live queries)

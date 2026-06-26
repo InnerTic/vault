@@ -1,3 +1,11 @@
+---
+title: "Dual Repo Workflow"
+tags:
+  - reference
+modified: 2026-06-26
+  - dual-repo-workflow
+---
+
 # Vault → Dotfiles Dual-Repo Workflow
 
 Two repos serve different purposes. This doc explains how they relate, how to push changes, and how the script archive/restore system works.

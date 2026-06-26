@@ -1,3 +1,13 @@
+---
+title: "08 Verifier"
+tags:
+  - projects
+modified: 2026-06-26
+  - translation
+  - pipeline
+  - 08-verifier
+---
+
 # Verifier
 
 **Port:** 8085 | **GPU:** P40 (CUDA1) | **Context:** 4096

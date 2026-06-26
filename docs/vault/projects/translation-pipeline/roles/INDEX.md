@@ -1,3 +1,12 @@
+---
+title: "Roles Overview"
+tags:
+  - projects
+modified: 2026-06-26
+  - translation
+  - pipeline
+---
+
 # Translation Pipeline v2.0 — Role Index
 
 Japanese & Chinese web novel translation pipeline across two GPUs.

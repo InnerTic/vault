@@ -1,3 +1,12 @@
+---
+title: "Cachyos Package List"
+tags:
+  - software
+modified: 2026-06-26
+  - packages
+  - cachyos-package-list
+---
+
 # Cleaned Package List for CachyOS Reinstall
 # Extracted from akuma_recovery.log and cachyos_packages.txt
 # Focus: Non-filesystem, generally useful packages for AI/workstation setup

@@ -1,6 +1,7 @@
 ---
 tags: [navigation, index]
 aliases: [sitemap, map, vault-map]
+modified: 2026-06-26
 updated: 2026-06-22
 ---
 

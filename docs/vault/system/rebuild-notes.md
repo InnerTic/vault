@@ -1,3 +1,11 @@
+---
+title: "Rebuild Notes"
+tags:
+  - system
+modified: 2026-06-26
+  - rebuild-notes
+---
+
 # Rebuild Notes
 
 ## Session 2026-06-18 — OpenCode/OpenClaw + Dual-Boot Recovery

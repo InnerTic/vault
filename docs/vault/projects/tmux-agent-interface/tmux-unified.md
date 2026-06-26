@@ -1,3 +1,12 @@
+---
+title: "Tmux Unified"
+tags:
+  - projects
+modified: 2026-06-26
+  - tmux-agent-interface
+  - tmux-unified
+---
+
 # tmux — Unified Reference (tmux 3.5+)
 
 **tmux** (Terminal Multiplexer) runs a background server managing sessions, windows, and panes. Detach/reattach terminals, preserve long-running jobs, and feed pane output to local LLMs — all programmable via control mode.

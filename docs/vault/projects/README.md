@@ -1,3 +1,10 @@
+---
+title: "Projects Overview"
+tags:
+  - projects
+modified: 2026-06-26
+---
+
 # Projects
 
 General-purpose project documentation outside the structured vault categories.

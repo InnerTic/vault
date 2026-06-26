@@ -1,3 +1,11 @@
+---
+title: "System Profile Cachyos"
+tags:
+  - archive
+modified: 2026-06-26
+  - system-profile-cachyos
+---
+
 
 
 this file needs to be current if possible using a combination of tools to gather data

@@ -1,3 +1,11 @@
+---
+title: "Lspci Akuma Output"
+tags:
+  - reference
+modified: 2026-06-26
+  - lspci-akuma-output
+---
+
 # lspci — Akuma System Output
 
 Host: **Akuma** (CachyOS/Arch, AMD Ryzen Cezanne, dual GPU)

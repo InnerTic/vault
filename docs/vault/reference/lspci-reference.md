@@ -1,3 +1,11 @@
+---
+title: "Lspci Reference"
+tags:
+  - reference
+modified: 2026-06-26
+  - lspci-reference
+---
+
 # lspci Reference
 
 Source: [lspci Command Cheat Sheet: All Flags & Examples](https://www.commandinline.com/lspci-command-cheat-sheet/) (Jan 2026)

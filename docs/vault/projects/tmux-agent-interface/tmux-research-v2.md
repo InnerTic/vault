@@ -1,3 +1,12 @@
+---
+title: "Tmux Research V2"
+tags:
+  - projects
+modified: 2026-06-26
+  - tmux-agent-interface
+  - tmux-research-v2
+---
+
 # Tmux — Research Notes
 
 **tmux** (Terminal Multiplexer) runs a background server that manages sessions, windows, and panes. Detach/reattach terminals, preserve long-running jobs, and feed pane output to local LLMs — all programmable via control mode.

@@ -1,3 +1,11 @@
+---
+title: "Akuma Narrative"
+tags:
+  - system
+modified: 2026-06-26
+  - akuma-narrative
+---
+
 # Akuma Recovery Log — Narrative Summary
 
 > INTERPRETIVE. Based on raw log + derived state. Not authoritative — subject to revision when new evidence appears.

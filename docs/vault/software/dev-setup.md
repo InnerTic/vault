@@ -1,6 +1,7 @@
 ---
 tags: [software, setup, reference]
 aliases: [dev-setup, bootstrap, python-setup, git-config]
+modified: 2026-06-26
 updated: 2026-06-15
 ---
 

@@ -1,6 +1,7 @@
 ---
 tags: [diagnostics, boot, systemd, troubleshooting]
 aliases: [boot-timing, boot-debug, slow-boot]
+modified: 2026-06-26
 updated: 2026-06-18
 ---
 

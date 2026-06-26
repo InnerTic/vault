@@ -1,3 +1,13 @@
+---
+title: "06 Style Auditor"
+tags:
+  - projects
+modified: 2026-06-26
+  - translation
+  - pipeline
+  - 06-style-auditor
+---
+
 # Style Auditor
 
 **Port:** 8086 | **GPU:** 3060 (CUDA0) | **Context:** 2048

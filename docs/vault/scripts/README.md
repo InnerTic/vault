@@ -1,3 +1,10 @@
+---
+title: "Scripts Overview"
+tags:
+  - scripts
+modified: 2026-06-26
+---
+
 # Scripts Vault
 
 All scripts extracted from monoliths, organized by purpose.

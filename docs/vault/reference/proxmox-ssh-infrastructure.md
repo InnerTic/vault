@@ -1,3 +1,11 @@
+---
+title: "Proxmox Ssh Infrastructure"
+tags:
+  - reference
+modified: 2026-06-26
+  - proxmox-ssh-infrastructure
+---
+
 # Proxmox SSH Infrastructure & AI Agent Access
 
 ## Overview

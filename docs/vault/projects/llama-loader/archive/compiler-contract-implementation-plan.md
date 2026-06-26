@@ -1,3 +1,13 @@
+---
+title: "Compiler Contract Implementation Plan"
+tags:
+  - projects
+modified: 2026-06-26
+  - llama-loader
+  - archive
+  - compiler-contract-implementation-plan
+---
+
 # Compiler Contract — Implementation Plan
 
 **Date:** 2026-06-22

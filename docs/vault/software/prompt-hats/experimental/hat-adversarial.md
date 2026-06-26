@@ -1,6 +1,7 @@
 ---
 tags: [hat, experimental, adversarial, prompt]
 aliases: [adversarial-hat, red-team, devil's-advocate]
+modified: 2026-06-26
 updated: 2026-06-20
 ---
 

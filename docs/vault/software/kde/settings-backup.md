@@ -1,3 +1,12 @@
+---
+title: "Settings Backup"
+tags:
+  - software
+modified: 2026-06-26
+  - kde
+  - settings-backup
+---
+
 # KDE/Plasma Settings Backup - Manual Restore Instructions
 
 Copy these files back to ~/.config/ after a fresh OS install to restore your KDE desktop settings.

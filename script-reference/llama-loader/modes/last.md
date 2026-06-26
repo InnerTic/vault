@@ -3,6 +3,11 @@ source: dotfiles/scripts/llama-loader/modes/last.sh
 restorable: true
 checksum: 56bbe9146e885a3b7fe1847f3af23f05ccd2232f80605e7803716729e334f286
 last_verified: 2026-06-21
+tags:
+  - llama-loader
+modified: 2026-06-26
+  - modes
+  - last
 ---
 
 # last.sh

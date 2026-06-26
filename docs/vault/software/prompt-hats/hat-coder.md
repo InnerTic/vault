@@ -1,6 +1,7 @@
 ---
 tags: [hat, coder, prompt]
 aliases: [coder-hat, execution-engineer]
+modified: 2026-06-26
 updated: 2026-06-20
 ---
 

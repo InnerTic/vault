@@ -1,3 +1,12 @@
+---
+title: "Tmux Research V3 Ref"
+tags:
+  - projects
+modified: 2026-06-26
+  - tmux-agent-interface
+  - tmux-research-v3-ref
+---
+
 ## .tmux.conf — Reference Configuration
 
 Optimized for modern terminals, tmux 3.5+, and AI agent workflows.

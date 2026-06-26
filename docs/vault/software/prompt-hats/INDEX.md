@@ -1,6 +1,7 @@
 ---
 tags: [navigation, index, hats]
 aliases: [hat-system, prompt-hats, role-hats]
+modified: 2026-06-26
 updated: 2026-06-20
 ---
 

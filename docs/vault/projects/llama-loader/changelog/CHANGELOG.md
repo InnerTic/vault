@@ -1,3 +1,12 @@
+---
+title: "CHANGELOG"
+tags:
+  - projects
+modified: 2026-06-26
+  - llama-loader
+  - changelog
+---
+
 # llama-loader Changelog
 
 **Source:** `dotfiles/scripts/llama-loader/`

@@ -1,3 +1,11 @@
+---
+title: "Akuma Index"
+tags:
+  - system
+modified: 2026-06-26
+  - akuma-index
+---
+
 # Akuma Recovery Log — Index
 
 Source document: `/home/ken/vault/docs/vault/archive/akuma-recovery.log`

@@ -1,3 +1,12 @@
+---
+title: "Model Index"
+tags:
+  - projects
+modified: 2026-06-26
+  - translation
+  - model-index
+---
+
 # Model Index & Evaluation
 
 Complete inventory of all available LLMs with architecture notes, role suitability, and tradeoffs.

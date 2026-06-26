@@ -1,3 +1,12 @@
+---
+title: "Heat Aware Cockpit"
+tags:
+  - software
+modified: 2026-06-26
+  - conky
+  - heat-aware-cockpit
+---
+
 # Heat-Aware Conky Cockpit
 
 Thermal-reactive UI overlay for the system telemetry panel.

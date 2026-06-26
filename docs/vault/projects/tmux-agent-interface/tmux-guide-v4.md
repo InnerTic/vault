@@ -1,3 +1,12 @@
+---
+title: "Tmux Guide V4"
+tags:
+  - projects
+modified: 2026-06-26
+  - tmux-agent-interface
+  - tmux-guide-v4
+---
+
 # tmux — Complete Guide (v4)
 
 **tmux** (Terminal Multiplexer) manages sessions, windows, and panes from a background server. Detach and reattach terminals, preserve long-running jobs, and feed pane output to local LLMs — all programmable via control mode.

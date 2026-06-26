@@ -1,3 +1,12 @@
+---
+title: "CHECKLIST"
+tags:
+  - projects
+modified: 2026-06-26
+  - multi-agent-gguf-switcher
+  - CHECKLIST
+---
+
 Multi-Agent GGUF Switcher — Checklist
 ======================================
 

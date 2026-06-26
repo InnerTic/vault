@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/vault/projects/director-agent.md",
-                "mode": "source",
+                "file": "docs/CHANGELOG.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "director-agent"
+              "title": "CHANGELOG"
             }
           }
         ]
@@ -182,21 +182,31 @@
   },
   "active": "49bcc2ba6e66a0d9",
   "lastOpenFiles": [
-    "docs/vault/projects/vault-driven-container-profiles.md",
-    "dotfiles/AGENTS.md",
-    "script-reference/vault-snapshot.md",
-    "AGENTS.md",
-    "dotfiles/docs/reference/gnupg-backup.md",
-    "docs/CHANGELOG.md",
-    "docs/CHANGELOG.raw.md",
-    "docs/INDEX.md",
-    "script-reference/vault-restore-all.md",
-    "script-reference/vault-restore.md",
-    "script-reference/forge-llm.md",
-    "script-reference/check-fixes.md",
-    "script-reference/build-gold-lxc.md",
-    "script-reference/archive-script.md",
-    "dotfiles/README.md",
-    "infra/CONTRACT.md"
+    "dotfiles/docs/vault/archive/scratchpad.md",
+    "dotfiles/docs/vault/archive/implementation-workflow-backup.md",
+    "dotfiles/docs/vault/archive/implementation-workflow.md",
+    "dotfiles/docs/vault/archive/cachyos-steam-nvidia-input-log.md",
+    "dotfiles/docs/reference/software-version-requirements.md",
+    "dotfiles/docs/vault/context/INDEX.md",
+    "dotfiles/docs/vault/projects/translation-pipeline/roles/00-parser.md",
+    "dotfiles/docs/vault/projects/ai-bubble-watchboard.md",
+    "dotfiles/docs/vault/projects/ai-watchtower.md",
+    "dotfiles/docs/vault/projects/local-ai-control-tower.md",
+    "dotfiles/docs/vault/projects/local-ai-strategy.md",
+    "dotfiles/docs/vault/projects/meta-scripts.md",
+    "dotfiles/docs/vault/projects/README.md",
+    "dotfiles/docs/vault/projects/sd-webui-forge-neo.md",
+    "dotfiles/docs/vault/projects/translation-pipeline.md",
+    "dotfiles/docs/vault/software/opencode/plugins.md",
+    "dotfiles/docs/vault/software/dev-setup.md",
+    "dotfiles/docs/vault/software/kvm-bridge-networking.md",
+    "dotfiles/docs/vault/system/backup-checklist.md",
+    "dotfiles/docs/vault/system/debian-setup-hoops.md",
+    "dotfiles/docs/vault/system/drives-and-mounts.md",
+    "dotfiles/docs/vault/system/dual-boot-recovery.md",
+    "dotfiles/docs/vault/software/ai-tools/commands.md",
+    "dotfiles/docs/vault/scripts/REBUILD_SCRIPT.md",
+    "dotfiles/docs/vault/scripts/shell-setup.md",
+    "dotfiles/docs/vault/scripts/symlink-workspace.md"
   ]
 }

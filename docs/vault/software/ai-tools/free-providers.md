@@ -1,3 +1,12 @@
+---
+title: "Free Providers"
+tags:
+  - software
+modified: 2026-06-26
+  - ai
+  - free-providers
+---
+
 # Free LLM API Providers — Backup Options
 **Generated: 2026-05-13**
 **Sources:** awesome-free-llm-apis (GitHub), free-llm.com, tokenmix.ai, awesomeagents.ai

@@ -1,3 +1,12 @@
+---
+title: "Llama Setup"
+tags:
+  - software
+modified: 2026-06-26
+  - ai
+  - llama-setup
+---
+
 # llama.cpp
 
 CUDA 12.4 (Debian) / 12.9 (CachyOS) · sm_61 + sm_86 (RTX 3060 + Tesla P40)

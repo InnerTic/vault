@@ -1,3 +1,11 @@
+---
+title: "Commands"
+tags:
+  - reference
+modified: 2026-06-26
+  - commands
+---
+
 # =============================================================================
 # QUICK REFERENCE COMMANDS
 # Last updated: 2026-06-22
@@ -102,6 +110,23 @@ ssh proxmox     # Proxmox VE host (172.16.7.1)
 ssh quartz      # Quartz wiki LXC (172.16.12.17)
 ssh pihole      # Pi-hole DNS LXC (172.16.12.1)
 ssh openclawVM  # OpenClaw VM (172.16.12.12)
+
+# =============================================================================
+# QUARTZ WIKI — Update after vault changes
+# =============================================================================
+update-wiki              # Rebuild Quartz site on LXC 301:
+                         #   ssh 172.16.12.17 "/home/ken/scripts/update-quartz.sh /home/ken/repos/vault /home/ken/apps/quartz"
+
+# =============================================================================
+# VAULT — Script management
+# =============================================================================
+sync-dotfiles             # Push vault → dotfiles mirror:
+                          #   cd ~/vault && git pull
+                          #   ~/vault/dotfiles/dotfiles-sync.sh --force
+vault-snapshot <script>   # Archive dotfiles/scripts/<script> to vault/script-reference/ as restorable .md
+vault-restore <script>    # Restore a single script from vault/script-reference/ back to dotfiles/scripts/
+vault-restore-all         # Disaster recovery: restore ALL scripts from vault/script-reference/
+check-fixes               # Quality gate — check pending bugs before running apt upgrade
 
 # =============================================================================
 # FREQUENTLY USED COMMANDS (from shell history)

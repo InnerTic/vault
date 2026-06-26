@@ -1,3 +1,11 @@
+---
+title: "Toggle P40"
+tags:
+  - scripts
+modified: 2026-06-26
+  - toggle-p40
+---
+
 # toggle-p40.sh
 
 ```bash

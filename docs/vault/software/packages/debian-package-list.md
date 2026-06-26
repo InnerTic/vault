@@ -1,3 +1,12 @@
+---
+title: "Debian Package List"
+tags:
+  - software
+modified: 2026-06-26
+  - packages
+  - debian-package-list
+---
+
 # Applications for reinstall — Debian
 # Base system packages (zsh, git, curl, python3, etc.) are already present
 # This list is only for additional apps not in the Debian base install

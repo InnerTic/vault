@@ -1,3 +1,12 @@
+---
+title: "Forge Neo"
+tags:
+  - software
+modified: 2026-06-26
+  - ai
+  - forge-neo
+---
+
 # SD WebUI Forge Neo
 
 CUDA 12.4 (Debian) / 12.9 (CachyOS) · `/mnt/workspace/sd-webui-forge-neo/`

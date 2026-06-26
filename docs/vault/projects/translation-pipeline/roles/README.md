@@ -1,3 +1,12 @@
+---
+title: "Roles Overview"
+tags:
+  - projects
+modified: 2026-06-26
+  - translation
+  - pipeline
+---
+
 # Pipeline Roles
 
 Each stage is a separate model that gets loaded on its GPU, serves one API call, then unloaded. Models are swappable — see each role's page for current model + alternatives.

@@ -1,3 +1,13 @@
+---
+title: "01 Glossary Updater"
+tags:
+  - projects
+modified: 2026-06-26
+  - translation
+  - pipeline
+  - 01-glossary-updater
+---
+
 # Glossary Candidate
 
 **Port:** 8082 | **GPU:** P40 (CUDA1) | **Context:** 4096

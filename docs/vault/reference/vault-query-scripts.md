@@ -1,3 +1,11 @@
+---
+title: "Vault Query Scripts"
+tags:
+  - reference
+modified: 2026-06-26
+  - vault-query-scripts
+---
+
 # Vault Query Scripts
 
 Minimal retrieval system: Fish CLI frontend + Bash backend. Grep-first, index-aware, no embeddings yet.

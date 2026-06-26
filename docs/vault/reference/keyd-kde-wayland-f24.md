@@ -1,3 +1,11 @@
+---
+title: "Keyd Kde Wayland F24"
+tags:
+  - reference
+modified: 2026-06-26
+  - keyd-kde-wayland-f24
+---
+
 # Why F24 worked (keyd + KDE + Wayland)
 
 ## 1. keyd is not "typing keys"

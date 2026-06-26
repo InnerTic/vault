@@ -1,3 +1,11 @@
+---
+title: "Vault Evolution Timeline Raw"
+tags:
+  - reference
+modified: 2026-06-26
+  - vault-evolution-timeline-raw
+---
+
 # Vault Evolution — Raw Facts (Immutable Log)
 
 ## Source Commands

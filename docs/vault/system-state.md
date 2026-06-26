@@ -1,3 +1,10 @@
+---
+title: "System State"
+tags:
+  - system-state
+modified: 2026-06-26
+---
+
 # System State
 
 **Type:** State document (not a changelog — describes current truth at a point in time)

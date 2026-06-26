@@ -1,3 +1,11 @@
+---
+title: "CONTRACT"
+tags:
+  - infra
+modified: 2026-06-26
+  - CONTRACT
+---
+
 # INFRA PATH CONTRACT — Canonical Layout
 
 This document defines the ONLY valid execution paths for `~/infra/`.

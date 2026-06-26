@@ -1,3 +1,12 @@
+---
+title: "Temporary Hacks"
+tags:
+  - software
+modified: 2026-06-26
+  - kde
+  - temporary-hacks
+---
+
 # Temporary Hacks
 
 Workarounds that exist only until upstream fixes are packaged.

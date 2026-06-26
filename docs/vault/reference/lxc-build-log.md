@@ -1,6 +1,7 @@
 ---
 tags: [reference, proxmox, lxc, build-log]
 aliases: [lxc-build-log, quartz-test-build, container-build, proxmox-lxc-build]
+modified: 2026-06-26
 updated: 2026-06-20
 ---
 

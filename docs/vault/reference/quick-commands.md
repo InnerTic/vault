@@ -1,3 +1,11 @@
+---
+title: "Quick Commands"
+tags:
+  - reference
+modified: 2026-06-26
+  - quick-commands
+---
+
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                         QUICK START COMMANDS                                 ║
 ║                     Last updated: 2026-06-22                                 ║

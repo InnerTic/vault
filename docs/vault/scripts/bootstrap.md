@@ -1,3 +1,11 @@
+---
+title: "Bootstrap"
+tags:
+  - scripts
+modified: 2026-06-26
+  - bootstrap
+---
+
 # bootstrap.sh
 
 ```bash

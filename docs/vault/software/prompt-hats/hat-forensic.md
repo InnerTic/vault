@@ -1,6 +1,7 @@
 ---
 tags: [hat, forensic, inspection, prompt]
 aliases: [forensic-hat, deep-inspection]
+modified: 2026-06-26
 updated: 2026-06-20
 ---
 

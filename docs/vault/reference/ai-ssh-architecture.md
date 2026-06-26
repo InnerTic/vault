@@ -1,6 +1,7 @@
 ---
 tags: [reference, security, ssh, ai, proxmox, lxc]
 aliases: [ai-ssh, agent-safe-ssh, restricted-ssh, ai-access]
+modified: 2026-06-26
 updated: 2026-06-20
 ---
 

@@ -1,3 +1,12 @@
+---
+title: "Setup"
+tags:
+  - software
+modified: 2026-06-26
+  - quartz
+  - setup
+---
+
 # Quartz Digital Garden Setup
 
 Quartz v5.0.0 — static site generator for the Obsidian vault.

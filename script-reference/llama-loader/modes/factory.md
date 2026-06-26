@@ -3,6 +3,11 @@ source: dotfiles/scripts/llama-loader/modes/factory.sh
 restorable: true
 checksum: 19322521f46914e9dd5584bea5ec6ea401ca3e3ce1e21e1f209dcc6eab25f54e
 last_verified: 2026-06-21
+tags:
+  - llama-loader
+modified: 2026-06-26
+  - modes
+  - factory
 ---
 
 # factory.sh

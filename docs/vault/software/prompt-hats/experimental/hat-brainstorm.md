@@ -1,6 +1,7 @@
 ---
 tags: [hat, experimental, brainstorm, prompt]
 aliases: [brainstorm-hat, divergent-thinking, ideation]
+modified: 2026-06-26
 updated: 2026-06-20
 ---
 

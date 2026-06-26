@@ -1,3 +1,10 @@
+---
+title: "AGENTS"
+tags:
+  - AGENTS
+modified: 2026-06-26
+---
+
 # vault.git — Single source of truth for Akuma
 
 Personal knowledge vault, system config, and documentation repo. **Not a software project.** No build system, no package manager, no tests.
@@ -44,3 +51,22 @@ Then boot the other OS and repeat.
 - Installation docs must be full commands with flags + annotations + source URLs — goal: clean reinstall recoverable from this repo alone
 - Model inventory: `find ~/Downloads/llm_models/ -name '*.gguf' -printf '%f\t%s\n'` (filenames drift)
 - Git user: `InnerTic` / `innertic@users.noreply.github.com`
+- All vault .md files should have YAML frontmatter with `title:` and `tags:` — deterministic tag derivation from directory path + filename
+
+## Sessions
+
+### 2026-06-26 — Vault tag/formatting audit + full frontmatter fix
+
+**Trigger**: User noticed missing tags and misformatted text across vault.
+
+**Scan** (local Qwen3.6-35B on P40, 12 batches of 20, ~30 min):
+- 240 .md files scanned
+- 150 missing frontmatter, 36 had frontmatter but no tags, 54 OK
+- 112 files with long lines (>120 chars), 15 with trailing whitespace
+
+**Fix** (`/tmp/vault-fix-frontmatter.sh`):
+- 186 files fixed (150 got full frontmatter + tags, 36 got tags added)
+- Tags derived from directory components + filename (e.g. `software/ai-tools/llama-setup.md` → `software, ai, llama-setup`)
+- Remaining issues: long lines (cosmetic), some titles need human review
+
+**Dotfiles sync**: Added `node_modules/`, `.serena/`, `quartz-data/`, `scripts/archive/` to `dotfiles/.gitignore`, synced mirror and pushed (`deb@0f8655c`).

@@ -3,6 +3,9 @@ source: dotfiles/scripts/vault-restore.sh
 restorable: true
 checksum: 957559db5a00daca71bd2e1182f4e9bdbd66de563b47d0641c624f30c53c50c1
 last_verified: 2026-06-21
+tags:
+  - vault-restore
+modified: 2026-06-26
 ---
 
 # vault-restore.sh

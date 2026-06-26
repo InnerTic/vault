@@ -3,6 +3,11 @@ source: dotfiles/scripts/llama-loader/builder/context.sh
 restorable: true
 checksum: 5817147783820c74843a89418adc8be18e0ae015b00a6a29d38db83ed0d38c20
 last_verified: 2026-06-21
+tags:
+  - llama-loader
+modified: 2026-06-26
+  - builder
+  - context
 ---
 
 # context.sh

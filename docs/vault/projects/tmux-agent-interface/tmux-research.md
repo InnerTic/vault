@@ -1,3 +1,12 @@
+---
+title: "Tmux Research"
+tags:
+  - projects
+modified: 2026-06-26
+  - tmux-agent-interface
+  - tmux-research
+---
+
 # Tmux — Research Notes
 
 **Tmux** (Terminal Multiplexer) runs a background daemon that manages terminals, sessions, windows, and panes. It lets you detach/reattach terminals, preserve long-running jobs, and script your workflow — including feeding pane output to local LLMs and using tmux as an agent control surface.

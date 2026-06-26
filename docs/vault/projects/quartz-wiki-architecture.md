@@ -1,3 +1,11 @@
+---
+title: "Quartz Wiki Architecture"
+tags:
+  - projects
+modified: 2026-06-26
+  - quartz-wiki-architecture
+---
+
 # Quartz Wiki — Architecture & Rollout Plan
 
 **Status:** Proposed

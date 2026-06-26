@@ -1,6 +1,7 @@
 ---
 tags: [keyd, input, keyboard, remapping]
 aliases: [keyd-setup, keyd-debug, keyd-troubleshoot]
+modified: 2026-06-26
 updated: 2026-06-18
 ---
 

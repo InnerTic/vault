@@ -1,3 +1,11 @@
+---
+title: "Fastfetch"
+tags:
+  - scripts
+modified: 2026-06-26
+  - fastfetch
+---
+
 # fastfetch.jsonc
 
 ```jsonc

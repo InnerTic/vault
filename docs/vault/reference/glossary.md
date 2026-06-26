@@ -1,6 +1,7 @@
 ---
 tags: [reference, glossary, definitions]
 aliases: [glossary, definitions, terms, abbreviations]
+modified: 2026-06-26
 updated: 2026-06-15
 ---
 

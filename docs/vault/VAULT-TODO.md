@@ -1,3 +1,10 @@
+---
+title: "VAULT TODO"
+tags:
+  - VAULT-TODO
+modified: 2026-06-26
+---
+
 # Vault Restructure — To-Do List
 
 **Branch:** `vault-restructure`  

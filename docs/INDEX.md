@@ -1,3 +1,11 @@
+---
+title: "Docs Overview"
+tags:
+  - index
+  - vault
+modified: 2026-06-26
+---
+
 # Docs Vault
 
 System documentation, rebuild references, GPU config, cheat sheets, and AI context.

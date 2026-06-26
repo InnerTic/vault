@@ -1,3 +1,12 @@
+---
+title: "Report Phase0 Inventory"
+tags:
+  - archive
+modified: 2026-06-26
+  - migration
+  - report-phase0-inventory
+---
+
 # Phase 0 — Inventory & Mapping Report
 
 **Date:** 2026-06-21

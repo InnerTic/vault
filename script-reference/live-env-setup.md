@@ -3,6 +3,9 @@ source: dotfiles/scripts/live-env-setup.sh
 restorable: true
 checksum: 600710135dc1a233bdd1c7fc77d0edfefdd11e3c361ff5b8eaa725a7df035cca
 last_verified: 2026-06-21
+tags:
+  - live-env-setup
+modified: 2026-06-26
 ---
 
 # live-env-setup.sh

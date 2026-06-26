@@ -2,6 +2,7 @@
 tags: [research, runbook, operations, vault-architecture]
 status: proposed
 source: opencode-session-2026-06-21
+modified: 2026-06-26
 ---
 
 # Runbook Architecture — Research Note

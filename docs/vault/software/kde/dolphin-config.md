@@ -1,3 +1,12 @@
+---
+title: "Dolphin Config"
+tags:
+  - software
+modified: 2026-06-26
+  - kde
+  - dolphin-config
+---
+
 # Dolphin Configuration — Reference Copy
 # Restore: cp this file to ~/.config/dolphinrc
 # After restore: run `kquitapp6 dolphin && dolphin` or log out/in

@@ -1,3 +1,11 @@
+---
+title: "Homelab Service Contract"
+tags:
+  - projects
+modified: 2026-06-26
+  - homelab-service-contract
+---
+
 # Homelab Service Contract
 
 **Type:** Architecture · **Updated:** 2026-06-21

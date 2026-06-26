@@ -1,4 +1,19 @@
-# Firecrawl MCP Setup
+---
+title: "Setup"
+tags:
+  - software
+modified: 2026-06-26
+  - web-scraping
+  - setup
+---
+
+
+
+rethink the setup form the ground up. this is a searxng container made with a community script. ITS A CONTAINER UNDER PROXMOX. LXC has no /mnt/workspace thats spicificlly Akuma and its OS's have that
+
+
+
+# Firecrawl MCP Setup 
 
 Web ingestion MCP server — converts URLs to clean markdown, extracts structured data, searches the web. Runs alongside SearXNG in LXC 108.
 

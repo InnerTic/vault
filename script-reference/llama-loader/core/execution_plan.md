@@ -3,6 +3,11 @@ source: dotfiles/scripts/llama-loader/core/execution_plan.sh
 restorable: true
 checksum: aecf3ba8af41dcaac7c4ce8005cb3799f149acf8af639f04c73a3fe29ceeecd6
 last_verified: 2026-06-21
+tags:
+  - llama-loader
+modified: 2026-06-26
+  - core
+  - execution-plan
 ---
 
 # execution_plan.sh

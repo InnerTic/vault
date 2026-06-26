@@ -1,6 +1,7 @@
 ---
 tags: [system, recovery, limine, dual-boot]
 aliases: [limine-recovery, mx-recovery, boot-recovery]
+modified: 2026-06-26
 updated: 2026-06-18
 ---
 

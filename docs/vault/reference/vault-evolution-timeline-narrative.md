@@ -1,3 +1,11 @@
+---
+title: "Vault Evolution Timeline Narrative"
+tags:
+  - reference
+modified: 2026-06-26
+  - vault-evolution-timeline-narrative
+---
+
 # Vault Evolution — Narrative Summary
 
 > INTERPRETIVE. Based on raw log + derived state. Not authoritative — subject to revision when new evidence appears.

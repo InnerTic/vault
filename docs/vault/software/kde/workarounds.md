@@ -1,3 +1,12 @@
+---
+title: "Workarounds"
+tags:
+  - software
+modified: 2026-06-26
+  - kde
+  - workarounds
+---
+
 # KDE/Plasma Workarounds — Tracked Bugs
 
 Workarounds for KDE bugs that need periodic review for upstream fixes.

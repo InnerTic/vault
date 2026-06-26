@@ -1,3 +1,13 @@
+---
+title: "00 Parser"
+tags:
+  - projects
+modified: 2026-06-26
+  - translation
+  - pipeline
+  - 00-parser
+---
+
 # Parser
 
 **Port:** 8080 | **GPU:** 3060 (CUDA0) | **Context:** 2048 | **Temp:** 0.1

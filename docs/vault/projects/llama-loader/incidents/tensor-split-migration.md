@@ -1,3 +1,13 @@
+---
+title: "Tensor Split Migration"
+tags:
+  - projects
+modified: 2026-06-26
+  - llama-loader
+  - incidents
+  - tensor-split-migration
+---
+
 # Tensor-Split Migration
 
 **Date:** 2026-06-21

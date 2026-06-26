@@ -1,3 +1,12 @@
+---
+title: "Setup"
+tags:
+  - software
+modified: 2026-06-26
+  - searxng
+  - setup
+---
+
 # SearXNG Setup
 
 Self-hosted metasearch engine running as a user systemd service.

@@ -1,6 +1,7 @@
 ---
 tags: [reference, virtualization, libvirt, networking, bridge]
 aliases: [libvirt-bridge, vm-bridge, br0-setup]
+modified: 2026-06-26
 updated: 2026-06-19
 ---
 

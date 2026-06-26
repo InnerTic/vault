@@ -3,6 +3,9 @@ source: dotfiles/scripts/lxc-bootstrap.sh
 restorable: true
 checksum: 412501e3b8af19a790e29d8b410b405aeced5bfb5483187130076e2e7e4b0292
 last_verified: 2026-06-21
+tags:
+  - lxc-bootstrap
+modified: 2026-06-26
 ---
 
 # lxc-bootstrap.sh

@@ -3,6 +3,11 @@ source: dotfiles/scripts/llama-loader/builder/concurrency.sh
 restorable: true
 checksum: 40a616cb255348d4937f569232e351ee8b03eb813be26679938c859112408518
 last_verified: 2026-06-21
+tags:
+  - llama-loader
+modified: 2026-06-26
+  - builder
+  - concurrency
 ---
 
 # concurrency.sh

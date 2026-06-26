@@ -1,3 +1,12 @@
+---
+title: "Ollama Notes"
+tags:
+  - software
+modified: 2026-06-26
+  - ai
+  - ollama-notes
+---
+
 # Ollama GPU/CPU Switching Notes for OpenClaw/OpenCode
 
 ## Current Setup (GPU enabled)

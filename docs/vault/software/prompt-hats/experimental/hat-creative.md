@@ -1,6 +1,7 @@
 ---
 tags: [hat, experimental, creative, prompt]
 aliases: [creative-hat, fiction-engine, worldbuilder]
+modified: 2026-06-26
 updated: 2026-06-20
 ---
 

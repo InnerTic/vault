@@ -1,3 +1,12 @@
+---
+title: "IMPL"
+tags:
+  - projects
+modified: 2026-06-26
+  - multi-agent-gguf-switcher
+  - IMPL
+---
+
 Python Implementation
 =====================
 

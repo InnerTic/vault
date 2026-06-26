@@ -1,3 +1,11 @@
+---
+title: "Agent Hallucination Techniques"
+tags:
+  - reference
+modified: 2026-06-26
+  - agent-hallucination-techniques
+---
+
 # Stop AI Agent Hallucinations — Reference
 
 **URL:** https://dev.to/aws/stop-ai-agent-hallucinations-4-essential-techniques-2i94

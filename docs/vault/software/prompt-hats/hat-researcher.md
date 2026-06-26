@@ -1,6 +1,7 @@
 ---
 tags: [hat, researcher, prompt]
 aliases: [researcher-hat, deep-explorer]
+modified: 2026-06-26
 updated: 2026-06-20
 ---
 

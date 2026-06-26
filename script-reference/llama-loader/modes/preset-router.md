@@ -3,6 +3,11 @@ source: dotfiles/scripts/llama-loader/modes/preset-router.sh
 restorable: true
 checksum: d6d16fd4a3aa6d5497e59ddff65ddf969dd5378fb3e7b277c65d045d0b5dd474
 last_verified: 2026-06-21
+tags:
+  - llama-loader
+modified: 2026-06-26
+  - modes
+  - preset-router
 ---
 
 # preset-router.sh

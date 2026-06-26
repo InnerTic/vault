@@ -1,3 +1,11 @@
+---
+title: "Memory Reasoning Execution Pipeline"
+tags:
+  - reference
+modified: 2026-06-26
+  - memory-reasoning-execution-pipeline
+---
+
 # Memory → Reasoning → Execution Pipeline
 
 How `vault-query | llama-loader` closes the loop.

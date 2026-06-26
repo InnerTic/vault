@@ -1,3 +1,13 @@
+---
+title: "02 Briefer"
+tags:
+  - projects
+modified: 2026-06-26
+  - translation
+  - pipeline
+  - 02-briefer
+---
+
 # Narrative Briefer
 
 **Port:** 8081 | **GPU:** P40 (CUDA1) | **Context:** 4096
