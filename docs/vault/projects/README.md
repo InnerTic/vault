@@ -12,7 +12,6 @@ General-purpose project documentation outside the structured vault categories.
 
 | Project | Reason |
 |---------|--------|
-| [[meta-scripts\|Meta Script Project]] | Overengineered — individual scripts (lxc-bootstrap, llama-loader modular) already achieved ad-hoc modularity. No code was ever written. |
 
 | Project | Source | Description |
 |---------|--------|-------------|

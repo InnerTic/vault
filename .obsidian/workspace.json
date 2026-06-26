@@ -182,6 +182,7 @@
   },
   "active": "49bcc2ba6e66a0d9",
   "lastOpenFiles": [
+    "docs/vault/archive/meta-scripts.md",
     "docs/vault/projects/quartz-wiki-architecture.md",
     "docs/vault/hardware/gpu/config-notes.md",
     "docs/CHANGELOG.md",
@@ -206,7 +207,6 @@
     "dotfiles/docs/vault/software/kvm-bridge-networking.md",
     "dotfiles/docs/vault/system/backup-checklist.md",
     "dotfiles/docs/vault/system/debian-setup-hoops.md",
-    "dotfiles/docs/vault/system/drives-and-mounts.md",
-    "dotfiles/docs/vault/system/dual-boot-recovery.md"
+    "dotfiles/docs/vault/system/drives-and-mounts.md"
   ]
 }
