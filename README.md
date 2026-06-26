@@ -1,3 +1,3 @@
-git clone git@github.com:InnerTic/vault.git ~/vault
-cd ~/vualt
-./bootstrap.sh
+git clone git@github.com:InnerTic/vault.git ~/vault\
+cd ~/vault
+
