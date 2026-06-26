@@ -1,7 +1,11 @@
 ---
+title: "Hat Orchestrator"
 tags:
+  - software
+  - prompt-hats
+  - hat-orchestrator
 aliases: [orchestrator-hat, meta-controller]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧩 Orchestrator Hat — Meta Controller

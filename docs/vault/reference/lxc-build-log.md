@@ -1,7 +1,10 @@
 ---
+title: "Lxc Build Log"
 tags:
+  - reference
+  - lxc-build-log
 aliases: [lxc-build-log, quartz-test-build, container-build, proxmox-lxc-build]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧱 Proxmox LXC Build Log — quartz-test (300)

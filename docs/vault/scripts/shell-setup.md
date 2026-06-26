@@ -2,6 +2,7 @@
 title: "Shell Setup"
 tags:
   - scripts
+modified: 2026-06-26
 ---
 
 # shell-setup.sh

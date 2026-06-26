@@ -2,6 +2,7 @@
 title: "Llama Loader Compiler Contract"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # llama-loader Compiler Contract

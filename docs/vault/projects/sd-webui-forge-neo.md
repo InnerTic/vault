@@ -2,6 +2,7 @@
 title: "Sd Webui Forge Neo"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # SD WebUI Forge Neo

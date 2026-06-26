@@ -1,10 +1,12 @@
 ---
+title: "Custom"
 source: dotfiles/scripts/llama-loader/modes/custom.sh
 restorable: true
 checksum: 09df9c73a5202f118587b54e71803804d222531f1c3a9a9f5208ba3e028f780f
 last_verified: 2026-06-21
 tags:
   - llama-loader
+modified: 2026-06-26
 ---
 
 # custom.sh

@@ -1,7 +1,11 @@
 ---
+title: "Cuda 12.9 Setup"
 tags:
+  - software
+  - ai-tools
+  - cuda-12.9-setup
 aliases: [cuda-setup, cuda-12.9, install-cuda]
-updated: 2026-06-17
+modified: 2026-06-26
 ---
 
 # CUDA 12.9 — Debian Manual Install

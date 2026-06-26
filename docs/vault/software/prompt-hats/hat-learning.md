@@ -1,7 +1,11 @@
 ---
+title: "Hat Learning"
 tags:
+  - software
+  - prompt-hats
+  - hat-learning
 aliases: [learning-hat, skill-instructor]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧭 Learning Hat — Skill Instructor

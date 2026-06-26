@@ -2,6 +2,7 @@
 title: "Heat Aware Cockpit"
 tags:
   - software
+modified: 2026-06-26
 ---
 
 # Heat-Aware Conky Cockpit

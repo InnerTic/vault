@@ -2,6 +2,7 @@
 title: "Free Providers"
 tags:
   - software
+modified: 2026-06-26
 ---
 
 # Free LLM API Providers — Backup Options

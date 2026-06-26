@@ -1,7 +1,10 @@
 ---
+title: "Prompt Hats Index"
 tags:
+  - software
+  - prompt-hats
 aliases: [hat-system, prompt-hats, role-hats]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # Prompt Hat System

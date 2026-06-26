@@ -2,6 +2,7 @@
 title: "AKUMA VERSIONS"
 tags:
   - system
+modified: 2026-06-26
 ---
 
 AKUMA SYSTEM EVOLUTION — VERSION PROGRESSION

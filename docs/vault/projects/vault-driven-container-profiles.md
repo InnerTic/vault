@@ -2,6 +2,7 @@
 title: "Vault Driven Container Profiles"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # Vault-Driven Container Profiles

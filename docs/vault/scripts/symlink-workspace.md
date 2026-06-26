@@ -2,6 +2,7 @@
 title: "Symlink Workspace"
 tags:
   - scripts
+modified: 2026-06-26
 ---
 
 # symlink-workspace.sh

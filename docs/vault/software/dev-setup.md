@@ -1,7 +1,10 @@
 ---
+title: "Dev Setup"
 tags:
+  - software
+  - dev-setup
 aliases: [dev-setup, bootstrap, python-setup, git-config]
-updated: 2026-06-15
+modified: 2026-06-26
 ---
 
 # Development Setup

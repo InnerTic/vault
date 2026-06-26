@@ -2,6 +2,7 @@
 title: "Setup"
 tags:
   - software
+modified: 2026-06-26
 ---
 
 # Quartz Digital Garden Setup

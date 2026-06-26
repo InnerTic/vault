@@ -1,7 +1,11 @@
 ---
+title: "Experimental Index"
 tags:
+  - software
+  - prompt-hats
+  - experimental
 aliases: [experimental-hats, fringe-hats]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧪 Experimental Hats

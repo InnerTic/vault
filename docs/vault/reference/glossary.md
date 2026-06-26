@@ -1,7 +1,10 @@
 ---
+title: "Glossary"
 tags:
+  - reference
+  - glossary
 aliases: [glossary, definitions, terms, abbreviations]
-updated: 2026-06-15
+modified: 2026-06-26
 ---
 
 # Glossary & Abbreviations

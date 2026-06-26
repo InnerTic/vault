@@ -2,6 +2,7 @@
 title: "Tmux Research V3 Ref"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 ## .tmux.conf — Reference Configuration

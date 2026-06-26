@@ -2,6 +2,7 @@
 title: "Temporary Hacks"
 tags:
   - software
+modified: 2026-06-26
 ---
 
 # Temporary Hacks

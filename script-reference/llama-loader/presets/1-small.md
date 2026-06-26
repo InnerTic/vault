@@ -1,10 +1,12 @@
 ---
+title: "1 Small"
 source: dotfiles/scripts/llama-loader/presets/1-small.sh
 restorable: true
 checksum: ebb59630b285f8fc7c9a23a5b86476ea4175be118514acef977bcc408279cecb
 last_verified: 2026-06-21
 tags:
   - llama-loader
+modified: 2026-06-26
 ---
 
 # 1-small.sh

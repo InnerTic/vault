@@ -1,10 +1,12 @@
 ---
+title: "Build Gold Lxc"
 source: dotfiles/scripts/build-gold-lxc.sh
 restorable: true
 checksum: bad2db3685d4cdc8f69aff39ddf7f1a0828ba977a420da0fa2d0fb44c1f051ad
 last_verified: 2026-06-21
 tags:
   - build-gold-lxc
+modified: 2026-06-26
 ---
 
 # build-gold-lxc.sh

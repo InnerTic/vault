@@ -2,6 +2,7 @@
 title: "AGENTS"
 tags:
   - AGENTS
+modified: 2026-06-26
 ---
 
 # vault.git — Single source of truth for Akuma

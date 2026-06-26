@@ -2,6 +2,7 @@
 title: "02 Briefer"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # Narrative Briefer

@@ -1,7 +1,9 @@
 ---
+title: "Faq"
 tags:
+  - reference
 aliases: [faq, common-questions]
-updated: 2026-06-15
+modified: 2026-06-26
 ---
 
 # Frequently Asked Questions

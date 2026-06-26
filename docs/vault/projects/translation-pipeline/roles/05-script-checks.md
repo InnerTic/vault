@@ -2,6 +2,7 @@
 title: "05 Script Checks"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # Step 5 — Script Checks (Deterministic Validation Gate)

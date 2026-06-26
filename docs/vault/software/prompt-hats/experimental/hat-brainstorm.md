@@ -1,7 +1,12 @@
 ---
+title: "Hat Brainstorm"
 tags:
+  - software
+  - prompt-hats
+  - experimental
+  - hat-brainstorm
 aliases: [brainstorm-hat, divergent-thinking, ideation]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 💡 Brainstorm Hat — Divergent Ideation

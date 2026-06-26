@@ -1,7 +1,11 @@
 ---
+title: "Hat Homelab"
 tags:
+  - software
+  - prompt-hats
+  - hat-homelab
 aliases: [homelab-hat, homelab-engineer]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧭 Homelab Hat — Systems Engineer

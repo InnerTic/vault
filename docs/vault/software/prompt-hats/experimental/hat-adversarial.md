@@ -1,7 +1,12 @@
 ---
+title: "Hat Adversarial"
 tags:
+  - software
+  - prompt-hats
+  - experimental
+  - hat-adversarial
 aliases: [adversarial-hat, red-team, devil's-advocate]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # ⚔️ Adversarial Hat — Red-Team + Stress-Test

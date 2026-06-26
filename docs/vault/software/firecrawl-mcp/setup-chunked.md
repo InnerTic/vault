@@ -2,6 +2,7 @@
 title: "Setup Chunked"
 tags:
   - software
+modified: 2026-06-26
 ---
 
 # Firecrawl MCP — Chunked Setup

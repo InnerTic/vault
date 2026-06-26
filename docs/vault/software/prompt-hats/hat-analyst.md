@@ -1,7 +1,11 @@
 ---
+title: "Hat Analyst"
 tags:
+  - software
+  - prompt-hats
+  - hat-analyst
 aliases: [analyst-hat, diagnostic-thinker]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧠 Analyst Hat — Diagnostic Thinker

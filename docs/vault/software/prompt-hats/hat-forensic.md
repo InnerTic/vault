@@ -1,7 +1,11 @@
 ---
+title: "Hat Forensic"
 tags:
+  - software
+  - prompt-hats
+  - hat-forensic
 aliases: [forensic-hat, deep-inspection]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🔍 Forensic Hat — Deep Inspection

@@ -1,7 +1,12 @@
 ---
+title: "Hat Unfiltered"
 tags:
+  - software
+  - prompt-hats
+  - experimental
+  - hat-unfiltered
 aliases: [unfiltered-hat, uncensored, no-rules]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🔞 Unfiltered Hat — No Rules, No Filters

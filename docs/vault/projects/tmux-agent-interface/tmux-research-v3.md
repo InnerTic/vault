@@ -2,6 +2,7 @@
 title: "Tmux Research V3"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # Tmux — Research Notes (v3)

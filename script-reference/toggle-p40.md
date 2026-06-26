@@ -1,10 +1,12 @@
 ---
+title: "Toggle P40"
 source: dotfiles/scripts/toggle-p40.sh
 restorable: true
 checksum: ba5e4f3ee10da8d7cac1cb7f06bd73ee396b95351cccfc29c923bf537d38a1d5
 last_verified: 2026-06-21
 tags:
   - toggle-p40
+modified: 2026-06-26
 ---
 
 # toggle-p40.sh

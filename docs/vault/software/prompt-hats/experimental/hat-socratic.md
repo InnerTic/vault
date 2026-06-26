@@ -1,7 +1,12 @@
 ---
+title: "Hat Socratic"
 tags:
+  - software
+  - prompt-hats
+  - experimental
+  - hat-socratic
 aliases: [socratic-hat, guided-discovery, inquiry]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # ❓ Socratic Hat — Guided Discovery

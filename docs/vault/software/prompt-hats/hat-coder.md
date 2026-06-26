@@ -1,7 +1,11 @@
 ---
+title: "Hat Coder"
 tags:
+  - software
+  - prompt-hats
+  - hat-coder
 aliases: [coder-hat, execution-engineer]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧑‍💻 Coder Hat — Execution Engineer

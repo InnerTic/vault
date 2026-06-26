@@ -1,7 +1,11 @@
 ---
+title: "Hat Architect"
 tags:
+  - software
+  - prompt-hats
+  - hat-architect
 aliases: [architect-hat, system-designer]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # ⚙️ Architect Hat — System Designer

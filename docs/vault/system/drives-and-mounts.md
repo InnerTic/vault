@@ -1,7 +1,10 @@
 ---
+title: "Drives And Mounts"
 tags:
+  - system
+  - drives-and-mounts
 aliases: [drives, mounts, fstab, storage-layout]
-updated: 2026-06-15
+modified: 2026-06-26
 ---
 
 # Drives & Mounts

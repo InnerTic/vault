@@ -2,6 +2,7 @@
 title: "Compiler Authority"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # Compiler Authority

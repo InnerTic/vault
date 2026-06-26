@@ -1,7 +1,11 @@
 ---
+title: "Hat Writer"
 tags:
+  - software
+  - prompt-hats
+  - hat-writer
 aliases: [writer-hat, structured-content-engine]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🪶 Writer Hat — Structured Content Engine

@@ -2,6 +2,7 @@
 title: "Proxmox Gold Image Builder"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # Proxmox Gold Image Builder

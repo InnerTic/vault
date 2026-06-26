@@ -2,6 +2,7 @@
 title: "Migrate Home Data"
 tags:
   - scripts
+modified: 2026-06-26
 ---
 
 # migrate-home-data.sh

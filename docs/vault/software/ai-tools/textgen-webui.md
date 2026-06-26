@@ -2,6 +2,7 @@
 title: "Textgen Webui"
 tags:
   - software
+modified: 2026-06-26
 ---
 
 # TextGen WebUI (oobabooga)

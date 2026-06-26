@@ -1,7 +1,12 @@
 ---
+title: "Hat Social"
 tags:
+  - software
+  - prompt-hats
+  - experimental
+  - hat-social
 aliases: [social-hat, mediator, coach]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🤝 Social Hat — Mediation + Coaching

@@ -2,6 +2,7 @@
 title: "Homelab Service Contract"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # Homelab Service Contract

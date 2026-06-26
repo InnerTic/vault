@@ -2,6 +2,7 @@
 title: "Link Workspace"
 tags:
   - scripts
+modified: 2026-06-26
 ---
 
 # link-workspace.sh

@@ -1,7 +1,12 @@
 ---
+title: "Hat Creative"
 tags:
+  - software
+  - prompt-hats
+  - experimental
+  - hat-creative
 aliases: [creative-hat, fiction-engine, worldbuilder]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🎨 Creative Hat — Fiction + Worldbuilding

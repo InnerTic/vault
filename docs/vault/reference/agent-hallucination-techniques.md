@@ -2,6 +2,7 @@
 title: "Agent Hallucination Techniques"
 tags:
   - reference
+modified: 2026-06-26
 ---
 
 # Stop AI Agent Hallucinations — Reference

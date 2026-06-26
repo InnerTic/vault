@@ -2,6 +2,7 @@
 title: "Live Env Setup"
 tags:
   - scripts
+modified: 2026-06-26
 ---
 
 # live-env-setup.sh

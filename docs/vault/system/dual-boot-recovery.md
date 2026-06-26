@@ -1,7 +1,10 @@
 ---
+title: "Dual Boot Recovery"
 tags:
+  - system
+  - dual-boot-recovery
 aliases: [limine-recovery, mx-recovery, boot-recovery]
-updated: 2026-06-18
+modified: 2026-06-26
 ---
 
 # Dual-Boot Recovery — Limine / MX Linux

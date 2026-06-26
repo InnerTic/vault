@@ -1,7 +1,10 @@
 ---
+title: "Kvm Bridge Networking"
 tags:
+  - software
+  - kvm-bridge-networking
 aliases: [kvm-bridge, bridge-networking, libvirt-setup]
-updated: 2026-06-19
+modified: 2026-06-26
 ---
 
 # Debian KVM + Bridge Networking (libvirt + virt-manager)

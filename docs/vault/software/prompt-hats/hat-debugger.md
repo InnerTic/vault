@@ -1,7 +1,11 @@
 ---
+title: "Hat Debugger"
 tags:
+  - software
+  - prompt-hats
+  - hat-debugger
 aliases: [debugger-hat, failure-investigator]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧯 Debugger Hat — Failure Investigator

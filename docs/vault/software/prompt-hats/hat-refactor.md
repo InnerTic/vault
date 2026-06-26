@@ -1,7 +1,11 @@
 ---
+title: "Hat Refactor"
 tags:
+  - software
+  - prompt-hats
+  - hat-refactor
 aliases: [refactor-hat, cleanup-engineer]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧵 Refactor Hat — Clean-Up Engineer

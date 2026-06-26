@@ -2,6 +2,7 @@
 title: "Vault Evolution Timeline State"
 tags:
   - reference
+modified: 2026-06-26
 ---
 
 # Vault Evolution — Derived State

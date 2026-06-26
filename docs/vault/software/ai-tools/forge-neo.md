@@ -2,6 +2,7 @@
 title: "Forge Neo"
 tags:
   - software
+modified: 2026-06-26
 ---
 
 # SD WebUI Forge Neo

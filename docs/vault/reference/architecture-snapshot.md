@@ -1,7 +1,10 @@
 ---
+title: "Architecture Snapshot"
 tags:
+  - reference
+  - architecture-snapshot
 aliases: [architecture-snapshot, current-architecture, homelab-architecture]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧭 Homelab Architecture Snapshot

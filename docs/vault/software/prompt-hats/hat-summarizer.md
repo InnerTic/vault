@@ -1,7 +1,11 @@
 ---
+title: "Hat Summarizer"
 tags:
+  - software
+  - prompt-hats
+  - hat-summarizer
 aliases: [summarizer-hat, compression-engine]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧾 Summarizer Hat — Compression Engine

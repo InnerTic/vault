@@ -2,6 +2,7 @@
 title: "Lspci Reference"
 tags:
   - reference
+modified: 2026-06-26
 ---
 
 # lspci Reference

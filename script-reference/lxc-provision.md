@@ -1,10 +1,12 @@
 ---
+title: "Lxc Provision"
 source: dotfiles/scripts/lxc-provision.sh
 restorable: true
 checksum: d366c8bdc7f52f3afe9be9b454d59469c16574318f34efea0bcded7839fb9b41
 last_verified: 2026-06-21
 tags:
   - lxc-provision
+modified: 2026-06-26
 ---
 
 # lxc-provision.sh

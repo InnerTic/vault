@@ -1,7 +1,10 @@
 ---
+title: "Changelog"
 tags:
+  - changelog
+  - vault
 aliases: [vault-changelog, changes]
-updated: 2026-06-15
+modified: 2026-06-26
 ---
 
 # Vault Changelog

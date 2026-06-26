@@ -1,7 +1,12 @@
 ---
+title: "Hat Persona"
 tags:
+  - software
+  - prompt-hats
+  - experimental
+  - hat-persona
 aliases: [persona-hat, deep-roleplay, immersion]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🎭 Persona Hat — Deep Immersion Roleplay

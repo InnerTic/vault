@@ -1,7 +1,11 @@
 ---
+title: "Hat Translator"
 tags:
+  - software
+  - prompt-hats
+  - hat-translator
 aliases: [translator-hat, meaning-preservation]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🌐 Translator Hat — Meaning Preservation

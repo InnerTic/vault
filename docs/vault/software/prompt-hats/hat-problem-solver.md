@@ -1,7 +1,11 @@
 ---
+title: "Hat Problem Solver"
 tags:
+  - software
+  - prompt-hats
+  - hat-problem-solver
 aliases: [problem-solver-hat, systems-thinking]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧠 Problem Solver Hat — Systems Thinking

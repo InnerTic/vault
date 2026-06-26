@@ -1,7 +1,10 @@
 ---
+title: "Libvirt Bridge Setup"
 tags:
+  - reference
+  - libvirt-bridge-setup
 aliases: [libvirt-bridge, vm-bridge, br0-setup]
-updated: 2026-06-19
+modified: 2026-06-26
 ---
 
 # Libvirt VM Host — Bridged Networking (CachyOS/Arch)

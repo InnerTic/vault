@@ -1,7 +1,10 @@
 ---
+title: "Boot Diagnostics"
 tags:
+  - reference
+  - boot-diagnostics
 aliases: [boot-timing, boot-debug, slow-boot]
-updated: 2026-06-18
+modified: 2026-06-26
 ---
 
 # Boot Diagnostics

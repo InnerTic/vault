@@ -1,10 +1,12 @@
 ---
+title: "Gpu"
 source: dotfiles/scripts/llama-loader/builder/gpu.sh
 restorable: true
 checksum: ff3162c8db3a1c3cc764c1b95214308de18726a2b7a3bec245370a78a754121a
 last_verified: 2026-06-21
 tags:
   - llama-loader
+modified: 2026-06-26
 ---
 
 # gpu.sh

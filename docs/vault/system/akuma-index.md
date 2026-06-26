@@ -2,6 +2,7 @@
 title: "Akuma Index"
 tags:
   - system
+modified: 2026-06-26
 ---
 
 # Akuma Recovery Log — Index

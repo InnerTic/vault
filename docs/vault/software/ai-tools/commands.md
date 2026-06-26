@@ -1,7 +1,11 @@
 ---
+title: "Commands"
 tags:
+  - software
+  - ai-tools
+  - commands
 aliases: [ai-commands, ai-tools, command-reference]
-updated: 2026-06-22
+modified: 2026-06-26
 ---
 
 # AI Tools — Command Reference

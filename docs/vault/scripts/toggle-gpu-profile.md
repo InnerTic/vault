@@ -2,6 +2,7 @@
 title: "Toggle Gpu Profile"
 tags:
   - scripts
+modified: 2026-06-26
 ---
 
 # toggle-gpu-profile.sh

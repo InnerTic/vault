@@ -1,10 +1,12 @@
 ---
+title: "Evaluate"
 source: dotfiles/scripts/llama-loader/introspect/evaluate.sh
 restorable: true
 checksum: 8621903e2686a6f0f61fe39dc980238982e6058238c54b06b6e1ffbe52190062
 last_verified: 2026-06-21
 tags:
   - llama-loader
+modified: 2026-06-26
 ---
 
 # evaluate.sh

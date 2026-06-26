@@ -2,6 +2,7 @@
 title: "01 Glossary Updater"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # Glossary Candidate

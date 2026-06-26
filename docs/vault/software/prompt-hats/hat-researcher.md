@@ -1,7 +1,11 @@
 ---
+title: "Hat Researcher"
 tags:
+  - software
+  - prompt-hats
+  - hat-researcher
 aliases: [researcher-hat, deep-explorer]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🔎 Researcher Hat — Deep Explorer

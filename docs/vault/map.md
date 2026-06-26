@@ -1,7 +1,9 @@
 ---
+title: "Map"
 tags:
+  - map
 aliases: [sitemap, map, vault-map]
-updated: 2026-06-22
+modified: 2026-06-26
 ---
 
 # Vault Map

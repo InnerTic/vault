@@ -1,10 +1,12 @@
 ---
+title: "Llama Server"
 source: dotfiles/scripts/llama-server.sh
 restorable: true
 checksum: 4d1cba4035f49632e6c2da69235cc1e7ec6af44c877321faec4a20bd8c95e7e6
 last_verified: 2026-06-21
 tags:
   - llama-server
+modified: 2026-06-26
 ---
 
 # llama-server.sh

@@ -1,7 +1,9 @@
 ---
+title: "Quick Start"
 tags:
+  - QUICK-START
 aliases: [emergency, quick-start, recovery, crisis]
-updated: 2026-06-15
+modified: 2026-06-26
 ---
 
 # 🚨 Emergency Recovery — 5 Minute Start

@@ -2,6 +2,7 @@
 title: "08 Verifier"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # Verifier

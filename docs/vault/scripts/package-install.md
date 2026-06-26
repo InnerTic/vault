@@ -2,6 +2,7 @@
 title: "Package Install"
 tags:
   - scripts
+modified: 2026-06-26
 ---
 
 # package-install.sh

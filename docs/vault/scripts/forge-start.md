@@ -2,6 +2,7 @@
 title: "Forge Start"
 tags:
   - scripts
+modified: 2026-06-26
 ---
 
 # forge-start.sh

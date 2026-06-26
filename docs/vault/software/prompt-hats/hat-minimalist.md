@@ -1,7 +1,11 @@
 ---
+title: "Hat Minimalist"
 tags:
+  - software
+  - prompt-hats
+  - hat-minimalist
 aliases: [minimalist-hat, compression-efficiency]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧊 Minimalist Hat — Compression + Efficiency

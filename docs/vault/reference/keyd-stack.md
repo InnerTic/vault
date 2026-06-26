@@ -1,7 +1,10 @@
 ---
+title: "Keyd Stack"
 tags:
+  - reference
+  - keyd-stack
 aliases: [keyd-setup, keyd-debug, keyd-troubleshoot]
-updated: 2026-06-18
+modified: 2026-06-26
 ---
 
 # keyd — Deterministic Debian Stack

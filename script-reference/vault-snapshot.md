@@ -1,10 +1,12 @@
 ---
+title: "Vault Snapshot"
 source: dotfiles/scripts/vault-snapshot.sh
 restorable: true
 checksum: 0979aac46b932ef6295b186e5fd33ca2f124943cbfaa207e2dc21307ea62c7dc
 last_verified: 2026-06-21
 tags:
   - vault-snapshot
+modified: 2026-06-26
 ---
 
 # vault-snapshot.sh

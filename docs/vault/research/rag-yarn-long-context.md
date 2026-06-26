@@ -5,6 +5,7 @@ tags:
   - rag
   - yarn
   - context-extension
+modified: 2026-06-26
 ---
 
 # RAG + YaRN: Context Window Blowup Effect

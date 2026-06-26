@@ -2,6 +2,7 @@
 title: "PERSONAS"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 Persona Definitions

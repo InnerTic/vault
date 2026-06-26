@@ -2,6 +2,7 @@
 title: "Index Retrieval System"
 tags:
   - reference
+modified: 2026-06-26
 ---
 
 # Index Format + Retrieval System

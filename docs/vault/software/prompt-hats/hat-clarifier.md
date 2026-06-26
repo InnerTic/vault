@@ -1,7 +1,11 @@
 ---
+title: "Hat Clarifier"
 tags:
+  - software
+  - prompt-hats
+  - hat-clarifier
 aliases: [clarifier-hat, ambiguity-resolver]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧾 Clarifier Hat — Ambiguity Resolver

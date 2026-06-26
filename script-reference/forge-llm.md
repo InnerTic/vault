@@ -1,10 +1,12 @@
 ---
+title: "Forge Llm"
 source: dotfiles/scripts/forge-llm.sh
 restorable: true
 checksum: 35058185e4109ed87fb72ca86e6b105414468a21fa1de670ac62f30593542b8e
 last_verified: 2026-06-21
 tags:
   - forge-llm
+modified: 2026-06-26
 ---
 
 # forge-llm.sh

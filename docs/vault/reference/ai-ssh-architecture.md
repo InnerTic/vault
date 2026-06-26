@@ -1,7 +1,10 @@
 ---
+title: "Ai Ssh Architecture"
 tags:
+  - reference
+  - ai-ssh-architecture
 aliases: [ai-ssh, agent-safe-ssh, restricted-ssh, ai-access]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧩 AI SSH Architecture — Restricted Access for LXCs

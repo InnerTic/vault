@@ -1,7 +1,11 @@
 ---
+title: "Hat Assistant"
 tags:
+  - software
+  - prompt-hats
+  - hat-assistant
 aliases: [assistant-hat, default-hat, general-purpose]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🎭 General Assistant Hat — Default

@@ -1,7 +1,12 @@
 ---
+title: "Hat Tactical"
 tags:
+  - software
+  - prompt-hats
+  - experimental
+  - hat-tactical
 aliases: [tactical-hat, wargaming, opponent-simulator]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🏆 Tactical Hat — Wargaming + Competition

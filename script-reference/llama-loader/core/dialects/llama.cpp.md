@@ -1,10 +1,12 @@
 ---
+title: "Llama.Cpp"
 source: dotfiles/scripts/llama-loader/core/dialects/llama.cpp.sh
 restorable: true
 checksum: faaa8a71b33ade174dce53517d713926d43a1b32ce12e4b4d416e7257f5dda7c
 last_verified: 2026-06-21
 tags:
   - llama-loader
+modified: 2026-06-26
 ---
 
 # llama.cpp.sh

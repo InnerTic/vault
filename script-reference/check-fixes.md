@@ -1,10 +1,12 @@
 ---
+title: "Check Fixes"
 source: dotfiles/scripts/check-fixes.sh
 restorable: true
 checksum: 705793a661c7658644a45a20a2942cb8ded54d8dee74a8ab25064a8ff5cbac54
 last_verified: 2026-06-21
 tags:
   - check-fixes
+modified: 2026-06-26
 ---
 
 # check-fixes.sh

@@ -1,7 +1,11 @@
 ---
+title: "Hat Automation"
 tags:
+  - software
+  - prompt-hats
+  - hat-automation
 aliases: [automation-hat, workflow-builder]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧱 Automation Hat — Workflow Builder

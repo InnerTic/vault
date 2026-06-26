@@ -2,6 +2,7 @@
 title: "Dolphin Config"
 tags:
   - software
+modified: 2026-06-26
 ---
 
 # Dolphin Configuration — Reference Copy

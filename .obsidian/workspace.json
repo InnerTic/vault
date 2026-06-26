@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dotfiles/docs/vault/context/INDEX.md",
+                "file": "dotfiles/docs/vault/map.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "INDEX"
+              "title": "map"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "hat",
+                "query": "hat prompt",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -181,8 +180,11 @@
       "bases:Create new base": false
     }
   },
-  "active": "bb69411e5456613a",
+  "active": "49bcc2ba6e66a0d9",
   "lastOpenFiles": [
+    "dotfiles/docs/vault/index.md",
+    "dotfiles/docs/vault/software/prompt-hats/core-baseline.md",
+    "dotfiles/docs/vault/context/INDEX.md",
     "docs/vault/context/INDEX.md",
     "docs/INDEX.md",
     "docs/vault/reference/vault-system-audit-2026-06-21.md",
@@ -196,7 +198,6 @@
     "dotfiles/docs/vault/archive/implementation-workflow.md",
     "dotfiles/docs/vault/archive/cachyos-steam-nvidia-input-log.md",
     "dotfiles/docs/reference/software-version-requirements.md",
-    "dotfiles/docs/vault/context/INDEX.md",
     "dotfiles/docs/vault/projects/translation-pipeline/roles/00-parser.md",
     "dotfiles/docs/vault/projects/ai-bubble-watchboard.md",
     "dotfiles/docs/vault/projects/ai-watchtower.md",
@@ -206,8 +207,6 @@
     "dotfiles/docs/vault/projects/README.md",
     "dotfiles/docs/vault/projects/sd-webui-forge-neo.md",
     "dotfiles/docs/vault/projects/translation-pipeline.md",
-    "dotfiles/docs/vault/software/opencode/plugins.md",
-    "dotfiles/docs/vault/software/dev-setup.md",
-    "dotfiles/docs/vault/software/kvm-bridge-networking.md"
+    "dotfiles/docs/vault/software/opencode/plugins.md"
   ]
 }

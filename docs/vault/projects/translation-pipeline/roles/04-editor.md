@@ -2,6 +2,7 @@
 title: "04 Editor"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # Editor

@@ -2,6 +2,7 @@
 title: "Tmux Guide V4"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # tmux — Complete Guide (v4)

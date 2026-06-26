@@ -2,6 +2,7 @@
 title: "Ollama Notes"
 tags:
   - software
+modified: 2026-06-26
 ---
 
 # Ollama GPU/CPU Switching Notes for OpenClaw/OpenCode

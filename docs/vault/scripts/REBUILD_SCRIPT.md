@@ -2,6 +2,7 @@
 title: "REBUILD SCRIPT"
 tags:
   - scripts
+modified: 2026-06-26
 ---
 
 # REBUILD_SCRIPT.sh

@@ -2,6 +2,7 @@
 title: "Tmux Walkthroughs"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # tmux Walkthroughs — Practical Guides

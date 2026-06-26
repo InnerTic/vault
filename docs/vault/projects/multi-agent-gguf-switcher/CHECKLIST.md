@@ -2,6 +2,7 @@
 title: "CHECKLIST"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 Multi-Agent GGUF Switcher — Checklist

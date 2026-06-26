@@ -1,7 +1,11 @@
 ---
+title: "Hat Translator Plus"
 tags:
+  - software
+  - prompt-hats
+  - hat-translator-plus
 aliases: [translator-plus, context-aware-linguist]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🌐 Translator+ Hat — Context-Aware Linguist

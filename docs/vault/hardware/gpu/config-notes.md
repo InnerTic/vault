@@ -2,6 +2,7 @@
 title: "Config Notes"
 tags:
   - hardware
+modified: 2026-06-26
 ---
 
 # GPU Configuration — Working Combo (June 2026)

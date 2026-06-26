@@ -1,7 +1,11 @@
 ---
+title: "Hat Experimenter"
 tags:
+  - software
+  - prompt-hats
+  - hat-experimenter
 aliases: [experimenter-hat, hypothesis-engine]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧪 Experimenter Hat — Hypothesis Engine

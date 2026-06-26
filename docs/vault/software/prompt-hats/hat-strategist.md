@@ -1,7 +1,11 @@
 ---
+title: "Hat Strategist"
 tags:
+  - software
+  - prompt-hats
+  - hat-strategist
 aliases: [strategist-hat, decision-optimizer]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # 🧭 Strategist Hat — Decision Optimizer

@@ -1,7 +1,10 @@
 ---
+title: "Bugs And Workarounds"
 tags:
+  - reference
+  - bugs-and-workarounds
 aliases: [known-issues, bugs, workarounds, temporary-hacks]
-updated: 2026-06-15
+modified: 2026-06-26
 ---
 
 # Bugs & Workarounds

@@ -2,6 +2,7 @@
 title: "Cachyos Package List"
 tags:
   - software
+modified: 2026-06-26
 ---
 
 # Cleaned Package List for CachyOS Reinstall

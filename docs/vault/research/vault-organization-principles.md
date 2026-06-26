@@ -1,7 +1,9 @@
 ---
+title: "Vault Organization Principles"
 tags:
-status: proposed
+  - source:status-proposed
 source: opencode-session-2026-06-21
+modified: 2026-06-26
 ---
 
 # Vault Organization Principles — Research Note

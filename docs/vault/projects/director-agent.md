@@ -2,6 +2,7 @@
 title: "Director Agent"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 # Director Agent Architecture — opencode → local llama.cpp

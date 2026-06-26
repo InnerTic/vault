@@ -2,6 +2,7 @@
 title: "Chat Ingestion Architecture"
 tags:
   - reference
+modified: 2026-06-26
 ---
 
 # Vault Chat Ingestion Architecture

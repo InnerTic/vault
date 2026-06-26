@@ -2,6 +2,7 @@
 title: "Serena Mcp"
 tags:
   - software
+modified: 2026-06-26
 ---
 
 # Serena MCP — The IDE-Backed Semantic Toolkit for AI Agents

@@ -1,7 +1,11 @@
 ---
+title: "Core Baseline"
 tags:
+  - software
+  - prompt-hats
+  - core-baseline
 aliases: [core, baseline-hat]
-updated: 2026-06-20
+modified: 2026-06-26
 ---
 
 # Core Baseline Hat

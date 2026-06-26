@@ -2,6 +2,7 @@
 title: "Install Tide Meslo"
 tags:
   - scripts
+modified: 2026-06-26
 ---
 
 # install-tide-meslo.sh

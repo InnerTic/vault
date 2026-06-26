@@ -1,6 +1,9 @@
 ---
+title: "Knowledge Audit"
 tags:
-updated: 2026-06-21
+  - reference
+  - knowledge-audit
+modified: 2026-06-26
 ---
 
 # Knowledge Audit — 2026-06-21

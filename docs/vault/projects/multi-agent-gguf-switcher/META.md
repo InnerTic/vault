@@ -2,6 +2,7 @@
 title: "META"
 tags:
   - projects
+modified: 2026-06-26
 ---
 
 GGUF Metadata Schema Extension

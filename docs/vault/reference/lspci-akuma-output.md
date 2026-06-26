@@ -2,6 +2,7 @@
 title: "Lspci Akuma Output"
 tags:
   - reference
+modified: 2026-06-26
 ---
 
 # lspci — Akuma System Output

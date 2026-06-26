@@ -2,6 +2,7 @@
 title: "System State"
 tags:
   - system-state
+modified: 2026-06-26
 ---
 
 # System State
