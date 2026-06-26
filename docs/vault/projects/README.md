@@ -13,11 +13,10 @@ General-purpose project documentation outside the structured vault categories.
 
 | Project | Reason |
 |---------|--------|
-| [[../projects/meta-scripts\|Meta Script Project]] | In progress — script orchestration layer. |
+| [[../projects/meta-scripts|Meta Script Project]] | In progress — script orchestration layer. |
 
 | Project | Source | Description |
 |---------|--------|-------------|
-| [[translation-pipeline\|Translation Pipeline v2.0]] | `/mnt/data/_translation-pipeline/translation-pipeline/` | Multi-stage LLM pipeline — 10 stages (parser→continuity) with per-role model docs in [[translation-pipeline/roles/INDEX\|roles/INDEX]] |
-| [[sd-webui-forge-neo\|SD WebUI Forge Neo]] | `/mnt/workspace/sd-webui-forge-neo/` | Stable Diffusion Forge — 3060 (primary) + P40 (VAE/upscale) |
-| [[llama-loader/INDEX\|llama-loader Knowledge Base]] | `dotfiles/scripts/llama-loader/` | Architecture, incidents, snapshots, changelog — IR/dialect pipeline |
-
+| [[translation-pipeline|Translation Pipeline v2.0]] | `/mnt/data/_translation-pipeline/translation-pipeline/` | Multi-stage LLM pipeline — 10 stages (parser→continuity) with per-role model docs in [[translation-pipeline/roles/INDEX|roles/INDEX]] |
+| [[sd-webui-forge-neo|SD WebUI Forge Neo]] | `/mnt/workspace/sd-webui-forge-neo/` | Stable Diffusion Forge — 3060 (primary) + P40 (VAE/upscale) |
+| [[llama-loader/INDEX|llama-loader Knowledge Base]] | `dotfiles/scripts/llama-loader/` | Architecture, incidents, snapshots, changelog — IR/dialect pipeline |

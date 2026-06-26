@@ -34,7 +34,7 @@ Customize `/mnt/workspace/searxng/settings.yml`:
 - `server.secret_key` — generate with `python3 -c "import secrets; print(secrets.token_urlsafe(32))"`
 - `server.bind_address` — `"0.0.0.0"` for LAN access, `"127.0.0.1"` for local-only
 - `server.limiter` — `false` for local use
-- `search.formats` — add `json` for API access: 
+- `search.formats` — add `json` for API access:
 
   ```yaml
   formats:

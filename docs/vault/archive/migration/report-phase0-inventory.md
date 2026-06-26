@@ -17,7 +17,8 @@ modified: 2026-06-26
 |---|---|---|
 | **VAULT** | 178 | docs/, docs/vault/ — knowledge, Quartz, architecture docs, runbooks, audits, prompt hats, changelogs |
 | **DOTFILES** | 35 | shell/, ssh/, git/, bootstrap*.sh, AGENTS.md, .gitignore, README.md, scripts/bootstrap/ (user env modules) |
-| **INFRA** | 37 | scripts/ (Proxmox/LXC, GPU inference, system health, toggle scripts), scripts/llama-loader/ (full system), scripts/lxc/ (container components) |
+| **INFRA** | 37 | scripts/ (Proxmox/LXC, GPU inference, system health, toggle scripts), scripts/llama-loader/ (full system),
+  scripts/lxc/ (container components) |
 | **UNKNOWN** | 0 | — |
 | **TOTAL** | 250 | — |
 
@@ -57,9 +58,3 @@ modified: 2026-06-26
 **37 files total.**
 
 ## Notes for Resume
-
-- Phase 0 complete — no files were moved or modified
-- All classifications have confidence ≥85 (no UNKNOWN)
-- `docs/vault/scripts/` contains documented copies of scripts (classified as VAULT — they are knowledge copies, not the live executables)
-- The live scripts are in `scripts/` (classified as INFRA or DOTFILES depending on purpose)
-- Next: Phase 1 — generate destination paths and risk-level plan

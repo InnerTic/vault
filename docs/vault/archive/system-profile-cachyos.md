@@ -5,13 +5,11 @@ tags:
 modified: 2026-06-26
 ---
 
-
-
 this file needs to be current if possible using a combination of tools to gather data
 
 # System Profile Summary - Akuma
-# Extracted from akuma_recovery.log for portable configuration reference
-# Focus: Hardware specs, desktop environment, and general setup (not hardware-specific UUIDs)
+## Extracted from akuma_recovery.log for portable configuration reference
+## Focus: Hardware specs, desktop environment, and general setup (not hardware-specific UUIDs)
 
 ## System Overview
 - **OS**: CachyOS Linux
@@ -66,21 +64,4 @@ this file needs to be current if possible using a combination of tools to gather
 - Preference for bleeding-edge but stable packages (CachyOS)
 - Focus on AI/development workflow with terminal-first approach
 - KDE Plasma desktop with customizations
-- Hybrid GPU setup (NVIDIA primary + AMD integrated)
-- Extensive use of bind mounts for flexible storage organization
-- Preference for CLI tools and terminal-based applications
-
-## Usage Notes
-This summary captures the portable aspects of the system configuration:
-1. Hardware specs and desktop environment can guide similar builds
-2. Graphics driver versions are specific to hardware but show preference
-3. Storage approach shows partitioning strategy (though exact sizes/UUIDs will differ)
-4. Package list provides foundation for reinstall
-5. Mount point patterns show preferred organization (separate gaming, srv data, etc.)
-
-For actual reinstall:
-1. Adapt partition sizes to new hardware
-2. Update UUIDs in /etc/fstab
-3. Adjust graphics drivers for actual GPU
-4. Use package list as base, add/remove as needed
-5. Recreate meaningful bind mount structure
+- Hybrid GPU setup (NVIDIA primary

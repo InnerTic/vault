@@ -9,4 +9,4 @@ modified: 2026-06-26
 
 > **Superseded:** This doc has been expanded into a knowledge tree at `llama-loader/`.
 >
-> See [[llama-loader/INDEX]] for the full architecture, incidents, and snapshots.
+> See [[llama-loader-compiler-contract]] for the full architecture, incidents, and snapshots.

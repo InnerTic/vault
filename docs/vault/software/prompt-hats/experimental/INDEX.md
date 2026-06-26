@@ -10,12 +10,12 @@ modified: 2026-06-26
 
 # 🧪 Experimental Hats
 
-Unstable, unconventional, or uncensored roles.  
+Unstable, unconventional, or uncensored roles.
 These may produce unexpected output — use intentionally, not as defaults.
 
 ## Usage
 
-Same as core hats: open the file, copy the prompt block, paste into system prompt.  
+Same as core hats: open the file, copy the prompt block, paste into system prompt.
 Some experimental hats intentionally bypass safety layers — be aware of context.
 
 ## The Hats

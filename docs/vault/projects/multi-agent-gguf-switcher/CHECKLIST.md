@@ -5,6 +5,8 @@ tags:
 modified: 2026-06-26
 ---
 
+# "CHECKLIST"
+
 Multi-Agent GGUF Switcher — Checklist
 ======================================
 

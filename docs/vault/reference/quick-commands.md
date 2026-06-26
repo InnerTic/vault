@@ -6,6 +6,8 @@ tags:
 modified: 2026-06-26
 ---
 
+# "Quick Commands"
+
 ```text
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                         QUICK START COMMANDS                                 ║
@@ -39,6 +41,15 @@ modified: 2026-06-26
 ║    ocl           OpenCode with local llama.cpp model                         ║
 ║    oclw          OpenCode Web UI with local model                           ║
 ║    opencode -c   OpenCode with -c (chat from stdin)                          ║
+║                                                                              ║
+║  ── VAULT MAINTENANCE (uses local LLM) ──                                   ║
+║                                                                              ║
+║    vault-llm.sh audit    Full audit (format + fonts + backlinks)              ║
+║    vault-llm.sh format   Check frontmatter, long lines, broken links          ║
+║    vault-llm.sh fonts    Check heading hierarchy/font issues                  ║
+║    vault-llm.sh check    Analyze a file with local LLM                       ║
+║    vault-llm.sh rewrite   Rewrite file with local LLM (diff + approval)      ║
+║    vault-llm.sh fix      Auto-fix formatting in a file                       ║
 ║                                                                              ║
 ║  ── QUICK HELP ──                                                            ║
 ║                                                                              ║

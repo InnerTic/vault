@@ -27,9 +27,9 @@ dotfiles.git  ← read-only mirror of vault/dotfiles/. Never edit.
 infra/        ← read-only mirror of vault/dotfiles/scripts/. Never edit.
 ```
 
-`~/vault/` is a symlink to `/mnt/workspace/vault/` (the actual git repo).  
-`~/dotfiles/` is a symlink to `/mnt/workspace/dotfiles/` (separate repo, mirror only).  
-`~/.zshrc` → `~/dotfiles/shell/.zshrc`.  
+`~/vault/` is a symlink to `/mnt/workspace/vault/` (the actual git repo).
+`~/dotfiles/` is a symlink to `/mnt/workspace/dotfiles/` (separate repo, mirror only).
+`~/.zshrc` → `~/dotfiles/shell/.zshrc`.
 `~/.bashrc` is standalone — the vault copy is an alias-only fragment.
 
 ## Priority Order
@@ -107,8 +107,8 @@ chat log
    ↓ link to project
 ```
 
-A session capture goes into `docs/vault/history/chat-ingest/`.  
-A distilled decision goes into the relevant project or reference doc.  
+A session capture goes into `docs/vault/history/chat-ingest/`.
+A distilled decision goes into the relevant project or reference doc.
 Never dump raw chats directly into project docs.
 
 ### Distillation Rules

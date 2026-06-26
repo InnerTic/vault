@@ -6,10 +6,10 @@ modified: 2026-06-26
 ---
 
 # Cleaned Package List for CachyOS Reinstall
-# Extracted from akuma_recovery.log and cachyos_packages.txt
-# Focus: Non-filesystem, generally useful packages for AI/workstation setup
+## Extracted from akuma_recovery.log and cachyos_packages.txt
+## Focus: Non-filesystem, generally useful packages for AI/workstation setup
 
-# Core Development & AI
+## Core Development & AI
 opencode
 cuda
 cudnn
@@ -23,7 +23,7 @@ go
 paru
 yay
 
-# Terminal & Shell
+## Terminal & Shell
 alacritty
 tmux
 micro
@@ -32,7 +32,7 @@ zsh
 zsh-completions
 bash-completion
 
-# System Utilities
+## System Utilities
 htop
 btop
 bottom
@@ -43,7 +43,7 @@ fastfetch
 neofetch
 inxi
 
-# Text Processing & Editing
+## Text Processing & Editing
 vim
 neovim
 emacs
@@ -55,13 +55,13 @@ fd
 bat
 delta
 
-# File Management
+## File Management
 ranger
 mc
 lf
 nnn
 
-# Network Tools
+## Network Tools
 curl
 wget
 httpie
@@ -71,7 +71,7 @@ sshfs
 rsync
 syncthing
 
-# Compression & Archiving
+## Compression & Archiving
 zip
 unzip
 tar
@@ -82,7 +82,7 @@ p7zip
 rar
 unrar
 
-# Document & Image Tools
+## Document & Image Tools
 pandoc
 texlive-most
 imagemagick
@@ -91,7 +91,7 @@ vlc
 gimp
 inkscape
 
-# Fonts (for good UI)
+## Fonts (for good UI)
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -103,7 +103,7 @@ ttf-meslo-nerd
 ttf-opensans
 awesome-terminal-fonts
 
-# KDE/Plasma (if keeping KDE)
+## KDE/Plasma (if keeping KDE)
 kdialog
 kwalletmanager
 phonon-qt6-vlc
@@ -114,7 +114,7 @@ hyprland
 kdeconnect
 kwallet-pam
 
-# Monitoring & System Info
+## Monitoring & System Info
 smartmontools
 hdparm
 lsscsi
@@ -123,7 +123,7 @@ mesa-utils
 ethtool
 lsblk
 
-# Security & Utilities
+## Security & Utilities
 gnupg
 pass
 keepassxc
@@ -131,14 +131,14 @@ bleachbit
 firejail
 apparmor
 
-# Virtualization & Containers
+## Virtualization & Containers
 docker
 docker-compose
 podman
 virtualbox
 qemu
 
-# Python Ecosystem (beyond basics)
+## Python Ecosystem (beyond basics)
 pip
 ipython
 jupyterlab
@@ -151,14 +151,14 @@ scikit-learn
 tensorflow
 pytorch
 
-# Web & Networking
+## Web & Networking
 nginx
 apache
 redis
 postgresql-client
 mysql-client
 
-# Miscellaneous Useful
+## Miscellaneous Useful
 bc
 calc
 units

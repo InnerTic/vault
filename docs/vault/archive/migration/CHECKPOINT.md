@@ -28,7 +28,8 @@ modified: 2026-06-26
 ## Key Decisions to Date
 
 - VAULT (178 files): all `docs/`, `CHANGELOG.*`, `KEY_LOCATIONS.txt`
-- DOTFILES (35 files): `shell/`, `ssh/`, `git/`, bootstrap, `AGENTS.md`, `README.md`, `.gitignore`, `scripts/bootstrap/`, `scripts/link-workspace.sh`, `scripts/test-cleanup-backups.sh`, `scripts/toggle-p40.example.yaml`
+- DOTFILES (35 files): `shell/`, `ssh/`, `git/`, bootstrap, `AGENTS.md`, `README.md`, `.gitignore`, `scripts/bootstrap/`,
+  `scripts/link-workspace.sh`, `scripts/test-cleanup-backups.sh`, `scripts/toggle-p40.example.yaml`
 - INFRA (37 files): `scripts/llama-loader/`, `scripts/lxc/`, Proxmox scripts, service scripts, system scripts
 - Migration order: A→B→C→D (vault first, dotfiles second, infra third, fixes last)
 - Rule: always COPY first, never delete, log everything

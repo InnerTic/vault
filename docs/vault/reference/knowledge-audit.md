@@ -8,7 +8,7 @@ modified: 2026-06-26
 
 # Knowledge Audit — 2026-06-21
 
-Audit of all documentation in `~/dotfiles/docs/`.  
+Audit of all documentation in `~/dotfiles/docs/`.
 Confidence score: 100 = verified, 75 = mostly verified, 50 = partially verified, 25 = likely outdated, 0 = obsolete.
 
 ---

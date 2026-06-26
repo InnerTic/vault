@@ -111,7 +111,7 @@ IDE-level semantic code operations powered by JetBrains' IntelliJ. Enables:
 - Without Serena: Agent uses `grep` to find usages → misses edge cases → breaks code
 - With Serena: Agent uses IDE-backed symbol search → 100% accurate
 
-**Reddit Quote:** 
+**Reddit Quote:**
 > "Serena's IDE-backed semantic tools are the single most impactful addition to my toolkit - cross-file renames, moves, and reference lookups... We solved this problem recently by providing custom hooks that nudge the agent in the right direction when it over-relies on grep or vanilla read."
 
 ### Real Example
@@ -172,7 +172,7 @@ Works well **with** `opencode-mem` (which you have). While mem stores semantic k
 
 ### Real Example
 ```bash
-# Without history-search: 
+# Without history-search:
 # You remember solving a similar problem last week
 # But have to scroll through 100+ commands to find it
 

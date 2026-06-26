@@ -73,17 +73,17 @@ ollama serve &
 Then confirm GPU usage returns with `nvidia-smi`.
 
 ## Tips to Manage VRAM Usage
-- **Limit concurrently loaded models:**  
-  `OLLAMA_MAX_LOADED_MODELS=1 ollama serve`  
+- **Limit concurrently loaded models:**
+  `OLLAMA_MAX_LOADED_MODELS=1 ollama serve`
   Keeps only the most‑recently used model in memory.
-- **Limit parallel requests:**  
-  `OLLAMA_NUM_PARALLEL=2 ollama serve`  
+- **Limit parallel requests:**
+  `OLLAMA_NUM_PARALLEL=2 ollama serve`
   Reduces spikes when many embedding requests arrive.
-- **Explicit unload when idle:**  
-  `ollama stop <model-name>`  
+- **Explicit unload when idle:**
+  `ollama stop <model-name>`
   Forces immediate VRAM release.
-- **Monitor:**  
-  `watch -n 5 nvidia-smi`  
+- **Monitor:**
+  `watch -n 5 nvidia-smi`
   `ollama ps`
 
 ## References

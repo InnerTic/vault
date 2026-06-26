@@ -5,6 +5,8 @@ tags:
 modified: 2026-06-26
 ---
 
+# "Multi Agent Gguf Switcher Overview"
+
 Multi-Agent GGUF Runtime Switcher (MAGRS)
 ==========================================
 

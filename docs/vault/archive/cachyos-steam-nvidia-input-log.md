@@ -1,11 +1,11 @@
 ---
-title: "Cachyos Steam Nvidia Input Log"
+title: "CachyOS Steam Nvidia Input Log"
 tags:
   - archive
 modified: 2026-06-26
 ---
 
-n# CachyOS Steam / NVIDIA / Input Issue Log (June 2026)
+# CachyOS Steam / NVIDIA / Input Issue Log (June 2026)
 
 ## Symptoms
 

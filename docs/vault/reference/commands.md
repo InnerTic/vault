@@ -113,8 +113,9 @@ ssh openclawVM  # OpenClaw VM (172.16.12.12)
 # =============================================================================
 # QUARTZ WIKI — Update after vault changes
 # =============================================================================
-update-wiki              # Rebuild Quartz site on LXC 301:
-                         #   ssh 172.16.12.17 "/home/ken/scripts/update-quartz.sh /home/ken/repos/vault /home/ken/apps/quartz"
+update-wiki              # Rebuild Quartz site on LXC (172.16.12.17):
+                         #   cd ~/vault && git add -A && git commit -m "msg" && git push && ssh quartz "/srv/quartz/update-wiki.sh"
+                         # Or: ssh quartz "/srv/quartz/update-wiki.sh"
 
 # =============================================================================
 # VAULT — Script management
@@ -126,6 +127,17 @@ vault-snapshot <script>   # Archive dotfiles/scripts/<script> to vault/script-re
 vault-restore <script>    # Restore a single script from vault/script-reference/ back to dotfiles/scripts/
 vault-restore-all         # Disaster recovery: restore ALL scripts from vault/script-reference/
 check-fixes               # Quality gate — check pending bugs before running apt upgrade
+
+# =============================================================================
+# VAULT MAINTENANCE — Local LLM tools (saves tokens on online models)
+# =============================================================================
+vault-llm.sh audit        # Full vault audit: format + fonts + backlinks (uses local llama.cpp)
+vault-llm.sh format       # Check frontmatter, long lines, trailing whitespace, broken wikilinks
+vault-llm.sh fonts        # Check heading hierarchy, excessive H1, missing H1
+vault-llm.sh backlinks    # Analyze cross-references with local LLM
+vault-llm.sh check <file> # Analyze a single file with local LLM (backlinks + formatting + content)
+vault-llm.sh rewrite <file> # Rewrite file with local LLM (shows diff, asks approval before writing)
+vault-llm.sh fix <file>   # Auto-fix trailing whitespace, long lines, missing frontmatter
 
 # =============================================================================
 # FREQUENTLY USED COMMANDS (from shell history)

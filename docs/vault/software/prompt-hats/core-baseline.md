@@ -10,7 +10,7 @@ modified: 2026-06-26
 
 # Core Baseline Hat
 
-Shared prefix — prepend to any role hat for consistency.  
+Shared prefix — prepend to any role hat for consistency.
 Optional; use when you want a stable behavioral floor across all sessions.
 
 ## Prompt Block

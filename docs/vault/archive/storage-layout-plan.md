@@ -31,7 +31,7 @@ modified: 2026-06-26
 ├── boot/
 └── home/ken/              (on sdd 112GB)
     ├── .config/           # App configs
-    ├── .local/            # Local app data  
+    ├── .local/            # Local app data
     ├── .openclaw/         # OpenClaw config (AI agent)
     ├── .opencode/         # OpenCode config
     ├── .wine/             # Wine prefixes
@@ -165,7 +165,7 @@ I need to configure storage drives as described in /home/ken/storage_layout_plan
 
 Drive layout:
 - sda (465GB SSD) at /mnt/ssd_storage - holds bulk data (Documents, Downloads, Pictures, Videos)
-- sdd (112GB SSD) at /home - user configs 
+- sdd (112GB SSD) at /home - user configs
 - nvme0n1 (465GB) at /home/ken/Steam - Steam library for games
 
 Please:

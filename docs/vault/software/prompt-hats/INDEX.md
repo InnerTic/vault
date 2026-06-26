@@ -9,7 +9,7 @@ modified: 2026-06-26
 
 # Prompt Hat System
 
-Role-switching prompt stack for local models (llama.cpp webchat, OpenCode, etc.).  
+Role-switching prompt stack for local models (llama.cpp webchat, OpenCode, etc.).
 Each hat is a self-contained operating mode with boundaries, input expectations, and output style.
 
 ## Usage

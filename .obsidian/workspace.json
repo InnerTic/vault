@@ -182,6 +182,8 @@
   },
   "active": "a2d067680022bd44",
   "lastOpenFiles": [
+    "docs/sedcyBiHs",
+    "docs/sedmG1gZx",
     "docs/vault/projects/meta-scripts.md",
     "docs/vault/projects/citation-attribution.md",
     "dotfiles/docs/vault/reference/lxc-build-log.md",
@@ -206,7 +208,6 @@
     "dotfiles/docs/reference/software-version-requirements.md",
     "dotfiles/docs/vault/projects/translation-pipeline/roles/00-parser.md",
     "dotfiles/docs/vault/projects/ai-bubble-watchboard.md",
-    "dotfiles/docs/vault/projects/ai-watchtower.md",
-    "dotfiles/docs/vault/projects/local-ai-control-tower.md"
+    "dotfiles/docs/vault/projects/ai-watchtower.md"
   ]
 }

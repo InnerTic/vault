@@ -7,28 +7,28 @@ modified: 2026-06-26
 
 # Vault Restructure — To-Do List
 
-**Branch:** `vault-restructure`  
+**Branch:** `vault-restructure`
 **Status:** Core structure complete. Remaining tasks:
 
 ---
 
 ## High Priority (Do Next Session)
 
-- [ ] **`docs/vault/system/drives-and-mounts.md`**  
+- [ ] **`docs/vault/system/drives-and-mounts.md`**
   Extract storage layout from rebuild-notes.md
   - UUID table for all 5 drives
   - fstab entries + explanations
   - When to use which drive
   - Bind mount strategy
 
-- [ ] **`docs/vault/software/dev-setup.md`**  
+- [ ] **`docs/vault/software/dev-setup.md`**
   Consolidate Python/Git/Shell setup
   - Python venv best practices
   - Git config (from dotfiles)
   - Shell config inheritance
   - Reference bootstrap.sh
 
-- [ ] **`docs/vault/reference/faq.md`**  
+- [ ] **`docs/vault/reference/faq.md`**
   Common questions:
   - "Where do my models go?"
   - "How do I switch models?"
@@ -39,18 +39,18 @@ modified: 2026-06-26
 
 ## High Priority — Vault Query System (Next Session)
 
-- [ ] **Create `vault-query.fish`** — front CLI  
-  `~/.local/bin/vault-query.fish`  
+- [ ] **Create `vault-query.fish`** — front CLI
+  `~/.local/bin/vault-query.fish`
   Fish wrapper that passes query to backend. Takes search text, calls `vault-query.sh`.
 
-- [ ] **Create `vault-query.sh`** — backend engine  
-  `~/.local/bin/vault-query.sh`  
+- [ ] **Create `vault-query.sh`** — backend engine
+  `~/.local/bin/vault-query.sh`
   Searches `conversations/`, `knowledge/`, `decisions/` directories. Scores by match count, returns ranked results with context snippets.
 
-- [ ] **Add `--decision-only`, `--knowledge-only`, `--conversation-only` flags**  
+- [ ] **Add `--decision-only`, `--knowledge-only`, `--conversation-only` flags**
   Filter by layer for targeted retrieval.
 
-- [ ] **Upgrade scoring to index JSON lookup**  
+- [ ] **Upgrade scoring to index JSON lookup**
   Replace raw grep with structured index metadata. Reserve for after index format is populated.
 
 ---
@@ -61,7 +61,7 @@ modified: 2026-06-26
   - `reference/bugs-and-workarounds.md` (temporary fixes, KDE/protontricks)
   - `reference/faq.md` (permanent questions)
 
-- [ ] **`docs/vault/map.md`**  
+- [ ] **`docs/vault/map.md`**
   Visual sitemap showing folder structure and navigation paths
 
 - [ ] **Add front matter tags to ALL files:**
@@ -73,13 +73,13 @@ modified: 2026-06-26
   ---
   ```
 
-- [ ] **`docs/vault/changelog.md`**  
+- [ ] **`docs/vault/changelog.md`**
   Track vault structure changes:
   - What moved where
   - Why (organization rationale)
   - When
 
-- [ ] **`docs/vault/.gitignore`**  
+- [ ] **`docs/vault/.gitignore`**
   Exclude Obsidian metadata from git:
   ```
   .obsidian/workspace.json
@@ -92,16 +92,16 @@ modified: 2026-06-26
 
 ## Polish (Nice-to-Have)
 
-- [ ] **`docs/vault/README.md`** for GitHub viewers  
+- [ ] **`docs/vault/README.md`** for GitHub viewers
   "This is best viewed in Obsidian. [[QUICK-START]]."
 
-- [ ] **Getting-started index**  
+- [ ] **Getting-started index**
   Entry point explaining vault organization
 
-- [ ] **Add "See Also" sections** to key docs  
+- [ ] **Add "See Also" sections** to key docs
   Instead of buried wikilinks
 
-- [ ] **Create Obsidian snippets** for custom styling  
+- [ ] **Create Obsidian snippets** for custom styling
   (if you want custom CSS)
 
 ---
@@ -128,15 +128,15 @@ modified: 2026-06-26
 
 ## Files Created This Session
 
-✅ `docs/vault/QUICK-START.md` — Emergency recovery guide  
-✅ `docs/vault/reference/glossary.md` — Definitions & abbreviations  
-✅ `docs/vault/software/ai-tools/commands.md` — AI command reference  
+✅ `docs/vault/QUICK-START.md` — Emergency recovery guide
+✅ `docs/vault/reference/glossary.md` — Definitions & abbreviations
+✅ `docs/vault/software/ai-tools/commands.md` — AI command reference
 ✅ `docs/vault/docs/VAULT-TODO.md` — This file
 
 ## Completed (Previous Sessions)
 
-✅ **`docs/vault/scripts/`** — All scripts migrated from `~/subjects/` and `dotfiles/scripts/` into vault with per-file `.md` views for Obsidian  
-✅ **`docs/vault/scripts/fastfetch.md`** — Fastfetch config in vault  
+✅ **`docs/vault/scripts/`** — All scripts migrated from `~/subjects/` and `dotfiles/scripts/` into vault with per-file `.md` views for Obsidian
+✅ **`docs/vault/scripts/fastfetch.md`** — Fastfetch config in vault
 ✅ **`docs/vault/scripts/README.md`** — Script index with categorized tables and wikilink entries
 
 ---

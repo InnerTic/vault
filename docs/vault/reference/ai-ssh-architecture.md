@@ -167,5 +167,5 @@ Key separation:
             AI AGENT
 ```
 
-Without these constraints, AI SSH access is a scriptable root shell with memory.  
+Without these constraints, AI SSH access is a scriptable root shell with memory.
 With them, it is a controlled operator with a limited toolbelt.

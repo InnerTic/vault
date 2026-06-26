@@ -5,6 +5,8 @@ tags:
 modified: 2026-06-26
 ---
 
+# "AKUMA VERSIONS"
+
 AKUMA SYSTEM EVOLUTION — VERSION PROGRESSION
 
 This documents how each version built on the prior one, showing the

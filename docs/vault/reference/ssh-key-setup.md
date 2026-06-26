@@ -8,7 +8,7 @@ modified: 2026-06-26
 # SSH Key Setup for Fresh Rebuild
 # ============================================
 # Purpose: Enable passwordless SSH login using RSA key auth
-# Prerequisites: 
+# Prerequisites:
 #   - Key generated on local workstation
 #   - Public key added to remote authorized_keys
 #   - VM IP: 172.16.13.1 (MAY BE STALE — verify current VM IP)
@@ -27,7 +27,7 @@ ssh-keygen -t rsa -b 4096 -C ken@Akuma
 #   -t rsa        = Use RSA algorithm (widely supported)
 #   -b 4096      = Key size 4096 bits (more secure than default 2048)
 #   -C ken@Akuma  = Comment label (helps identify key later)
-# 
+#
 # When prompted:
 #   > Enter file in which to save the key: (press Enter for default ~/.ssh/id_rsa)
 #   > Enter passphrase: (press Enter for no passphrase - or type one if you want)
@@ -101,16 +101,16 @@ ssh -i ~/.ssh/id_rsa ken@172.16.13.1
 # =============================================================================
 # Troubleshooting
 # ==============================================================================
-# 
+#
 # "Permission denied (publickey)":
 #   - Check key is in authorized_keys (no typos)
 #   - Check permissions (700 on .ssh, 600 on authorized_keys)
 #   - Check private key exists: ls -la ~/.ssh/id_rsa
-# 
+#
 # "Connection refused":
 #   - SSH service may not be running on VM
 #   - Check firewall: sudo ufw allow ssh
-# 
+#
 # "Too many authentication failures":
 #   - Add to ~/.ssh/config:
 #     Host 172.16.13.1

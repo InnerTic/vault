@@ -20,7 +20,8 @@ System documentation, rebuild references, GPU config, cheat sheets, and AI conte
 | [[vault/map]] | Full vault sitemap — navigation paths for every scenario |
 | [[vault/QUICK-START]] | 🚨 Emergency recovery — 5-minute restore after reinstall |
 | [[vault/hardware/gpu/config-notes\|gpu/config-notes]] | GPU stack — driver, CUDA, dual-GPU (RTX 3060 + Tesla P40) |
-| [[vault/software/ai-tools/llama-setup\|ai-tools/llama-setup]] | Building llama.cpp with dual-GPU CUDA support (sm_61 + sm_86) |
+| [[vault/software/ai-tools/llama-setup\|ai-tools/llama-setup]] | Building llama.cpp with dual-GPU CUDA support (sm_61
++ sm_86) |
 | [[vault/software/ai-tools/commands\|commands]] | AI command reference — llm, sdxl, textgen, oc |
 | [[vault/reference/quick-commands\|quick-commands]] | Condensed cheat sheet — AI commands, model paths, network IPs |
 | [[vault/software/prompt-hats/INDEX\|prompt-hats]] | 22 stable hats + 8 experimental |
@@ -65,10 +66,12 @@ System documentation, rebuild references, GPU config, cheat sheets, and AI conte
 
 | Page | Description |
 |------|-------------|
-| [[vault/reference/architecture-snapshot\|architecture-snapshot]] | 🧭 Homelab architecture — network, Proxmox, LXC, auth |
+| [[vault/reference/architecture-snapshot\|architecture-snapshot]] | 🧭 Homelab architecture — network, Proxmox, LXC,
+auth |
 | [[vault/reference/ai-ssh-architecture\|ai-ssh-architecture]] | 🧩 Restricted ai-user SSH pattern |
 | [[vault/reference/lxc-build-log\|lxc-build-log]] | 🧱 LXC 300 build log + gold pipeline |
-| [[vault/reference/proxmox-ssh-infrastructure\|proxmox-ssh-infrastructure]] | SSH key injection, LXC bootstrap, agent access |
+| [[vault/reference/proxmox-ssh-infrastructure\|proxmox-ssh-infrastructure]] | SSH key injection, LXC bootstrap, agent
+access |
 | [[vault/reference/faq\|faq]] | Common questions |
 | [[vault/reference/glossary\|glossary]] | Term definitions |
 | [[vault/reference/bugs-and-workarounds\|bugs-and-workarounds]] | Active upstream bugs and workarounds |

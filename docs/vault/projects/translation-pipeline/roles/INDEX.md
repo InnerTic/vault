@@ -88,8 +88,8 @@ This system is designed for:
 
 It is structured as a **multi-tier cognition stack**:
 
-> large models = reasoning + truth  
-> mid models = translation + editing  
+> large models = reasoning + truth
+> mid models = translation + editing
 > small models = structure + enforcement
 
 ---
@@ -415,7 +415,7 @@ Instead:
 - 27B becomes an exception handler
 - 4B becomes the default engine
 - verification remains heavy but selective
-added notes 
+added notes
 # Model Drop-In: Mistral Editor (Stable)
 
 ## Model
@@ -533,15 +533,15 @@ This model is a deterministic English surface transformer.It is not a translator
 - Below is a **machine-routable JSON spec** for your full translation system. It is designed so an external agent can:
 
 - select models automatically
-    
+
 - route chunks by difficulty
-    
+
 - enforce role constraints
-    
+
 - trigger escalation (4B → 27B → verifier)
-    
+
 - keep strict separation between translation / editing / verification
-    
+
 
 No narrative fluff. This is structured as a control plane definition.
 
@@ -830,11 +830,11 @@ Not a pipeline of scripts, but a **decision system**
 Instead of random drift:
 
 - low → fast path
-    
+
 - medium → hybrid path
-    
+
 - high → full reasoning stack
-    
+
 
 ## 3. A separation of cognition layers
 
