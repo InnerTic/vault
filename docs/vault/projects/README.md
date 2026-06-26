@@ -12,6 +12,7 @@ General-purpose project documentation outside the structured vault categories.
 
 | Project | Reason |
 |---------|--------|
+| [[../archive/meta-scripts\|Meta Script Project]] | Overengineered — goals achieved ad-hoc. Moved to archive. |
 
 | Project | Source | Description |
 |---------|--------|-------------|
