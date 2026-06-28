@@ -87,3 +87,23 @@ rm ~/dotfiles/docs && git checkout HEAD -- docs
 ```bash
 npx quartz plugin install
 ```
+
+**Git repo warnings (3× "couldn't find git repository for content"):**
+The `created-modified-date` plugin uses `@napi-rs/simple-git` which requires a
+readable `~/.gitconfig`. If this symlink is broken:
+
+```bash
+# Check and fix
+ls -la ~/.gitconfig
+ln -sf ~/vault/dotfiles/git/.gitconfig ~/.gitconfig
+```
+
+Also ensure the content directory is in a git repo:
+
+```bash
+cd ~/quartz/content
+git init
+git config user.email "innertic@users.noreply.github.com"
+git config user.name "InnerTic"
+git add -A && git commit --allow-empty -m "content snapshot"
+```
