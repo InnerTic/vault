@@ -91,6 +91,48 @@ Add to `~/.config/opencode/opencode.jsonc` (or `claude_desktop_config.json`):
 
 Provides tools: `searxng_web_search`, `searxng_search_suggestions`, `searxng_instance_info`, `web_url_read`.
 
+### Live config (LXC deployment)
+
+SearXNG runs in LXC 108 (`172.16.12.16`), so the actual config uses:
+
+```json
+{
+  "mcpServers": {
+    "searxng": {
+      "command": "npx",
+      "args": ["-y", "mcp-searxng"],
+      "env": {
+        "SEARXNG_URL": "http://172.16.12.16:8888"
+      }
+    }
+  }
+}
+```
+
+### Fixed: API returns 403 — resolved 2026-06-28
+
+**Root cause:** `search.formats` in `/etc/searxng/settings.yml` only included `html`, not `json`. The default SearXNG config only serves HTML unless `json` is explicitly added. The MCP bridge queries the JSON API, which returned 403.
+
+**Fix:** Added `json` to `search.formats`:
+
+```yaml
+search:
+  formats:
+    - html
+    - json
+```
+
+Other potential causes that were already correct on LXC 108:
+- `server.limiter: false` — was already set
+- SSH root access — was actually available (root key works)
+- `search_token` — not required when `server.limiter: false`
+
+**How to fix again if needed:**
+```bash
+scp corrected-settings.yml root@172.16.12.16:/etc/searxng/settings.yml
+ssh root@172.16.12.16 "kill -HUP \$(pgrep -f 'searx.webapp')"
+```
+
 ## Commands
 
 ```bash
@@ -102,12 +144,17 @@ journalctl --user -u searxng.service -n 50 --no-pager
 
 ## Usage
 
-- Web UI: http://127.0.0.1:8888
-- JSON API: `curl 'http://127.0.0.1:8888/search?q=test&format=json'`
-- OpenCode provider config: `"baseURL": "http://0.0.0.0:8888"`
+| Access | URL |
+|--------|-----|
+| Web UI (local) | http://127.0.0.1:8888 |
+| Web UI (LAN) | http://172.16.12.16:8888 |
+| JSON API | `curl 'http://172.16.12.16:8888/search?q=test&format=json'` |
+| OpenCode provider | `"baseURL": "http://172.16.12.16:8888"` |
+| OpenCode MCP env | `SEARXNG_URL=http://172.16.12.16:8888` |
 
 ## Directory layout
 
+### Local install (docs/vault)
 ```
 /mnt/workspace/searxng/
 ├── repo/              # git clone of searxng/searxng
@@ -115,11 +162,20 @@ journalctl --user -u searxng.service -n 50 --no-pager
 ├── settings.yml       # custom config
 ```
 
+### LXC 108 (live)
+```
+/usr/local/searxng/
+├── searxng-src/       # git clone
+├── searx-pyenv/       # Python venv
+├── /etc/searxng/settings.yml   # actual config path
+```
+
 ## Notes
 
 - Installed via pip (not AUR) to avoid sudo dependency and keep it as a user service
 - Uses `--no-build-isolation` because setup.py imports `searx` (which requires `msgspec`) at import time during build
 - No nginx reverse proxy needed for local-only usage — SearXNG's built-in server handles direct access on port 8888
+- LXC 108 runs fish shell (not bash) — heredocs won't work over SSH, use `printf` or `scp` instead
 
 ## References
 
