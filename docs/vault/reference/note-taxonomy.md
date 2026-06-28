@@ -71,6 +71,7 @@ modified: YYYY-MM-DD
 - Labs live in `Labs/`, not in the numbered sequence.
 - **Every file must be tagged.** Tags derived from directory + filename (e.g. `learning/tmux/02-Sessions.md` → `learning, tmux, sessions`).
 - **Every file must be backlinkable.** Must contain at least one `[[wikilink]]` to another vault page. No orphan notes.
+- **General AI drafts** (not part of a curriculum) go to `docs/vault/inbox/`. Same rules apply: tagged, backlinked, reviewed before promotion.
 
 ---
 
