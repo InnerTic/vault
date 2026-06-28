@@ -19,7 +19,7 @@ All dates are daily [[wikilinks]] unless noted as work entries.
 | 2026-05-11 | [[2026-05-11|GW2 Multi-Box]] -- [[20260511-001-GW2-Multi-Box-Wine-Setup|Wine/Proton setup, failure modes]] |
 | 2026-05-13 | [[2026-05-13|Free Models and Archival]] -- [[20260513-001-Free-Models-Context-and-Archival|AI provider catalog, context system, archive]] |
 | 2026-06-04 | [[2026-06-04|Rebuild Script]] -- [[20260604-001-Rebuild-Script-Live-Env-Setup|live-env-setup, pkglist]] |
-| 2026-06-05 | [[2026-06-05|CUDA 12.4]] -- [[20260605-001-CUDA-12-4-Dual-Arch-Build|dual-arch build, P40 kernel fix]] |
+| 2026-06-05 | [[2026-06-05|CUDA 12.4]] -- [[20260605-001-CUDA-12.4-Dual-Arch-Build|dual-arch build, P40 kernel fix]] |
 | 2026-06-06 | [[2026-06-06|VM-Disks and Thorium]] -- [[20260606-001-VM-Disks-Partition-Thorium-Dark-Mode|sde split, dark mode, AKUMA_VERSIONS]] |
 | 2026-06-07 | [[2026-06-07|KDE Workarounds]] -- [[20260607-001-KDE-Workarounds-Documented|tracked bugs, dolphinrc]] |
 | 2026-06-08 | [[2026-06-08|KDE Hacks]] -- [[20260608-001-KDE-Temporary-Hacks|bug 519773, MIME fix]] |
