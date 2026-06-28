@@ -114,8 +114,8 @@ ssh openclawVM  # OpenClaw VM (172.16.12.12)
 # QUARTZ WIKI — Update after vault changes
 # =============================================================================
 update-wiki              # Rebuild Quartz site on LXC (172.16.12.17):
-                         #   cd ~/vault && git add -A && git commit -m "msg" && git push && ssh quartz "/srv/quartz/update-wiki.sh"
-                         # Or: ssh quartz "/srv/quartz/update-wiki.sh"
+                         #   cd ~/vault && git add -A && git commit -m "msg" && git push && ssh quartz "/home/ken/scripts/update-wiki.sh"
+                         # Or: ssh quartz "/home/ken/scripts/update-wiki.sh"
 
 # =============================================================================
 # VAULT — Script management
