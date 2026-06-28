@@ -72,3 +72,36 @@ Then boot the other OS and repeat.
 - Remaining issues: long lines (cosmetic), some titles need human review
 
 **Dotfiles sync**: Added `node_modules/`, `.serena/`, `quartz-data/`, `scripts/archive/` to `dotfiles/.gitignore`, synced mirror and pushed (`deb@0f8655c`).
+
+### 2026-06-28 — Meta-scripts abortloop fix + Citation pipeline + Web Pipeline
+
+**Trigger**: User reported meta-scripts.md was repeatedly archived by agents despite being active. User requested local web fetching solution after SearXNG API returned 403.
+
+**Meta-scripts fix**:
+- File had `status: abandoned` and "Abandoned" in title/body since vault import (`382849c`)
+- Agents kept moving it to `archive/`; user corrected twice across two days
+- Fixed: moved back to `projects/`, rewrote content, fixed 6 cross-refs in map, knowledge-audit, projects README, scripts README, changelog
+- Added DO NOT ARCHIVE rule to AGENTS.md conventions
+
+**Citation pipeline** (`~/.local/bin/vault-attribution.py`):
+- 5-phase CLI: scan, fetch, compare, apply, audit
+- Line-level Jaccard similarity (≥90% auto, ≥50% review)
+- Local AI audit via llama-server for remaining uncited files
+- 242 vault files: 38 cited, 204 uncited
+
+**Web Pipeline** (`/mnt/workspace/web-pipeline/`):
+- 3-tier escalation: Firecrawl → Playwright Stealth → Persistent Browser
+- Persistent: `chromium.launchPersistentContext` with profile at `profiles/default/`, Xvfb for non-headless display, `--force-dark-mode`
+- Cache: MD5-hashed, 10-min TTL
+- MCP server wired in `opencode.jsonc` as `web-pipeline` tool `web_fetch`
+- Tested: example.com (stealth ✓), HN (stealth ✓), qidian.com (persistent, rendered real content)
+- Logger: per-fetch `.md` notes with YAML frontmatter + aggregated `journal.md` with `[[wikilinks]]`
+- Cleanup: `cleanup.js` removes fetch notes older than 24h
+
+**Journal**: `docs/vault/journal/2026-06-28.md` — Lewis & Clark style expedition log.
+
+**Key decisions**:
+- Pipeline lives at `/mnt/workspace/web-pipeline/` (not `/opt/` — no sudo)
+- Persistent browser profile at `/mnt/workspace/web-pipeline/profiles/default/`
+- No raw page content in logs — metadata only in journal, content in cache
+- Per-fetch notes cleaned after 24h
