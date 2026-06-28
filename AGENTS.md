@@ -54,6 +54,7 @@ Then boot the other OS and repeat.
 - Git user: `InnerTic` / `innertic@users.noreply.github.com`
 - All vault .md files should have YAML frontmatter with `title:` and `tags:` — deterministic tag derivation from directory path + filename
 - **DO NOT archive `meta-scripts.md`** — it is an active, in-progress project. The file's original content erroneously read "Abandoned" (from vault import), causing a loop where agents kept moving it to `archive/`. Corrected 2026-06-26: content rewritten, cross-refs fixed, restored to `projects/`.
+- **Journal structure:** Daily notes at `journal/YYYY-MM-DD.md` are 1-page indexes with `[[wikilinks]]` to work entries at `journal/entries/YYYY/YYYYMMDD-NNN-Slug.md`. Each entry has a unique immutable ID (`YYYYMMDD-NNN`). Template at `journal/TEMPLATE.md`.
 
 ## Sessions
 
@@ -98,7 +99,7 @@ Then boot the other OS and repeat.
 - Logger: per-fetch `.md` notes with YAML frontmatter + aggregated `journal.md` with `[[wikilinks]]`
 - Cleanup: `cleanup.js` removes fetch notes older than 24h
 
-**Journal**: `docs/vault/journal/2026-06-28.md` — Lewis & Clark style expedition log.
+**Journal**: `docs/vault/journal/2026-06-28.md` — 1-page daily index with `[[wikilinks]]` to 3 work entries at `journal/entries/2026/20260628-{001,002,003}.md`. Each entry has immutable ID, structured frontmatter (projects, systems, files, lessons). Template at `journal/TEMPLATE.md`.
 
 **Key decisions**:
 - Pipeline lives at `/mnt/workspace/web-pipeline/` (not `/opt/` — no sudo)
