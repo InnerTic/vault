@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dotfiles/docs/vault/reference/knowledge-audit.md",
+                "file": "docs/vault/journal/2026-06-28.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "knowledge-audit"
+              "title": "2026-06-28"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "hat prompt",
+                "query": "web",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -180,8 +181,17 @@
       "bases:Create new base": false
     }
   },
-  "active": "a2d067680022bd44",
+  "active": "49bcc2ba6e66a0d9",
   "lastOpenFiles": [
+    "README.md",
+    "docs/vault/journal/TEMPLATE.md",
+    "docs/vault/journal/entries/2026/20260628-003-Web-Pipeline.md",
+    "docs/vault/journal/entries/2026/20260628-002-Citation-Pipeline.md",
+    "docs/vault/journal/entries/2026/20260628-001-Meta-Scripts.md",
+    "docs/vault/journal/entries/2026",
+    "docs/vault/journal/entries",
+    "dotfiles/docs/vault/projects/translation-pipeline.md",
+    "dotfiles/docs/vault/reference/knowledge-audit.md",
     "docs/sedcyBiHs",
     "docs/sedmG1gZx",
     "docs/vault/projects/meta-scripts.md",
@@ -202,12 +212,6 @@
     "docs/CHANGELOG.md",
     "docs/vault/research/rag-yarn-long-context.md",
     "dotfiles/docs/vault/archive/scratchpad.md",
-    "dotfiles/docs/vault/archive/implementation-workflow-backup.md",
-    "dotfiles/docs/vault/archive/implementation-workflow.md",
-    "dotfiles/docs/vault/archive/cachyos-steam-nvidia-input-log.md",
-    "dotfiles/docs/reference/software-version-requirements.md",
-    "dotfiles/docs/vault/projects/translation-pipeline/roles/00-parser.md",
-    "dotfiles/docs/vault/projects/ai-bubble-watchboard.md",
-    "dotfiles/docs/vault/projects/ai-watchtower.md"
+    "dotfiles/docs/vault/archive/implementation-workflow-backup.md"
   ]
 }
