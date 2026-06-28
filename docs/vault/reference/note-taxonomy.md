@@ -114,9 +114,9 @@ scripts:
   - script-path
 files:
   - file-path
-created:
+created_pages:
   - "[[Thing Created]]"
-updated:
+updated_pages:
   - "[[Thing Updated]]"
 tags:
   - tag1

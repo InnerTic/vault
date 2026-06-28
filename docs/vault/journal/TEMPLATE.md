@@ -15,14 +15,13 @@ scripts:
   - script-path
 files:
   - file-path
-created:
+created_pages:
   - "[[Thing Created]]"
-updated:
+updated_pages:
   - "[[Thing Updated]]"
 tags:
   - tag1
   - tag2
-modified: YYYY-MM-DD
 ---
 
 # YYYYMMDD-NNN — Short Title

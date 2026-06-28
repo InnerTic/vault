@@ -31,7 +31,14 @@ cp quartz.config.default.yaml quartz.config.yaml
 rsync, NOT symlink. Symlink produced recursive loops.
 
 ```bash
-rsync -av --delete ~/dotfiles/docs/ ~/quartz/content/
+rsync -av --delete --exclude=.git ~/vault/docs/ ~/quartz/content/
+```
+
+After first sync, init a git repo in content for quartz date plugin:
+
+```bash
+cd ~/quartz/content
+git init && git config user.email "innertic@users.noreply.github.com" && git config user.name "InnerTic" && git add -A && git commit --allow-empty -m "content snapshot"
 ```
 
 ## Plugin Installation
