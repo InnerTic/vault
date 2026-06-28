@@ -1,7 +1,6 @@
 ---
 type: work-entry
 id: YYYYMMDD-NNN
-date: YYYY-MM-DD
 status: completed | in-progress | blocked
 confidence: high | medium | low
 time_spent: Xh
@@ -25,6 +24,8 @@ tags:
 ---
 
 # YYYYMMDD-NNN — Short Title
+
+Date: YYYY-MM-DD (derived from filename prefix)
 
 ## Goal
 
