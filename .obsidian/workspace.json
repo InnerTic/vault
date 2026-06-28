@@ -11,14 +11,10 @@
             "id": "49bcc2ba6e66a0d9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "journal/entries/2026/20260628-001-Meta-Scripts.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "20260628-001-Meta-Scripts"
+              "title": "New tab"
             }
           }
         ]
@@ -180,8 +176,28 @@
       "bases:Create new base": false
     }
   },
-  "active": "49bcc2ba6e66a0d9",
+  "active": "a2d067680022bd44",
   "lastOpenFiles": [
+    "docs/vault/journal/entries/2026/20260628-003-Web-Pipeline.md",
+    "docs/vault/journal/entries/2026/20260628-002-Citation-Pipeline.md",
+    "docs/vault/journal/entries/2026/20260628-001-Meta-Scripts.md",
+    "docs/vault/journal/entries/2026/20260626-003-RAG-YaRN.md",
+    "docs/vault/journal/entries/2026/20260626-002-Meta-Scripts.md",
+    "docs/vault/journal/entries/2026/20260626-001-Frontmatter-Audit.md",
+    "docs/vault/journal/entries/2026/20260625-001-Firecrawl-MCP.md",
+    "docs/vault/journal/entries/2026/20260624-001-Dotfiles-Sync.md",
+    "docs/vault/journal/entries/2026/20260621-003-Path-Fixes.md",
+    "docs/vault/journal/entries/2026/20260621-002-Dotfiles-Reabsorb.md",
+    "docs/vault/journal/entries/2026/20260621-001-Vault-Import.md",
+    "docs/vault/journal/entries/2026",
+    "docs/vault/journal/entries",
+    "docs/vault/journal/TEMPLATE.md",
+    "docs/vault/journal/2026-06-28.md",
+    "docs/vault/journal/2026-06-26.md",
+    "docs/vault/journal/2026-06-25.md",
+    "docs/vault/journal/2026-06-24.md",
+    "docs/vault/journal/2026-06-21.md",
+    "docs/vault/journal",
     "journal/entries/2026/20260626-003-RAG-YaRN.md",
     "journal/entries/2026/20260626-002-Meta-Scripts.md",
     "journal/entries/2026/20260626-001-Frontmatter-Audit.md",
@@ -191,29 +207,10 @@
     "journal/entries/2026/20260624-001-Dotfiles-Sync.md",
     "journal/2026-06-24.md",
     "journal/entries/2026/20260621-003-Path-Fixes.md",
-    "journal/entries/2026/20260621-002-Dotfiles-Reabsorb.md",
-    "journal/entries/2026/20260621-001-Vault-Import.md",
-    "journal/2026-06-21.md",
-    "journal/entries/2026/20260628-002-Citation-Pipeline.md",
-    "journal/2026-06-28.md",
-    "journal/TEMPLATE.md",
-    "journal/entries/2026/20260628-003-Web-Pipeline.md",
-    "journal/entries/2026/20260628-001-Meta-Scripts.md",
-    "dotfiles/docs/vault/projects/translation-pipeline.md",
-    "docs/vault/journal/2026-06-28.md",
     "journal/entries/2026",
     "journal/entries",
     "journal",
-    "README.md",
-    "docs/vault/journal/TEMPLATE.md",
-    "docs/vault/journal/entries/2026/20260628-003-Web-Pipeline.md",
-    "docs/vault/journal/entries/2026/20260628-002-Citation-Pipeline.md",
-    "docs/vault/journal/entries/2026/20260628-001-Meta-Scripts.md",
-    "docs/vault/journal/entries/2026",
-    "docs/vault/journal/entries",
-    "dotfiles/docs/vault/reference/knowledge-audit.md",
     "docs/sedcyBiHs",
-    "docs/sedmG1gZx",
-    "docs/vault/projects/meta-scripts.md"
+    "docs/sedmG1gZx"
   ]
 }
