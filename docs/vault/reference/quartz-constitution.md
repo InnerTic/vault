@@ -175,3 +175,21 @@ Generate the static site. Verify output. Do not configure a web server yet.
 ### Task Block 5 — Serve the Site Locally
 
 Choose a lightweight static web server. Support localhost and LAN access. Do not hardcode IP addresses.
+
+---
+
+## Build Notes
+
+### esbuild eval() warning
+
+Quartz v5 emits this warning during every build:
+
+```
+▲ [WARNING] Using direct eval with a bundler is not recommended
+.quartz/plugins/note-properties/dist/index.js:3117
+return eval(str) || {};
+```
+
+**Not a failure.** The Note Properties plugin uses `eval()` to interpret user expressions. esbuild warns whenever it encounters `eval()` because it limits tree-shaking and bundling optimizations. The built site works correctly.
+
+**Ignore** during normal use. If the plugin breaks after a Quartz update, investigate then. No action needed for a working setup.
