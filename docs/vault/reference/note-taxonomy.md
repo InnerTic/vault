@@ -83,14 +83,15 @@ modified: YYYY-MM-DD
 
 | Subtype | Directory | Example |
 |---------|-----------|---------|
-| Work entries | `journal/entries/YYYY/` | `journal/entries/2026/20260628-003-Web-Pipeline.md` |
+| Work entries | `journal/entries/YYYY/MM/` | `journal/entries/2026/06/20260628-003-Web-Pipeline.md` |
 | Daily indexes | `journal/` | `journal/2026-06-28.md` |
 | Projects | `projects/` | `projects/citation-attribution.md` |
 
 **Work entry naming convention:**
 ```
-YYYYMMDD-NNN-Short-Description.md
+journal/entries/YYYY/MM/YYYYMMDD-NNN-Short-Description.md
 ```
+Entries are grouped by year/month subdirectory to keep the Quartz explorer clean.
 - `YYYYMMDD` — date
 - `NNN` — sequential within that day (001, 002...)
 - `Short-Description` — kebab-case summary
