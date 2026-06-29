@@ -172,7 +172,7 @@ vault-publish
 This single command runs the full pipeline:
 1. Backlinks entries (vault-journal-backlink.sh)
 2. Rsyncs vault → Quartz content
-3. Rebuilds static site
+3. Rebuilds static site locally
 4. Commits and pushes vault changes
 
 If `~/.gitconfig` is broken, `npx quartz build` emits 3× "couldn't find git repository for content":
