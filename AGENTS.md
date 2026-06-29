@@ -159,29 +159,26 @@ Then boot the other OS and repeat.
 | `~/.local/bin/vault-attribution.py` | Citation pipeline: scan uncited files, compare against source repos, apply source: fields, AI audit |
 | `~/.local/bin/learn-topic` | Learning pipeline agent (roadmap / lesson / lab generation)
 | `~/quartz/` | Quartz v5 static site (Obsidian → blog) |
+| `~/.local/bin/vault-publish` | Full publish pipeline: backlink → sync → build → push |
 
 ## Quartz update workflow
 
-After `git push` to vault, update Quartz:
+After editing vault files (or to test a build without committing):
 
 ```bash
-# 1. Sync vault content to Quartz
-rsync -av --delete --exclude=.git ~/vault/docs/ ~/quartz/content/
-
-# 2. Rebuild static site
-cd ~/quartz && npx quartz build
-
-# 3. (optional) Hard reset if content gets stale
-rm -rf ~/quartz/public/*
-npx quartz build
+vault-publish
 ```
 
-If `~/.gitconfig` is broken (missing, empty, or bad symlink), `npx quartz build` will emit 3× "couldn't find git repository for content" warnings. Fix:
+This single command runs the full pipeline:
+1. Backlinks entries (vault-journal-backlink.sh)
+2. Rsyncs vault → Quartz content
+3. Rebuilds static site
+4. Commits and pushes vault changes
 
+If `~/.gitconfig` is broken, `npx quartz build` emits 3× "couldn't find git repository for content":
 ```bash
-# ~/.gitconfig must exist and be readable by @napi-rs/simple-git
 ls -la ~/.gitconfig
 ln -sf ~/vault/dotfiles/git/.gitconfig ~/.gitconfig
 ```
 
-Quartz config is at `~/quartz/quartz.config.yaml`. The `created-modified-date` plugin needs valid `date`/`modified`/`created` frontmatter fields — placeholder strings like `YYYY-MM-DD` or wikilinks in `created:` will produce "invalid date" warnings in the build log. TEMPLATE.md uses `created_pages:` / `updated_pages:` instead of `created:` / `updated:` to avoid this collision.
+Quartz config at `~/quartz/quartz.config.yaml`. Valid frontmatter dates required — TEMPLATE.md uses `created_pages:` / `updated_pages:` instead of `created:` / `updated:` to avoid collision with the `created-modified-date` plugin.
