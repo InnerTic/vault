@@ -83,15 +83,15 @@ modified: YYYY-MM-DD
 
 | Subtype | Directory | Example |
 |---------|-----------|---------|
-| Work entries | `journal/entries/YYYY/MM/` | `journal/entries/2026/06/20260628-003-Web-Pipeline.md` |
-| Daily indexes | `journal/` | `journal/2026-06-28.md` |
+| Daily indexes | `journal/YYYY/MM/` | `journal/2026/06/2026-06-28.md` |
+| Work entries | `journal/YYYY/MM/entries/` | `journal/2026/06/entries/20260628-003-Web-Pipeline.md` |
 | Projects | `projects/` | `projects/citation-attribution.md` |
 
 **Work entry naming convention:**
 ```
-journal/entries/YYYY/MM/YYYYMMDD-NNN-Short-Description.md
+journal/YYYY/MM/entries/YYYYMMDD-NNN-Short-Description.md
 ```
-Entries are grouped by year/month subdirectory to keep the Quartz explorer clean.
+Entries are grouped under their month directory alongside the daily note, not in a separate top-level `entries/` tree.
 - `YYYYMMDD` — date
 - `NNN` — sequential within that day (001, 002...)
 - `Short-Description` — kebab-case summary
@@ -234,6 +234,6 @@ The second query is preferred — it requires no manual `history:` maintenance. 
 | Type | Purpose | Directory | Key frontmatter | Immutable? |
 |------|---------|-----------|----------------|------------|
 | Learning | Curricula, lessons, labs | `learning/` | title, tags, status | No |
-| Engineering | Work records, decisions | `journal/entries/` | id, date, projects | Yes (id) |
+| Engineering | Work records, decisions | `journal/YYYY/MM/entries/` | id, date, projects | Yes (id) |
 | Reference | Concepts, APIs, commands | `reference/`, `software/`, etc. | title, tags, source | No |
-| Daily | Day index | `journal/` | title, tags | No |
+| Daily | Day index | `journal/YYYY/MM/` | title, tags | No |
