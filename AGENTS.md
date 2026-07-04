@@ -2,7 +2,7 @@
 title: "AGENTS"
 tags:
   - AGENTS
-modified: 2026-06-26
+modified: 2026-07-03
 ---
 
 # vault.git — Single source of truth for Akuma
@@ -61,7 +61,7 @@ Then boot the other OS and repeat.
 
 ## Sessions
 
-### 2026-06-26 — Vault tag/formatting audit + full frontmatter fix
+### Vault Hygiene — 2026-06-26
 
 **Trigger**: User noticed missing tags and misformatted text across vault.
 
@@ -77,7 +77,7 @@ Then boot the other OS and repeat.
 
 **Dotfiles sync**: Added `node_modules/`, `.serena/`, `quartz-data/`, `scripts/archive/` to `dotfiles/.gitignore`, synced mirror and pushed (`deb@0f8655c`).
 
-### 2026-06-28 — Meta-scripts abortloop fix + Citation pipeline + Web Pipeline
+### Web Pipeline — 2026-06-28
 
 **Trigger**: User reported meta-scripts.md was repeatedly archived by agents despite being active. User requested local web fetching solution after SearXNG API returned 403.
 
@@ -104,7 +104,7 @@ Then boot the other OS and repeat.
 
 **Journal**: `docs/vault/journal/2026-06-28.md` — 1-page daily index with `[[wikilinks]]` to 3 work entries at `docs/vault/journal/entries/2026/20260628-{001,002,003}.md`. Each entry has immutable ID, structured frontmatter (projects, systems, files, lessons). Template at `docs/vault/journal/TEMPLATE.md`.
 
-### 2026-06-28 (session 2) — Learning pipeline rollout + vault invariant hardening
+### Learning Pipeline — 2026-06-28
 
 **Trigger**: User identified that the learning pipeline and note taxonomy needed explicit rules for tagging and backlinks.
 
@@ -140,6 +140,32 @@ Then boot the other OS and repeat.
 2. Run `learn-topic tmux --lesson 1` to generate first lesson into Inbox
 3. After each lesson, run vault-journal-backlink.sh to cross-link
 4. Verify all new files with tag + backlink lint check
+
+### Translation Library — 2026-07-03
+
+**Trigger**: Standardized all 7 books in `/mnt/workspace/Projects/translation/` with uniform pipeline structure.
+
+**Setup**:
+- Created `raw/`, `clean/`, `chunks/`, `output/`, `canon/`, `work/` directories for Blue Magic, Catastrophic Necromancer, Dungeon, The bell tolls for revenge, zhys
+- Copied pipeline scripts (parser, glossary, briefer, translate, stitch) to each book's `scripts/`
+- Created `pipe.sh` for each book (role-based runner identical to Hyperdimensional Sorcerer's)
+- Added html-to-text extraction role (`./pipe.sh -1`) for HTML-source books
+- Moved 269 (Dungeon) + 288 (bell tolls) HTML files from root into `raw/`
+- Identified zhys as duplicate of Eerie (same site IDs 80804287–83304294)
+
+**Book inventory**:
+
+| Book | raw | clean | pipe | notes |
+|------|-----|-------|------|-------|
+| Blue Magic | 76 .htm | — | Y | Japanese (syosetu.com), needs extract |
+| Catastrophic Necromancer | 4851 .txt | 4851 | Y | English, already analyzed |
+| Dungeon | 269 .htm | — | Y | Needs extract |
+| Eerie - I Devour Without End | 567 | 566 | Y | Complete, just needs pipe.sh |
+| Hyperdimensional Sorcerer | 4436 | — | Y | Full pipeline running |
+| The bell tolls for revenge | 288 .htm | — | Y | Needs extract |
+| zhys | — | — | Y | Duplicate of Eerie |
+
+**Next**: Extract HTML books, then run parser/briefer pipeline per book.
 
 ---
 

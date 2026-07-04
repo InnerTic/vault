@@ -44,16 +44,22 @@ All dates are daily [[wikilinks]] unless noted as work entries.
 - **2026-06-25** — [[2026-06-25|Firecrawl MCP]] — [[20260625-001-Firecrawl-MCP|setup docs]]
 - **2026-06-26** — [[2026-06-26|Frontmatter Audit]] — [[20260626-001-Frontmatter-Audit|240 files fixed]], [[20260626-002-Meta-Scripts|meta-scripts]], [[20260626-003-RAG-YaRN|RAG research]]
 - **2026-06-28** — [[2026-06-28|Pipeline Day]] — [[20260628-001-Meta-Scripts|meta-scripts fix]], [[20260628-002-Citation-Pipeline|citation pipeline]], [[20260628-003-Web-Pipeline|web pipeline]]
+- **2026-06-29** — [[2026-06-29|Journal Restructure]] — [[20260629-001-Journal-Restructure-and-Vault-Publish|journal restructure, vault-publish]]
+
+### July
+
+- **2026-07-02** — [[2026-07-02|Catastrophic Necromancer QC]] — [[20260702-001-Catastrophic-Necromancer-Analysis|consistency checks, promo strip, name fix]]
+- **2026-07-03** — [[2026-07-03|Translation Library]] — [[20260703-001-Translation-Library-Standardization|7-book pipeline standardization]]
 
 ---
 
 ## Stats
 
 - **First entry**: 2026-04-19
-- **Latest entry**: 2026-06-28
-- **Total entries**: 27
+- **Latest entry**: 2026-07-03
+- **Total entries**: 30
 - **Pre-vault entries** (before June 21): 21
-- **Post-migration entries** (June 21+): 6
+- **Post-migration entries** (June 21+): 9
 
 ## See Also
 
