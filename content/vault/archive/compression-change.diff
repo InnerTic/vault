@@ -1,0 +1,13 @@
+--- /tmp/config_before.yaml	2026-06-22 08:28:27.187786334 -0700
++++ /home/ken/.hermes/config.yaml	2026-06-22 08:28:32.316922929 -0700
+@@ -141,8 +141,8 @@
+     idempotent_no_progress: 5
+ compression:
+   enabled: true
+-  threshold: 0.5
+-  target_ratio: 0.2
++  threshold: 0.3
++  target_ratio: 0.15
+   protect_last_n: 20
+   hygiene_hard_message_limit: 400
+   protect_first_n: 3
