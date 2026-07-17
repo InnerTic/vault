@@ -3,7 +3,7 @@ title: "Map"
 tags:
   - map
 aliases: [sitemap, map, vault-map]
-modified: 2026-06-26
+modified: 2026-07-17
 ---
 
 # Vault Map
@@ -88,8 +88,8 @@ docs/                          ← Vault root (.obsidian/ lives here)
 │   │   ├── vault-query-scripts.md        ← Vault query scripts
 │   │   ├── memory-reasoning-execution-pipeline.md
 │   │   ├── libvirt-bridge-setup.md       ← Zero-touch KVM bridge
-│   │   ├── keyd-stack.md                ← keyd upstream install + remap
-│   │   ├── keyd-kde-wayland-f24.md       ← keyd + KDE Wayland F24 workaround
+│   │   ├── keyd-stack.md                ← keyd install + Caps→Hyper→F24 (working config)
+│   │   ├── keyd-kde-wayland-f24.md       ← keyd F24 theory + dual-interface resolution
 │   │   ├── key-locations.md             ← Key file locations
 │   │   ├── commands.md                  ← Full command reference
 │   │   ├── quick-commands.md            ← Condensed cheat sheet

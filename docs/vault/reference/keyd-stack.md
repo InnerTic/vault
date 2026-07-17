@@ -4,16 +4,26 @@ tags:
   - reference
   - keyd-stack
 aliases: [keyd-setup, keyd-debug, keyd-troubleshoot]
-modified: 2026-06-26
+modified: 2026-07-17
 ---
 
-# keyd — Deterministic Debian Stack
+# keyd — Key Remapping Stack
 
-Upstream keyd install, diagnostics, and the input group permission fix.
+Install, diagnostics, Caps→Hyper→F24 pipeline, and dual-interface keyboard handling.
 
 ---
 
-## 1. Install from upstream (not distro package)
+## 1. Install
+
+### 1.1 CachyOS / Arch
+
+```bash
+sudo pacman -S keyd
+sudo systemctl enable --now keyd
+# or: pkexec pacman -S keyd
+```
+
+### 1.2 Debian / MX Linux (build from source)
 
 The Debian/MX package installs a daemon-only build (`/usr/bin/keyd.rvaiya`) missing the CLI tools. Always build from source:
 
@@ -27,7 +37,7 @@ sudo systemctl enable --now keyd
 
 **What you get vs distro package:**
 
-| Component | Distro package | Upstream build |
+| Component | Distro package (Debian) | Arch package / Upstream build |
 |---|---|---|
 | Daemon (`keyd` service) | ✔ (renamed binary) | ✔ |
 | `keyd monitor` | ❌ | ✔ |
@@ -90,189 +100,247 @@ ls -l /dev/input/event0             # expected: crw-rw---- 1 root input
 
 ---
 
-## 4. Remapping: Caps → Hyper → F24
+## 4. Working Config: Caps → Hyper → F24 (CachyOS / KDE Wayland)
 
-This does NOT require `keyd monitor` to work — monitor is for debugging only. The remapping itself only needs:
+### 4.1 Find the correct device ID
 
-### 4.1 Config file
+Keyboards with multiple USB interfaces (common on gaming keyboards) create multiple evdev nodes. Caps Lock may come from only ONE of them. Using `[ids] *` can cause conflicts.
+
+**Find which interface emits Caps Lock:**
+
+```bash
+# Stop keyd, grab each keyboard device, test Caps
+python3 << 'PY'
+import evdev
+from evdev import ecodes
+from select import select
+import time, os
+
+for name in sorted(os.listdir("/dev/input")):
+    if not name.startswith("event"): continue
+    p = f"/dev/input/{name}"
+    try:
+        d = evdev.InputDevice(p)
+        keys = d.capabilities().get(ecodes.EV_KEY, [])
+        if ecodes.KEY_CAPSLOCK not in keys: continue
+        d.grab()
+        print(f"Testing {p}: {d.name} — press Caps now...")
+        end = time.time() + 4
+        saw = False
+        while time.time() < end:
+            r,_,_ = select([d.fd], [], [], 0.3)
+            if not r: continue
+            for e in d.read():
+                if e.type == ecodes.EV_KEY and e.code == ecodes.KEY_CAPSLOCK:
+                    print(f"  CAPS on {p}")
+                    saw = True
+        if not saw:
+            print(f"  (no CAPS on {p})")
+        d.ungrab()
+    except Exception as e:
+        print(f"  skip {p}: {e}")
+PY
+```
+
+**On Akuma**: Caps Lock emits only on `258a:010c:3d952825` (BY Tech Gaming Keyboard input0), not on `258a:010c:1d20ac0e` (input1). Using `*` in `[ids]` caused both interfaces to match, and the conflict prevented layer activation.
+
+### 4.2 Config (CachyOS / Akuma)
 
 ```bash
 sudo mkdir -p /etc/keyd
 sudo tee /etc/keyd/default.conf > /dev/null << 'EOF'
 [ids]
-*
+258a:010c:3d952825
 
 [main]
-capslock = hyper
+capslock = overload(hyper, noop)
 
 [hyper]
 space = f24
 EOF
 ```
 
-### 4.2 Apply
+**Why `overload(hyper, noop)` not `layer(hyper)`**: `overload` provides tap/hold semantics — hold Caps activates the hyper layer, tap does nothing (`noop`). `layer(hyper)` alone didn't activate on this keyboard.
+
+### 4.3 Apply
 
 ```bash
 sudo systemctl restart keyd
 ```
 
----
-
-## 5. Known failure: `capslock = hyper` + `[hyper] space = f24` on KDE Wayland
-
-On this system (and previously on CachyOS), the Caps→Hyper→F24 chain **does not work** with keyd on KDE Wayland.
-
-### What happens
-
-| Step | Expected | Actual |
-|---|---|---|
-| Hold Caps | `hyper` modifier active | `capslock` passed through unchanged |
-| Press Space while holding Caps | `f24` emitted | `space` passed through unchanged |
-| Application receives | F24 keypress | Meta+Space (KDE interprets it) |
-
-### Keyd monitor output (virtual keyboard)
-
-```
-capslock down
-space down
-capslock up
-space up
-```
-
-No remapping occurs — keyd's virtual keyboard emits the raw keys as if no config existed.
-
-### Root cause
-
-Unknown. The same config and keyd version works on other setups. Suspected causes:
-
-| Cause | Why |
-|---|---|
-| KDE Wayland grabs evdev before keyd | Despite correct permissions, KWin may claim exclusive access |
-| `capslock = hyper` syntax mismatch | `hyper` in keyd may need different syntax (e.g. `layer(hyper)`) on some builds |
-| Wayland compositor filtering | Synthetic input from keyd's virtual keyboard may be deprioritized by KWin |
-
-### Tested and failed on
-
-- CachyOS (same behavior)
-- Debian 13 / MX Linux base (same behavior)
-- keyd v2.6.0 (latest upstream)
-- KDE Plasma 6, Wayland session
-
-### Practical impact
-
-The Caps→Hyper→F24→Yakuake pipeline cannot be reliably built on KDE Wayland using keyd alone. Alternative approaches are needed (see below).
-
----
-
-## 6. Debug when mapping "does nothing"
-
-### 5.1 Check if keyd sees the key at all
+### 4.4 Verify
 
 ```bash
-keyd monitor                        # press Caps — do you see it?
+keyd monitor
+# Hold Caps + press Space → should see f24 down / f24 up
 ```
 
-If **yes** (keyd sees it) but mapping fails → KDE/X11/Wayland layer issue.
-If **no** → keyd isn't attached to your keyboard device.
-
-### 5.2 Kernel-level input debug (bypasses keyd)
+### 4.5 Generic config template (for other keyboards)
 
 ```bash
-sudo evtest                         # pick your keyboard, press keys
-```
-
-This shows raw evdev events — the ground truth before any remapping layer.
-
-### 5.3 KDE keyboard interception
-
-| Environment | Issue | Fix |
-|---|---|---|
-| X11 | `setxkbmap` options override | Check `setxkbmap -query` |
-| Wayland | KDE keyboard shortcuts layer | Check System Settings → Keyboard → Shortcuts |
-| Both | Caps may be grabbed by KDE before keyd | Temporarily disable KDE Caps-binding |
-
----
-
-## 6. Alternative approaches (when keyd layer remapping fails)
-
-If `capslock = hyper` + `[hyper] space = f24` doesn't produce F24 on your KDE Wayland setup, try these:
-
-### 6.1 Direct key remap (no layer)
-
-Bypass the hyper layer entirely — map Caps+Space directly to F24:
-
-```bash
-sudo tee /etc/keyd/default.conf > /dev/null << 'EOF'
 [ids]
-*
+<your-device-id-from-step-4.1>
 
 [main]
-capslock = compose
-
-[compose]
-space = f24
-EOF
-```
-
-Note: `compose` is a keyd built-in layer name. This may work when custom layer names like `hyper` don't.
-
-### 6.2 Use `layer(hyper)` syntax
-
-```bash
-[main]
-capslock = layer(hyper)
+capslock = overload(hyper, noop)
 
 [hyper]
 space = f24
 ```
 
-The explicit `layer(hyper)` call may be required on some keyd versions instead of bare `hyper`.
+---
 
-### 6.3 Use evdev at the application level
+## 5. Known failure: why `[ids] *` + `capslock = hyper` failed
 
-Skip keyd for the F24 binding and instead configure Yakuake (or your target app) to respond to a different signal — e.g., a dbus call or a custom shortcut that doesn't depend on keyd's virtual keyboard layer system.
+**Resolved 2026-07-17.** The root cause was dual-interface keyboard conflict, not KDE Wayland interception.
+
+### What happened
+
+| Symptom | Cause |
+|---|---|
+| `a = b` worked in keyd | keyd was remapping the correct device — but only one of two interfaces |
+| `capslock = hyper` did nothing | The second keyboard interface (also matching `*`) swallowed or conflicted with the Caps remap |
+| `capslock = loadkeys` names failed | `compose`, `layer(hyper)` — all failed because the conflict prevented layer activation |
+| Caps acted as "right click" temporarily | `compose` layer interpreted the key as a mouse event through keyd's virtual mouse |
+
+### Why it wasn't KDE Wayland after all
+
+The suspicion that KWin grabs evdev before keyd was incorrect. Keyd WAS seeing the device — but it was seeing TWO keyboard devices from the same physical keyboard, and only one emitted Caps Lock. Matching both with `[ids] *` caused silent conflict.
+
+### Tested and failed configs (all resolved by device-id matching)
+
+| Config | Result |
+|---|---|
+| `capslock = hyper` + `[hyper] space = f24` | Failed — layer not active |
+| `capslock = layer(hyper)` + `[hyper] space = f24` | Failed — layer not active |
+| `capslock = compose` + `[compose] space = f24` | Failed — Caps became right-click |
+| `capslock = f24` (direct) | Failed — Caps passed through raw |
+| `capslock = overload(hyper, noop)` + `[hyper] space = f24` | **Works** with correct device ID |
 
 ---
 
-## 7. Quick success check (after reboot)
+## 6. Debug when mapping fails
+
+### 6.1 Check if keyd sees the key
 
 ```bash
-groups | grep input                 # must have input group
-keyd monitor                        # press Caps Lock → seen?
-# Then press Caps + Space → F24 emitted?
+keyd monitor                        # press Caps — do you see it?
+```
+
+If **yes** (keyd sees Caps) but mapping fails → config or layer activation issue.
+If **no** → wrong device ID, or Caps is on a different interface.
+
+### 6.2 Find which device emits Caps (without keyd)
+
+```bash
+# Stop keyd first, then run the device probe from section 4.1
+sudo systemctl stop keyd
+python3 << 'PY'  # (see 4.1 for full script)
+```
+
+### 6.3 Dual-interface keyboards
+
+Gaming keyboards often expose multiple USB interfaces. Only one emits Caps Lock. Use the probe script in section 4.1 to find it, then match that specific ID in `[ids]`.
+
+### 6.4 KDE keyboard interception
+
+| Environment | Issue | Fix |
+|---|---|---|
+| X11 | `setxkbmap` options override | Check `setxkbmap -query` |
+| Wayland | KDE keyboard shortcuts layer | Check System Settings → Keyboard → Shortcuts |
+| Both | Caps may be grabbed by KDE before keyd | Set XKB option `caps:none` in `~/.config/kxkbrc` |
+
+---
+
+## 7. Success check (after setup)
+
+```bash
+groups | grep input                 # must include 'input'
+systemctl is-active keyd            # must say 'active'
+keyd monitor                        # hold Caps + press Space → f24 down/up
+```
+
+## 8. Yakuake integration
+
+### 8.1 Install
+
+```bash
+sudo pacman -S yakuake
+```
+
+### 8.2 Shortcut binding
+
+In `~/.config/kglobalshortcutsrc` under `[yakuake]`:
+
+```ini
+toggle-window-state=Ctrl+Space,F12,F24,Open/Retract Yakuake
+```
+
+Multiple shortcuts can be listed: `Ctrl+Space` (standard), `F12` (fallback), `F24` (keyd Caps+Space target).
+
+### 8.3 Autostart
+
+`~/.config/autostart/yakuake.desktop`:
+
+```ini
+[Desktop Entry]
+Exec=/usr/bin/yakuake
+Name=yakuake
+Terminal=False
+Type=Application
 ```
 
 ---
 
-## 7. Key mental model
+## 9. Key mental model
 
 ```
 Hardware keypress
   │
   ▼
-evdev (/dev/input/event*)    ← keyd reads here (needs input group)
+evdev (/dev/input/event*)    ← keyd reads here (requires correct device ID)
   │
   ▼
 keyd daemon                  ← remaps according to /etc/keyd/default.conf
   │
   ▼
-KDE/X11/Wayland              ← may re-intercept (shortcuts, layout)
+keyd virtual keyboard        ← emits remapped keys (e.g. f24)
   │
   ▼
-Application
+KDE/Wayland                  ← shortcut system sees F24
+  │
+  ▼
+Application (Yakuake)
 ```
 
-**Three layers of failure:**
+**Four layers of failure:**
 
 | Layer | Symptom | Debug |
 |---|---|---|
 | Permission | `keyd monitor` can't open devices | `groups`, `ls -l /dev/input/event0` |
-| Config | keyd runs but no remapping | `keyd monitor`, check `/etc/keyd/default.conf` |
-| DE intercept | keyd works but KDE overrides | `evtest`, KDE shortcut settings |
+| Device ID | keyd runs but Caps never seen | `python3` probe script (section 4.1) |
+| Config | keyd sees Caps but no remapping | `keyd monitor`, check syntax |
+| KDE shortcut | F24 emitted but Yakuake doesn't toggle | Check `kglobalshortcutsrc` |
 
 ---
 
-## 8. Script-ready health check
+## 10. Akuma-specific reference
+
+```
+Host:    Akuma (CachyOS, KDE Plasma 6 Wayland)
+Keyboard: BY Tech Gaming Keyboard
+Caps device: 258a:010c:3d952825 (/dev/input/event4, input0)
+Ignored interface: 258a:010c:1d20ac0e (/dev/input/event7, input1)
+
+Config: /etc/keyd/default.conf
+Installed via: pacman (cachyos-extra-v3, keyd 2.6.0)
+
+Yakuake shortcut: Ctrl+Space,F12,F24 → Open/Retract Yakuake
+XKB option: caps:none (in ~/.config/kxkbrc)
+Input group: ken added to 'input' + udev rule at /etc/udev/rules.d/99-keyd.rules
+```
+
+## 11. Health check
 
 ```bash
 echo "=== keyd daemon ===" && systemctl is-active keyd && \

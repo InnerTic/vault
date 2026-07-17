@@ -4,55 +4,59 @@ tags:
   - system
   - drives-and-mounts
 aliases: [drives, mounts, fstab, storage-layout]
-modified: 2026-06-26
+modified: 2026-07-17
 ---
 
 # Drives & Mounts
 
 Physical drive layout, UUIDs, fstab entries, bind mounts, and symlinks.
 
-## Drive Inventory
+**Active boot**: CachyOS (gaming / AI workstation). Debian/MX layout preserved in [[#debian-mx-linux-boot-historical|Debian section]].
 
-| Drive | Size | FS | Mount | Purpose |
-|-------|------|----|-------|---------|
-| **sda** | 119G | btrfs | `/` | OS root (subvolumes: root, boot, var, swap) |
-| **sdb** | 465G | ext4 | `/mnt/ssd_storage` | Bulk data — documents, downloads, media |
-| **sdc** | 3.6T | ntfs | `/mnt/data` | Long-term backup, large files |
-| **sdd** | 112G | btrfs | `/home` | User home dir (ephemeral — wiped on reinstall) |
-| **sde1** | 10.7G | vfat | — | MX Linux EFI (EFI-SYSTEM) |
-| **sde2** | 222.7G | ext4 | — | MX Linux root (rootMX25) |
-| **sde3** | 243.5G | xfs | `/mnt/vm-disks` | VM disk storage |
-| **nvme0n1** | 465G | ext4 | `/mnt/workspace` | AI tools, models, projects, dotfiles (persistent) |
+## CachyOS Drive Inventory
 
-## UUIDs (for /etc/fstab)
+| Device | Size | FS | Mount | Purpose |
+|--------|------|----|-------|---------|
+| **sda1** | 4.1G | vfat | `/boot` | EFI boot partition |
+| **sda2** | 115G | btrfs | `/` (subvol @) | OS root — subvolumes: @root, @srv, @cache, @tmp, @log |
+| **sdb1** | 465G | ext4 | `/mnt/ssd_storage` | Bulk data — documents, downloads, media |
+| **sdc1** | 3.6T | btrfs | `/mnt/data` | HDD — model storage, backups, large files |
+| **sdd1** | 112G | btrfs | `/home` | User home directory |
+| **sde1** | 256M | vfat | — | MX Linux EFI (not mounted normally) |
+| **sde2** | 48G | btrfs | — | MX Linux root (rootMX25) |
+| **sde3** | 186G | btrfs | — | MX Linux home (homeMX) |
+| **sde4** | 243G | xfs | `/mnt/vm-disks` | VM disk storage |
+| **sdf** | 466G | ext4 | — | Old Debian drive (unmounted, historical) |
+| **sdg** | 58G | — | — | USB / transient (varies) |
+| **nvme0n1p1** | 465G | ext4 | `/mnt/workspace` | AI tools, llama.cpp, projects, dotfiles (persistent) |
 
-| Mount | UUID |
-|-------|------|
-| sda root | `acaebe11-05e0-48d5-957e-7b35f21f73fb` |
-| sda boot | `7193-39A8` |
-| sdd /home | `4365b1fa-735e-455d-9645-e65be9903454` |
-| sdb /mnt/ssd_storage | `51b4243d-ea88-4a02-b02f-c286d52b6e0d` |
-| sdc /mnt/data | `7E303CAF303C6FEF` |
-| sde1 /boot (MX EFI) | `3F33-0777` (vfat) |
-| sde2 / (MX root) | `34bdf920-237c-4392-835f-0416be09ada5` (ext4) |
-| sde3 /mnt/vm-disks | `81132c1e-5ca5-419f-8967-61284c27dadd` (xfs) |
-| nvme /mnt/workspace | `9a1cdd8a-3d81-468f-be70-aa00a01d7301` |
+## CachyOS UUIDs (Active /etc/fstab)
 
-## Drive Selection Guide
+| Mount | UUID | FS |
+|-------|------|----|
+| sda1 /boot | `C3E7-93C2` | vfat |
+| sda2 / | `76c0155f-a646-40b6-8fec-ae64fcc4a037` | btrfs |
+| sdb1 /mnt/ssd_storage | `51b4243d-ea88-4a02-b02f-c286d52b6e0d` | ext4 |
+| sdc1 /mnt/data | `f0b1d710-a0a6-4ef1-83ce-fc9e55d577d8` | btrfs |
+| sdd1 /home | `e070aea8-a128-4e6d-9e3f-da38a6604dbe` | btrfs |
+| sde4 /mnt/vm-disks | `58f7f216-4c23-47ab-8cea-8b524bc3eab7` | xfs |
+| nvme0n1p1 /mnt/workspace | `9a1cdd8a-3d81-468f-be70-aa00a01d7301` | ext4 |
 
-| Use case | Drive | Why |
-|----------|-------|-----|
-| OS, packages, temp | sda (/) | Btrfs snapshots for rollback |
-| AI models, projects | nvme (workspace) | Fast NVMe, persists reinstalls |
-| Documents, media | sdb (ssd_storage) | Large SSD, bind-mounted to ~/ |
-| VMs, disk images | sde3 (VM-Disks) | Dedicated xfs partition |
-| MX Linux (secondary OS) | sde2 (rootMX25) | ext4, MX Linux root |
-| Backups, archives | sdc (Data-HDD) | 3.6T NTFS, slow but huge |
-| User configs | sdd (/home) | Small btrfs, gets wiped |
+## Root Btrfs Subvolumes
+
+| Subvolume | Mount | Purpose |
+|-----------|-------|---------|
+| `@` | `/` | OS root |
+| `@root` | `/root` | Root home |
+| `@srv` | `/srv` | Server data |
+| `@cache` | `/var/cache` | Package cache |
+| `@tmp` | `/var/tmp` | Temporary files |
+| `@log` | `/var/log` | System logs |
+| — | `/tmp` | tmpfs (ram) |
 
 ## Bind Mounts (/etc/fstab)
 
-ssd_storage directories bind-mounted into home for media and data:
+ssd_storage directories bind-mounted into home:
 
 | Source | Target |
 |--------|--------|
@@ -72,21 +76,62 @@ ssd_storage directories bind-mounted into home for media and data:
 | `~/ssd_storage` | `/mnt/ssd_storage` | Quick access to bulk storage |
 | `~/workspace` | `/mnt/workspace` | Primary work directory |
 | `/workspace` | `/mnt/workspace` | Steam Proton Z: drive compat |
-| `~/Models` | `~/Downloads/llm_models` | Shortcut to model files |
-| `~/Gw2-win` | `/mnt/ssd_storage/ken/Gw2-win` | GW2 install |
+| `~/Downloads/llm_models` | `/mnt/data/model_storage` | Canonical GGUF store (HDD) |
+| `~/dotfiles` | `/mnt/workspace/dotfiles` | Dotfiles mirror |
 
 ## Workspace Persistence
 
 `/mnt/workspace` (nvme-workspace) is the **only drive that never gets formatted**.
 It holds:
-- [[workspace-symlink-strategy|Symlinked home dirs]] (.ssh, .librewolf, .opencode, etc.)
-- `dotfiles/` — this repo
+- `dotfiles/` — this repo (mirror of vault/dotfiles/)
 - `llama.cpp/` — build + source
 - `sd-webui-forge-neo/` — Stable Diffusion
 - `textgen/` — TextGen WebUI
 - `searxng/` — search engine
-- Model files
-- VM disk images (on sde3)
+
+## 2026-07-17 fstab fixes
+
+During CachyOS system restore, two fstab entries were stale:
+
+| Mount | Old UUID | New UUID | Change |
+|-------|----------|----------|--------|
+| /mnt/data | `7E303CAF303C6FEF` | `f0b1d710-a0a6-4ef1-83ce-fc9e55d577d8` | ntfs-3g → btrfs, UUID changed after reformat |
+| /mnt/vm-disks | `446695a8-1348-4d45-ab10-5af0a5bf1ae5` | `58f7f216-4c23-47ab-8cea-8b524bc3eab7` | Partition index changed (sde3→sde4), UUID changed |
+
+Both were auto-mounted by KDE at `/run/media/ken/*` instead of `/mnt/*` before the fix. Now correctly mounted at their `/mnt` paths via fstab.
+
+## Debian / MX Linux Boot (HISTORICAL)
+
+When booted into Debian, drive letters and assignments differ. This section preserved for cross-reference when dual-booting.
+
+### Debian Drive Inventory
+
+| Device | Size | FS | Mount | Purpose |
+|--------|------|----|-------|---------|
+| sdb1 | 465G | ext4 | `/mnt/ssd_storage` | Bulk data |
+| sdc1 | 3.6T | btrfs | `/mnt/m2_storage` | Secondary storage |
+| sdd2 | 222G | ext4 | `/` (root) | OS root (rootMX25, Debian 13 trixie) |
+| sdd3 | 243G | xfs | `/media/ken/81132c1e...` | USB mount (was vm-disks) |
+| nvme0n1p1 | 465G | ext4 | `/mnt/workspace` | AI tools, projects |
+
+### Debian UUIDs
+
+| Mount | UUID | FS |
+|-------|------|----|
+| sdd2 / (root) | `34bdf920-237c-4392-835f-0416be09ada5` | ext4 |
+| sdb1 /mnt/ssd_storage | `51b4243d-ea88-4a02-b02f-c286d52b6e0d` | ext4 |
+| nvme /mnt/workspace | `9a1cdd8a-3d81-468f-be70-aa00a01d7301` | ext4 |
+
+## Drive Selection Guide
+
+| Use case | Drive | Why |
+|----------|-------|-----|
+| OS, packages, temp | sda2 (/) | Btrfs snapshots for rollback |
+| AI models, projects | nvme (workspace) | Fast NVMe, persists reinstalls |
+| Model GGUFs (canonical) | sdc (/mnt/data) | 3.6T btrfs, all GGUFs stored here |
+| Documents, media | sdb (ssd_storage) | Large SSD, bind-mounted to ~/ |
+| VMs, disk images | sde4 (vm-disks) | Dedicated xfs partition |
+| User configs | sdd (/home) | Btrfs, regular backups recommended |
 
 ## Related
 

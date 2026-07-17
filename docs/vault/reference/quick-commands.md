@@ -3,7 +3,7 @@ title: "Quick Commands"
 tags:
   - reference
   - quick-commands
-modified: 2026-06-26
+modified: 2026-07-17
 ---
 
 # "Quick Commands"
@@ -51,6 +51,8 @@ modified: 2026-06-26
 ║    vault-llm.sh rewrite   Rewrite file with local LLM (diff + approval)      ║
 ║    vault-llm.sh fix      Auto-fix formatting in a file                       ║
 ║                                                                              ║
+║    yakuake      Open Yakuake drop-down terminal (or F24/Ctrl+Space)       ║
+║                                                                              ║
 ║  ── QUICK HELP ──                                                            ║
 ║                                                                              ║
 ║    quickhelp     Print this file                                              ║
@@ -75,7 +77,7 @@ modified: 2026-06-26
 ║                                                                              ║
 ║    Local models: ~/Downloads/llm_models/                                     ║
 ║    SSD models:   ~/Downloads/llm_models/                                     ║
-║    HDD models:   /mnt/data/model_storage/                                   ║
+║    HDD models:   /media/HDD_Data/model_storage/                                   ║
 ║                                                                              ║
 ║  ── NETWORK ──                                                               ║
 ║                                                                              ║

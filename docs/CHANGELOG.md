@@ -2,7 +2,7 @@
 title: "CHANGELOG"
 tags:
   - changelog
-modified: 2026-06-26
+modified: 2026-07-17
 ---
 
 # Changelog (Curated)
@@ -14,6 +14,17 @@ modified: 2026-06-26
 - Older entries are condensed.
 - Breaking architectural shifts are marked as milestones.
 - Detailed implementation notes belong in Raw Changelog.
+
+## 2026-07-17
+
+milestone:
+    CachyOS system restore — keyd Caps→Hyper→F24 finally working, fstab fixed
+
+- fix(keyd): Caps→Hyper→F24 pipeline now working on KDE Wayland. Root cause: dual-interface gaming keyboard — Caps Lock only on `258a:010c:3d952825` (input0). `[ids] *` matched both interfaces, causing silent layer conflict. Fixed by matching only the Caps-emitting device ID and using `overload(hyper, noop)` instead of bare `layer(hyper)`.
+- fix(fstab): `/mnt/data` UUID updated (`7E303CAF...` → `f0b1d710-...`, ntfs-3g → btrfs). `/mnt/vm-disks` UUID updated (`446695a8...` → `58f7f216-...`, partition sde3→sde4). Both were auto-mounted at `/run/media/ken/*` before fix.
+- feat(system): Installed keyd + yakuake via pacman. Yakuake shortcut bound to `Ctrl+Space,F12,F24`. Caps→Hyper→F24→Yakuake pipeline complete.
+- docs(vault): Rewrote keyd-stack.md (device-id probe script, working config, Akuma reference). Rewrote keyd-kde-wayland-f24.md (resolution section, debug mantra). Rewrote drives-and-mounts.md (CachyOS layout, fstab fix log, preserved Debian layout).
+- system: Added ken to `input` group, udev rule `/etc/udev/rules.d/99-keyd.rules`, XKB `caps:none` in `~/.config/kxkbrc`.
 
 ## 2026-06-26
 

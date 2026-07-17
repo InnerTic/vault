@@ -2,7 +2,7 @@
 title: "Keyd Kde Wayland F24"
 tags:
   - reference
-modified: 2026-06-26
+modified: 2026-07-17
 ---
 
 # Why F24 worked (keyd + KDE + Wayland)
@@ -77,44 +77,75 @@ F24 simply bypasses conflict at the KDE layer.
 - F1–F12 = user + app space
 - F13–F24 = control plane space
 
-## 8. Known failure: Caps→Hyper→F24 on KDE Wayland
+## 8. Known failure (HISTORICAL — resolved 2026-07-17)
 
-The approach documented above (`capslock = hyper` + `[hyper] space = f24`) **does not work reliably** on KDE Wayland.
+The approach `capslock = hyper` + `[hyper] space = f24` previously **did not work** on KDE Wayland. Root cause was **dual-interface keyboard conflict**, not KDE Wayland interception.
 
-### Observed behavior
+### Original symptoms (now explained)
 
-On both CachyOS and Debian 13 (KDE Plasma 6, Wayland):
-- `keyd monitor` shows the virtual keyboard emitting raw `capslock` and `space` — no remapping
-- The application receives `Meta+Space`, not F24
-- Config file is syntactically valid and loaded correctly
+| Symptom | Actual cause |
+|---|---|
+| `keyd monitor` showed raw capslock/space | Second keyboard interface conflicted with layer activation |
+| Application received Meta+Space | No remapping occurred → KDE interpreted raw keys |
+| All layer syntax variants failed (`hyper`, `layer(hyper)`, `compose`) | Conflict prevented any layer from activating on Caps device |
 
-### Why the above theory breaks
+### Suspected causes (all ruled out)
 
-The earlier pipeline diagram assumed keyd's layer system would inject F24 into the Wayland event stream. In practice:
+- ~~KWin grabs evdev before keyd~~ — keyd WAS grabbing the device, but wrong one
+- ~~`hyper` layer name not recognized~~ — `overload(hyper, noop)` works fine
+- ~~Wayland filters synthetic input~~ — F24 passes through cleanly once emitted
+
+### What actually failed
 
 ```
-Caps Lock (held)
-   ↓
-keyd layer (hyper) ← layer NOT activating
-   ↓
-maps → F24 ← Not reached — space passes through raw
-   ↓
-KDE sees Meta+Space ← fallthrough behavior
+Caps Lock (held) → event4 (input0, 258a:010c:3d952825) ← Caps lives here
+                  event7 (input1, 258a:010c:1d20ac0e) ← also matches *, no Caps
+     ↓
+Both interfaces matched by [ids] * → layer activation conflicted
+     ↓
+No remapping occurred
 ```
 
-### Suspected causes
+### Resolution: device-id matching
 
-- KWin grabs the keyboard device exclusively on Wayland, preventing keyd from intercepting
-- The `hyper` layer name is not treated as a modifier by keyd on this build/platform
-- Wayland's security model restricts synthetic input from virtual keyboards
+```
+[ids]
+258a:010c:3d952825      ← match ONLY the interface that emits Caps Lock
 
-### Bottom line
+[main]
+capslock = overload(hyper, noop)
 
-F13–F24 being "control plane space" is correct in theory, but **keyd cannot reliably inject them into KDE Wayland** using layer-based remapping. Alternative approaches needed.
+[hyper]
+space = f24
+```
+
+Finding the correct device ID was the critical debug step. See [[reference/keyd-stack]] section 4.1 for the python probe script.
 
 ---
 
-## 9. Mental model upgrade
+## 9. Working config (Akuma / CachyOS)
+
+```bash
+sudo tee /etc/keyd/default.conf > /dev/null << 'CONF'
+[ids]
+258a:010c:3d952825
+
+[main]
+capslock = overload(hyper, noop)
+
+[hyper]
+space = f24
+CONF
+sudo systemctl enable --now keyd
+```
+
+And in `~/.config/kglobalshortcutsrc`:
+```ini
+[yakuake]
+toggle-window-state=Ctrl+Space,F12,F24,Open/Retract Yakuake
+```
+
+## 10. Mental model upgrade
 
 ```
 F1–F12   = human/UI interaction layer
@@ -122,3 +153,12 @@ F13–F24  = system control bus
 ```
 
 keyd is now acting as a **hardware-to-control-plane compiler**.
+
+## 11. Debug mantra
+
+When Caps→Hyper→F24 fails, check in this order:
+1. `groups | grep input` — permission
+2. Python probe script → find the right device ID → update `[ids]`
+3. `capslock = overload(hyper, noop)` — correct syntax for tap/hold layers
+4. `keyd monitor` → verify f24 emitted
+5. `grep F24 ~/.config/kglobalshortcutsrc` — Yakuake shortcut bound

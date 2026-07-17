@@ -2,7 +2,7 @@
 title: "CHANGELOG.Raw"
 tags:
   - .raw
-modified: 2026-06-26
+modified: 2026-07-17
 ---
 
 # Changelog (Raw / Verbose)
@@ -14,6 +14,84 @@ modified: 2026-06-26
 - Older entries are condensed.
 - Breaking architectural shifts are marked as milestones.
 - Detailed implementation notes belong here.
+
+## 2026-07-17
+
+### keyd Caps→Hyper→F24 pipeline fixed
+
+**Symptom**: Caps Lock did nothing (or acted as right-click when `compose` was tried). `a = b` remap worked, proving keyd was intercepting keyboard events — but Caps Lock specifically wasn't being remapped.
+
+**Debug process**:
+
+1. `keyd monitor` showed NO keyboard events when Caps was pressed — only mouse events. This meant keyd wasn't seeing the key at all.
+2. Stopped keyd, used python-evdev to grab all `KEY_CAPSLOCK`-capable devices exclusively. Found Caps Lock events ONLY on `/dev/input/event4` (BY Tech Gaming Keyboard, input0, `258a:010c:3d952825`).
+3. `/dev/input/event7` (BY Tech Gaming Keyboard, input1, `258a:010c:1d20ac0e`) also had KEY_CAPSLOCK in its capability set but never emitted it. This is the second USB interface the gaming keyboard exposes.
+4. Using `[ids] *` matched BOTH interfaces. The conflicting match prevented the hyper layer from activating correctly.
+5. Solution: match only `258a:010c:3d952825` in `[ids]`, use `overload(hyper, noop)` syntax.
+
+**Syntax evolution tested**:
+
+| Config | Device | Result |
+|--------|--------|--------|
+| `capslock = hyper` + `[hyper] space = f24` | `*` | Failed — layer not active |
+| `capslock = layer(hyper)` + `[hyper] space = f24` | `*` | Failed — layer not active |
+| `capslock = compose` + `[compose] space = f24` | `*` | Failed — Caps became right-click |
+| `capslock = f24` (direct) | `*` | Failed — Caps passed through raw |
+| `capslock = f24` (direct) | `258a:010c:3d952825` | **Works** — proves single-device matching |
+| `capslock = overload(hyper, noop)` + `[hyper] space = f24` | `258a:010c:3d952825` | **Works** — final solution |
+
+**Working config**:
+
+```ini
+[ids]
+258a:010c:3d952825
+
+[main]
+capslock = overload(hyper, noop)
+
+[hyper]
+space = f24
+```
+
+### fstab fixes
+
+**Problem**: `/mnt/data` and `/mnt/vm-disks` were stale — KDE auto-mounted them at `/run/media/ken/*` instead.
+
+**/mnt/data**:
+- Old: `UUID=7E303CAF303C6FEF /mnt/data ntfs-3g defaults,nofail 0 2`
+- Drive was reformatted from NTFS to btrfs, new UUID `f0b1d710-a0a6-4ef1-83ce-fc9e55d577d8`
+- Fixed: `sed -i 's|UUID=7E303CAF...|UUID=f0b1d710...|' /etc/fstab`, FS changed to btrfs
+
+**/mnt/vm-disks**:
+- Old: `UUID=446695a8-1348-4d45-ab10-5af0a5bf1ae5 /mnt/vm-disks xfs`
+- Partition index changed from sde3 to sde4, UUID changed
+- Fixed: `sed -i 's|UUID=446695a8...|UUID=58f7f216...|' /etc/fstab`
+
+### Packages installed
+
+- `keyd` 2.6.0-5.1 (cachyos-extra-v3)
+- `yakuake` 26.04.2-1.1 (cachyos-extra-v3)
+- Installed via `pkexec pacman -S` (sudo was locked after too many failed attempts)
+
+### Yakuake config
+
+- Autostart: `~/.config/autostart/yakuake.desktop` (existed from previous install)
+- Shortcut: `toggle-window-state=Ctrl+Space,F12,F24,Open/Retract Yakuake` in `~/.config/kglobalshortcutsrc`
+- Config: `~/.config/yakuakerc` — minimal, FirstRun=false, Window Height=100
+
+### System config
+
+- `ken` added to `input` group via `pkexec /usr/sbin/usermod -aG input ken`
+- udev rule: `/etc/udev/rules.d/99-keyd.rules` — `KERNEL=="event*", GROUP="input", MODE="660"`
+- XKB: `caps:none` in `~/.config/kxkbrc` (KDE doesn't intercept Caps, keyd handles it)
+- keyd service: enabled and active via `pkexec /usr/bin/systemctl enable --now keyd`
+
+### Vault docs updated
+
+- `docs/vault/reference/keyd-stack.md` — full rewrite: added Arch install, device-ID probe script, working config, Akuma reference section, resolved failure analysis
+- `docs/vault/reference/keyd-kde-wayland-f24.md` — added resolution section (10), debug mantra (11), working config (9), updated failure section (8) with root cause
+- `docs/vault/system/drives-and-mounts.md` — full rewrite: CachyOS layout, active fstab UUIDs, btrfs subvolumes, fstab fix log, preserved Debian layout as historical section
+- `docs/CHANGELOG.md` / `docs/CHANGELOG.raw.md` — this entry
 
 ## 2026-06-19
 
