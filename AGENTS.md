@@ -2,7 +2,7 @@
 title: "AGENTS"
 tags:
   - AGENTS
-modified: 2026-07-03
+modified: 2026-07-11
 ---
 
 # vault.git — Single source of truth for Akuma
@@ -25,7 +25,9 @@ Then boot the other OS and repeat.
 
 ## Host Akuma
 
-- **Dual-boot**: Debian 13 Trixie (bash) / CachyOS (fish)
+- **Dual-boot**: MX Linux 13 Trixie (AI workstation, bash) / CachyOS (gaming, fish)
+- **MX Linux boot**: RTX 3060 + Tesla P40 both on nvidia driver — LLM inference, SD Forge
+- **CachyOS boot**: Tesla P40 passed through to VM via VFIO — gaming
 - **GPU 0**: RTX 3060 (12 GB, sm_86) — small/medium LLMs + SD Forge
 - **GPU 1**: Tesla P40 (24 GB, sm_61) — large LLMs (30B–70B Q4)
 - llama.cpp built with `CMAKE_CUDA_ARCHITECTURES="61;86"`
@@ -44,13 +46,16 @@ Then boot the other OS and repeat.
 | `/workspace/sd-webui-forge-neo` | SD Forge (`~/infra/forge-start.sh`, port 7860) |
 | `~/.local/bin/llama-loader` | Interactive model manager (selects GGUF, starts llama-server) |
 | `~/.local/bin/vault-attribution.py` | Citation pipeline: scan uncited files, compare against source repos, apply source: fields, AI audit |
+| `/mnt/data/model_storage/` | **Canonical model store** (HDD, btrfs). All GGUFs live here. |
+| `~/Downloads/llm_models` | Symlink → `/mnt/data/model_storage/` |
+| `
 
 ## Conventions
 
 - All infra scripts deploy to `~/infra/` root (no subdirectory grouping per `infra/CONTRACT.md`)
 - All docs use Obsidian `[[wikilinks]]` for cross-references
 - Installation docs must be full commands with flags + annotations + source URLs — goal: clean reinstall recoverable from this repo alone
-- Model inventory: `find ~/Downloads/llm_models/ -name '*.gguf' -printf '%f\t%s\n'` (filenames drift)
+- Model inventory: `find /mnt/data/model_storage/ -maxdepth 1 -name '*.gguf' -printf '%f\t%s\n'`
 - Git user: `InnerTic` / `innertic@users.noreply.github.com`
 - All vault .md files must have YAML frontmatter with `title:` and `tags:` — deterministic tag derivation from directory path + filename. Every new file must be tagged before commit.
 - All vault .md files must be backlinkable: use `[[wikilinks]]` to cross-reference related pages. No file is an island — every note should link to at least one other vault page.
@@ -186,6 +191,18 @@ Then boot the other OS and repeat.
 | `~/.local/bin/learn-topic` | Learning pipeline agent (roadmap / lesson / lab generation)
 | `~/quartz/` | Quartz v5 static site (Obsidian → blog) |
 | `~/.local/bin/vault-publish` | Full publish pipeline: backlink → sync → build → push |
+
+## Model Storage
+
+All GGUFs live on the HDD at `/mnt/data/model_storage/`. Two symlinks provide access:
+
+| Path | Type |
+|------|------|
+| `/mnt/data/model_storage/` | **Canonical store** (btrfs, HDD) |
+| `~/Downloads/llm_models` | Symlink → `/mnt/data/model_storage/` |
+| `
+
+Model inventory: `find /mnt/data/model_storage/ -maxdepth 1 -name '*.gguf' -printf '%f\t%s\n'`
 
 ## Quartz update workflow
 
