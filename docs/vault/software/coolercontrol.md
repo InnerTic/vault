@@ -1,55 +1,47 @@
 ---
-title: "CoolerControl"
+title: CoolerControl
 tags:
   - software
+  - system
   - cooling
-  - hardware
-modified: 2026-07-02
+  - fans
 ---
 
 # CoolerControl
 
-Fan/pump control daemon + GUI for Linux. Detects `hwmon/sysfs` and `liquidctl` devices, provides Web UI and desktop app.
+Fan control for Linux — monitors and controls cooling devices (CPU, GPU, case fans).
 
-## Packages
+## Installation
 
-- `coolercontrold` — system daemon (required)
-- `coolercontrol` — desktop app (optional, or use Web UI)
-
-Optional deps: `liquidctl` (AIOs/coolers), `lm_sensors` (hwmon support)
-
-## Install (Debian)
+**CachyOS** (from CachyOS repo, builds from source):
 
 ```bash
-# coolercontrold (daemon) + coolercontrol (desktop app)
-sudo apt install coolercontrold coolercontrol
-# Optional deps for better hardware support
-sudo apt install liquidctl lm-sensors
+sudo pacman -S coolercontrol
 ```
 
-Works on Debian 13 Trixie — daemon detects hwmon devices, desktop GUI applies fan graphs that function correctly. Fan control takes effect immediately.
+**Alternative** (binary package from AUR):
+
+```bash
+yay -S coolercontrol-bin
+```
+
+Both pull in `coolercontrold` as a dependency.
+
+## Service
+
+The daemon must be running for the GUI to work:
+
+```bash
+sudo systemctl enable --now coolercontrold
+```
 
 ## Usage
 
-1. Check [[hardware-support]] — verify devices are detected, load required kernel modules
-2. Create a Profile (Fan Profiles → Graph Profile), set temp sensor + curve
-3. Assign Profile to fan channels (Controls Page or per-fan settings)
-4. One Profile can be reused across multiple fans
+- Launch: `coolercontrol` (GUI)
+- Profiles saved at `/etc/coolercontrol/`
+- The daemon (`coolercontrold`) applies profiles on boot
 
-## Features
+## Reference
 
-- GUI with dashboards, system daemon runs in background
-- Control devices based on any temp sensor or combination
-- Auto-detection of hwmon/sysfs and liquidctl devices
-- GPU fan control (NVIDIA + AMD)
-- Profiles: Fixed, Graph, Mix, Overlay
-- Custom Sensors from files or sensor combos
-- System-wide cooling Modes
-- Alerts for temp/fan anomalies
-- REST API, headless Web UI, remote access
-
-## References
-
-- [Getting Started](https://docs.coolercontrol.org/getting-started.html)
-- `hwmon` sysfs at `/sys/class/hwmon/hwmon*/`
-- [[translation-pipeline]] cooling notes
+- [Homepage](https://gitlab.com/coolercontrol/coolercontrol)
+- [[software/dev-setup|Dev Setup]]

@@ -181,8 +181,12 @@
       "bases:Create new base": false
     }
   },
-  "active": "49bcc2ba6e66a0d9",
+  "active": "bb69411e5456613a",
   "lastOpenFiles": [
+    "docs/vault/software/librewolf.md",
+    "docs/vault/software/g502-hero-setup.md",
+    "docs/vault/projects/translation-mcp-integration.md",
+    "docs/vault/software/opencode/mcp-inventory.md",
     "docs/INDEX.md",
     "docs/vault/projects/proxmox-gold-image-builder.md",
     "docs/vault/projects/learning-pipeline.md",
@@ -205,10 +209,6 @@
     "docs/vault/journal/2026/06/2026-06-12.md",
     "docs/vault/journal/2026/06/2026-06-11.md",
     "docs/vault/journal/2026/06/2026-06-08.md",
-    "docs/vault/journal/2026/06/2026-06-07.md",
-    "docs/vault/journal/2026/06/2026-06-06.md",
-    "docs/vault/journal/2026/06/2026-06-05.md",
-    "docs/vault/journal/2026/06/2026-06-04.md",
     "docs/vault/journal/2026/06",
     "docs/vault/journal/2026/05",
     "docs/vault/journal/2026/04",

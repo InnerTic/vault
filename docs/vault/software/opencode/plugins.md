@@ -1,17 +1,53 @@
----
-title: "Plugins"
-tags:
-  - software
-modified: 2026-06-26
+# OpenCode Plugin & MCP Setup
+## Current installation state (2026-07-18)
+
+## Plugins
+
+| Plugin | Purpose |
+|--------|---------|
+| `opencode-plugin-litellm` | Auto-discovers models from running LiteLLM proxy |
+| `opencode-token-tracker` | Real-time token/cost/latency per response |
+| `opencode-telemetry` | Passive SQLite logging of all sessions |
+| `flowdeck` | 25-agent multi-agent orchestration workflow |
+
+## MCP Servers
+
+| Server | Purpose |
+|--------|---------|
+| `searxng` | Local web search via 172.16.12.16:8888 |
+| `opencode` | 80 tools bridging MCP clients to OpenCode headless API |
+| `sequential-thinking` | Step-by-step structured reasoning |
+| `filesystem` | Secure file ops with configurable access |
+| `fetch` | Web content fetching and conversion |
+| `memory` | Knowledge graph persistent memory |
+| `git` | Git repository read/search/manipulate |
+| `pdf` | PDF text extraction |
+| `time` | Time and timezone conversion |
+| `deepl` | DeepL translation API (needs DEEPL_AUTH_KEY) |
+| `xcomet` | Translation quality evaluation (venv: `/mnt/workspace/xcomet-venv`, model: `wmt22-comet-da`) |
+| `getlinnk` | Document translation via Linnk |
+| `general-translation` | General Translation MCP server |
+| `filecommander` | 46 tools: OCR, ZIP, encoding fix, duplicate detection |
+| `drawio` | Diagram generation in draw.io editor |
+
+## LSP Servers — BROKE OpenCode on 2026-07-18
+
+Do NOT add `lsp` block to `opencode.jsonc` — it caused OpenCode to crash on startup. LSP is handled natively by OpenCode, not through config.
+
+| Language | Server | Package | Status |
+|----------|--------|---------|--------|
+| Python | `pylsp` | `python-lsp-server` (pacman) | Installed, but configured via native LSP |
+| Bash | `bash-language-server` | `bash-language-server` (npm) | Installed, but configured via native LSP |
+
+## Config
+
+`~/.config/opencode/opencode.jsonc`
+
 ---
 
-# OpenCode Plugin & MCP Recommendations
-## Based on Reddit's r/opencodeCLI Thread Analysis
+# Research Archive — Original Reddit Thread Analysis
 
----
-
-## 1. Dynamic Context Pruning (DCP)
-**Status:** ❌ NOT INSTALLED | **Priority:** 🔴 CRITICAL
+## 1. Dynamic Context Pruning (DCP) - NOT INSTALLED
 
 ### What It Does
 Automatically removes obsolete tool outputs from your conversation context as you work. Instead of your context bloating with past command outputs, DCP intelligently strips what's no longer needed.
@@ -54,11 +90,11 @@ get_dir_structure(path: string): Returns a tree view...
 run_command(cmd: string): Executes shell commands...
 ```
 
-It sends: `[d]` (with full definitions available on-demand)
+It sends: `[d]` (with full [[glossary]] available on-demand)
 
 ### Why You Need It
 - **Context Savings:** Tool descriptions can be 500+ tokens
-- **Agent Intelligence:** Agents still know what tools do, but descriptions are deferred
+- **Agent Intelligence:** [[AGENTS]] still know what tools do, but descriptions are deferred
 - **Zero Performance Loss:** Tools work exactly the same
 
 ### Real Example
@@ -111,7 +147,7 @@ IDE-level semantic code operations powered by JetBrains' IntelliJ. Enables:
 - Without Serena: Agent uses `grep` to find usages → misses edge cases → breaks code
 - With Serena: Agent uses IDE-backed symbol search → 100% accurate
 
-**Reddit Quote:**
+**Reddit Quote:** 
 > "Serena's IDE-backed semantic tools are the single most impactful addition to my toolkit - cross-file renames, moves, and reference lookups... We solved this problem recently by providing custom hooks that nudge the agent in the right direction when it over-relies on grep or vanilla read."
 
 ### Real Example
@@ -172,7 +208,7 @@ Works well **with** `opencode-mem` (which you have). While mem stores semantic k
 
 ### Real Example
 ```bash
-# Without history-search:
+# Without history-search: 
 # You remember solving a similar problem last week
 # But have to scroll through 100+ commands to find it
 
@@ -212,7 +248,7 @@ opencode sessions list
 ```
 
 ### How It Helps You
-- **Session Management:** Keep multiple agents running, switch easily
+- **Session Management:** Keep multiple [[AGENTS]] running, switch easily
 - **Less Terminal Clutter:** One multiplexer window shows all sessions
 - **Better Organization:** Named sessions you can reference
 
@@ -276,7 +312,7 @@ Skip unless you're hitting context limits constantly. DCP alone should solve mos
 **Status:** ❌ NOT INSTALLED | **Priority:** 🟢 OPTIONAL (For multi-agent workflows)
 
 ### What It Does
-Framework for multi-agent orchestration. Provides specialized agents (Explorer, Oracle, Librarian, Designer, etc.)
+Framework for multi-agent orchestration. Provides specialized [[AGENTS]] (Explorer, Oracle, Librarian, Designer, etc.)
 
 ### Why You Need It
 Only if you want pre-built agent templates and multi-agent coordination.
