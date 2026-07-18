@@ -58,7 +58,7 @@ Models that fit the 3060 — file size must be ≤~9GB to leave room for KV cach
 
 | Attribute | Value |
 |-----------|-------|
-| **Path** | `/mnt/data/model_storage/` |
+| **Path** | `/media/HDD_Data/model_storage/` |
 | **Size** | 7.3G |
 | **Arch** | 4B dense, f16 |
 | **VRAM** | ~7.5GB |
@@ -69,7 +69,7 @@ Models that fit the 3060 — file size must be ≤~9GB to leave room for KV cach
 
 | Attribute | Value |
 |-----------|-------|
-| **Path** | `/mnt/data/model_storage/` |
+| **Path** | `/media/HDD_Data/model_storage/` |
 | **Size** | 7.2G |
 | **Arch** | 7B dense, Q8_0 |
 | **VRAM** | ~7.5GB |
@@ -80,7 +80,7 @@ Models that fit the 3060 — file size must be ≤~9GB to leave room for KV cach
 
 | Attribute | Value |
 |-----------|-------|
-| **Path** | `/mnt/data/model_storage/` |
+| **Path** | `/media/HDD_Data/model_storage/` |
 | **Size** | 7.3G |
 | **Arch** | 4B dense, f16 |
 | **VRAM** | ~7.5GB |
@@ -91,7 +91,7 @@ Models that fit the 3060 — file size must be ≤~9GB to leave room for KV cach
 
 | Attribute | Value |
 |-----------|-------|
-| **Path** | `/mnt/data/model_storage/` |
+| **Path** | `/media/HDD_Data/model_storage/` |
 | **Size** | 8.7G |
 | **Arch** | MoE 3B active, MXFP4 |
 | **VRAM** | ~9GB |
@@ -113,7 +113,7 @@ Models that fit the 3060 — file size must be ≤~9GB to leave room for KV cach
 
 | Attribute | Value                                      |
 | --------- | ------------------------------------------ |
-| **Path**  | `/mnt/data/model_storage/`                 |
+| **Path**  | `/media/HDD_Data/model_storage/`                 |
 | **Size**  | 12G                                        |
 | **Arch**  | 12B dense, Q8_0, polaris/heretic fine-tune |
 | **VRAM**  | ~12GB — P40 only for full offload; 3060 with `-ngl` partial offload |
@@ -167,7 +167,7 @@ Fits models up to ~20GB.
 
 | Attribute | Value |
 |-----------|-------|
-| **Path** | `/mnt/data/model_storage/` |
+| **Path** | `/media/HDD_Data/model_storage/` |
 | **Size** | 16G |
 | **Arch** | 27B dense, Q4_K_M |
 | **VRAM** | ~17GB (7GB headroom on P40) |
@@ -178,7 +178,7 @@ Fits models up to ~20GB.
 
 | Attribute | Value |
 |-----------|-------|
-| **Path** | `/mnt/data/model_storage/` |
+| **Path** | `/media/HDD_Data/model_storage/` |
 | **Size** | 14G |
 | **Arch** | MoE 4/26 active (~7B), Q4_K_M |
 | **VRAM** | ~14GB (all expert weights loaded) |
@@ -224,7 +224,7 @@ All are 26B MoE (4B active). File size ≈ VRAM usage. Larger variants (>14G) ma
 | File | Location | Size | Purpose |
 |------|----------|------|---------|
 | `mmproj.gguf` | `~/Downloads/llm_models/` | 1.2G | Vision encoder |
-| `mmproj-BF16.gguf` | `~/Downloads/llm_models/` + `/mnt/data/model_storage/` | 1.1G | Vision encoder (BF16) |
+| `mmproj-BF16.gguf` | `~/Downloads/llm_models/` + `/media/HDD_Data/model_storage/` | 1.1G | Vision encoder (BF16) |
 | `Qwen.Qwen3-VL-Embedding-2B.Q4_K_M.gguf` | `~/Downloads/llm_models/` | 1.1G | Embedding model |
 
 ---

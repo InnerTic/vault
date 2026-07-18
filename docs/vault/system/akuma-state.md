@@ -22,7 +22,6 @@ modified: 2026-06-26
 - **Dual swap**: Physical partition (sdb3) + zram (46.3G) — implies memory pressure management
 - **Separate /home on NVMe**: nvme0n1p1 isolated to /home — performance + safety strategy
 - **/var on SSD (sda)**: Separated from root (sdb) — prevents log/cache growth from filling root
-- **3.6TB NTFS for backup**: Cross-platform (ntfs-3g), uid/gid mapped to user 1001
 - **Games on /var via bind mount**: Games moved from /home to /var to keep /home lean
 
 ## Derived Inferences (Marked as Inferred)

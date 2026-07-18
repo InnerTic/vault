@@ -50,14 +50,15 @@ All dates are daily [[wikilinks]] unless noted as work entries.
 
 - **2026-07-02** — [[2026-07-02|Catastrophic Necromancer QC]] — [[20260702-001-Catastrophic-Necromancer-Analysis|consistency checks, promo strip, name fix]]
 - **2026-07-03** — [[2026-07-03|Translation Library]] — [[20260703-001-Translation-Library-Standardization|7-book pipeline standardization]]
+- **2026-07-14** — [[2026-07-14|Knowledge Engine]] — [[20260714-001-LXC310-Knowledge-Engine-Setup|LXC 310 provisioned, Quartz + Caddy]], [[20260714-002-Knowledge-Engine-Schema-Indexer|SQLite schema v2, indexer built]]
 
 ---
 
 ## Stats
 
 - **First entry**: 2026-04-19
-- **Latest entry**: 2026-07-03
-- **Total entries**: 30
+- **Latest entry**: 2026-07-14
+- **Total entries**: 32
 - **Pre-vault entries** (before June 21): 21
 - **Post-migration entries** (June 21+): 9
 

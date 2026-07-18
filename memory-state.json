@@ -12,7 +12,7 @@
         "PCI topology: 3060 and NVMe on CPU-direct lanes, P40/WiFi/NIC share chipset x4",
         "Start commands: llmstart, sdxl, textgen, llama-loader, llsd, llmk, healthcheck",
         "Two-repo: vault.git = source of truth, dotfiles.git = read-only mirror at ~/dotfiles, sync via dotfiles-sync.sh",
-        "Key paths: /workspace/textgen, /workspace/sd-webui-forge-neo, ~/infra/, ~/Downloads/llm_models/",
+        "Key paths: /workspace/textgen, /workspace/sd-webui-forge-neo, ~/infra/, /media/HDD_Data/model_storage/ (canonical model store), ~/Downloads/llm_models (symlink → HDD), /media/ken/81132c1e-5ca5-419f-8967-61284c27dadd/models (symlink → HDD)",
         "Git identity: InnerTic / innertic@users.noreply.github.com"
       ]
     },

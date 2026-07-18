@@ -47,7 +47,6 @@ Source: `/home/ken/vault/docs/vault/archive/akuma-recovery.log` (pre-2026-04-19 
 | swap | 2b82ec28-ca9d-4278-95b3-495aca2271ba | swap | defaults |
 | `/home` | 9a1cdd8a-3d81-468f-be70-aa00a01d7301 | ext4 | defaults,noatime |
 | `/var` | 4c2a516d-28af-43f7-9936-4157b2652582 | ext4 | defaults,noatime |
-| `/mnt/data` | 7E303CAF303C6FEF | ntfs-3g | defaults,uid=1001,gid=1001,noatime,big_writes |
 
 ## Bind Mounts
 | Source | Target | Type |

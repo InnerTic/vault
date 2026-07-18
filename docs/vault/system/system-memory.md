@@ -13,18 +13,16 @@ modified: 2026-06-26
 **CPU:** AMD Ryzen 7 5700G (16 cores) | **RAM:** 48 GiB (46.3 GiB usable)
 **GPU:** NVIDIA GeForce RTX 3060 12GB VRAM (driver 580.142) + AMD Radeon integrated
 
-## Drive Layout (Actual, 2026-05-10)
+## Drive Layout (MX Linux, 2026-07-11)
 
 | Drive | Size | FSType | Mount | Purpose |
 |-------|------|--------|-------|---------|
-| **sda** | 119.2G | btrfs | `/` (subvolumes) | OS root, boot, swap, log, cache |
-| **sdb** | 465.8G | ext4 | `/mnt/ssd_storage` | Bulk data (docs, downloads, pics, videos) |
-| **sdc** | 3.6T | ntfs | `/mnt/data` | Data-HDD (long-term backup) |
-| **sdd** | 111.8G | btrfs | `/home` | User configs, Wine prefixes, dotfiles |
-| **sde1** | 10.7G | vfat | — | MX Linux EFI (EFI-SYSTEM) |
-| **sde2** | 222.7G | ext4 | — | MX Linux root (rootMX25) |
-| **sde3** | 243.5G | xfs | `/mnt/vm-disks` | VM-Disks |
-| **nvme0n1** | 465.8G | ext4 | `/mnt/workspace` | AI tools, Steam games, llama.cpp, forge |
+| **sdb1** | 465.8G | ext4 | `/mnt/ssd_storage` | Bulk data (docs, downloads, pics, videos) |
+| **sdc1** | 3.6T | btrfs | `/mnt/m2_storage` | M.2 storage |
+| **sdd2** | 222.7G | ext4 | `/` (root) | OS root (rootMX25, Debian 13 trixie) |
+| **sdd3** | 243.5G | xfs | USB mount | USB drive |
+| **sdf1** | 3.6T | btrfs | `/media/HDD_Data` | Model storage (GGUFs), backups, large files |
+| **nvme0n1p1** | 465.8G | ext4 | `/mnt/workspace` | AI tools, llama.cpp, forge, projects |
 
 ## OS Subvolumes (sda, Btrfs)
 
@@ -34,10 +32,9 @@ modified: 2026-06-26
 
 ```
 ~/ssd_storage  -> /mnt/ssd_storage
-# ~/m2_storage   -> /mnt/m2_storage (DEPRECATED — now /mnt/vm-disks on sde3)
 ~/workspace    -> /mnt/workspace   (also /workspace -> /mnt/workspace for Z: drive compat)
 ~/Models       -> ~/Downloads/llm_models
-~/Gw2-win      -> /mnt/ssd_storage/ken/Gw2-win
+~/Downloads/llm_models -> /media/HDD_Data/model_storage  (canonical GGUF store)
 ```
 
 ## Bind Mounts (/etc/fstab)
@@ -57,14 +54,11 @@ modified: 2026-06-26
 
 | Mount | UUID |
 |-------|------|
-| sda root | acaebe11-05e0-48d5-957e-7b35f21f73fb |
-| sda boot | 7193-39A8 |
-| sdd /home | 4365b1fa-735e-455d-9645-e65be9903454 |
-| sdb /mnt/ssd_storage | 51b4243d-ea88-4a02-b02f-c286d52b6e0d |
-| sdc /mnt/data | 7E303CAF303C6FEF |
-| sde1 /boot (MX EFI) | 3F33-0777 (vfat) |
-| sde2 / (MX root) | 34bdf920-237c-4392-835f-0416be09ada5 (ext4) |
-| sde3 /mnt/vm-disks | 81132c1e-5ca5-419f-8967-61284c27dadd (xfs) |
+| sdd2 / (root) | 34bdf920-237c-4392-835f-0416be09ada5 |
+| sdd1 /boot/efi | 3F33-0777 (vfat) |
+| sdb1 /mnt/ssd_storage | 51b4243d-ea88-4a02-b02f-c286d52b6e0d |
+| sdc1 /mnt/m2_storage | e070aea8-a128-4e6d-9e3f-da38a6604dbe |
+| sdf1 /media/HDD_Data | f0b1d710-a0a6-4ef1-83ce-fc9e55d577d8 |
 | nvme /mnt/workspace | 9a1cdd8a-3d81-468f-be70-aa00a01d7301 |
 
 ## AI Tool Aliases (from ~/.zshrc)

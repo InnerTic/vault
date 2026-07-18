@@ -7,7 +7,7 @@ modified: 2026-06-26
 
 # Translation Pipeline v2.0
 
-**Source:** `/mnt/data/_translation-pipeline/translation-pipeline/`
+**Source:** `/media/HDD_Data/_translation-pipeline/translation-pipeline/`
 
 A production workflow for translating Japanese & Chinese web novels while preserving character continuity, terminology, honorifics, and literary style.
 
@@ -284,7 +284,7 @@ Image → OCR → Parser → Translator → Editor → Verifier → Human
 ## Filesystem
 
 ```
-/mnt/data/_translation-pipeline/translation-pipeline/
+/media/HDD_Data/_translation-pipeline/translation-pipeline/
   books/
     <project>/
       raw/                     # Original source text
