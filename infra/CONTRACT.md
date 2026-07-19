@@ -21,6 +21,7 @@ Any path not listed here is a schema violation.
 ├── forge-start.sh                # SD WebUI Forge starter
 ├── healthcheck.sh                # System health check
 ├── llama-server.sh               # llama.cpp server wrapper
+├── textgen-start.sh              # TextGen WebUI launcher
 ├── check-fixes.sh                # Runtime fix application
 ├── toggle-gpu-profile.sh         # GPU profile switcher
 ├── toggle-p40.sh                 # P40 passthrough toggle
@@ -90,6 +91,7 @@ Any path not listed here is a schema violation.
 forge-start.sh
 healthcheck.sh
 llama-server.sh
+textgen-start.sh
 check-fixes.sh
 toggle-gpu-profile.sh
 toggle-p40.sh
