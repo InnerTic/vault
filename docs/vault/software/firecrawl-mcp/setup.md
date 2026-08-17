@@ -48,14 +48,6 @@ npx firecrawl-mcp --help
 
 ### Env file
 
-`/mnt/workspace/searxng/firecrawl/.env`:
-
-```
-# Only needed for hosted Firecrawl (api.firecrawl.dev).
-# Leave empty or unset for self-hosted.
-FIRECRAWL_API_KEY=
-```
-
 ### Service file
 
 `~/.config/systemd/user/firecrawl-mcp.service`:
@@ -94,10 +86,7 @@ Add to `~/.config/opencode/opencode.jsonc`:
 "firecrawl": {
   "type": "local",
   "command": ["npx", "firecrawl-mcp"],
-  "cwd": "/mnt/workspace/searxng/firecrawl",
-  "environment": {
-    "FIRECRAWL_API_KEY": "{env:FIRECRAWL_API_KEY}"
-  }
+  "cwd": "/mnt/workspace/searxng/firecrawl"
 }
 ```
 
@@ -115,12 +104,12 @@ extract the install steps from this page use firecrawl
 /mnt/workspace/searxng/firecrawl/
 ├── package.json       # npm init (pins firecrawl-mcp)
 ├── node_modules/      # local install
-├── .env               # API key (if using hosted)
+├── .env               # env config (if needed)
 ```
 
 ## Notes
 
-- **Hosted vs self-hosted**: This setup assumes hosted Firecrawl (api.firecrawl.dev) with an API key. Self-hosted is a separate container with Docker.
+- **Hosted vs self-hosted**: Local only. No API key needed.
 - **No reverse proxy**: MCP runs in stdio mode, consumed directly by OpenCode/Claude. No port needed.
 - **Node.js**: Uses the same Node runtime already present for `mcp-searxng`.
 

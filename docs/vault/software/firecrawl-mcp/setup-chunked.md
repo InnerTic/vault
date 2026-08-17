@@ -50,13 +50,7 @@ npx firecrawl-mcp --help
 
 ---
 
-## Chunk 2 — Env + systemd service
-
-Create `/mnt/workspace/searxng/firecrawl/.env`:
-
-```
-FIRECRAWL_API_KEY=
-```
+## Chunk 2 — systemd service
 
 Create `~/.config/systemd/user/firecrawl-mcp.service`:
 
@@ -97,10 +91,7 @@ Add to `mcp` block in `~/.config/opencode/opencode.jsonc`:
 "firecrawl": {
   "type": "local",
   "command": ["npx", "firecrawl-mcp"],
-  "cwd": "/mnt/workspace/searxng/firecrawl",
-  "environment": {
-    "FIRECRAWL_API_KEY": "{env:FIRECRAWL_API_KEY}"
-  }
+  "cwd": "/mnt/workspace/searxng/firecrawl"
 }
 ```
 

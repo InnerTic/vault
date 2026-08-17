@@ -302,6 +302,14 @@ Image → OCR → Parser → Translator → Editor → Verifier → Human
     ...
 ```
 
+## Operations
+
+See the full [[translation-pipeline/operations|Operations Guide]] for:
+- Commands (`./pipe.sh prep`, `pipe`, `combine`, `rewrite`, `all`)
+- .d override system (global + per-book config fragments)
+- Book directory structure
+- Starting a new book workflow
+
 ## Success Metric
 
 1. **Faithfulness to the source.**

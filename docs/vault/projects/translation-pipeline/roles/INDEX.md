@@ -59,6 +59,10 @@ Compare against project history: terminology drift, speaker attribution, POV dri
 `PromptEnhancer-32B` — P40
 Final QC: omissions, additions, name errors, drift, continuity violations. Does NOT rewrite.
 
+### [[10-rewriter]] — Rewriter (Chapter-Level)
+Any capable model — 3060
+Aggressively smooths the combined chapter into natural English. Takes briefer context + glossary + full chapter. This is the one stage allowed to rewrite. Runs after all chunks are assembled.
+
 ### [[09-continuity-updater]] — Continuity Updater
 `gemma-4-26B-A4B-APEX-Compact.gguf` — P40
 Update canon: equipment, injuries, deaths, relationships, locations, scene index, timeline.

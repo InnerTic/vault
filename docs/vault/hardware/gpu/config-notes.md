@@ -90,3 +90,50 @@ The legacy 580.xx branch is the *only* current NVIDIA driver supporting both GPU
 on the same system. Mixed Pascal+Ampere under the 580 branch is confirmed working
 on this system (CachyOS, DKMS). A migration to any distro shipping mainline 590+
 would break the P40 unless the distro also provides a legacy 580xx package.
+
+## Display Layout — 3 Monitors, Extended (2K main @ native 180 Hz)
+
+**Setup (Akuma, Debian 13, Plasma 6/X11):**
+- RTX 3060 drives all three monitors (Tesla P40 is compute-only, no display)
+- 2× Samsung LF22T35 (1920×1080) — `HDMI-0` / `DP-1`, stacked on the left
+  (`DP-1` on top at `{0,0}`, `HDMI-0` below at `{0,1080}`)
+- 1× HKC GQ271NE 2K (2560×1440 native, **primary**) — `DP-2`, on the right at
+  `{1920,360}` (vertically centered against the 2160-tall 1080 stack)
+- **Mode: EXTENDED** — every monitor shows its own content; the 2K runs at
+  **native 2560×1440 @ 180 Hz**. Total virtual screen: 4480×2160.
+- Mirror was tried and abandoned as useless — clone forces the 2K down to
+  1920×1080 and all screens show the identical picture.
+
+**Live apply (no sudo):**
+```
+DISPLAY=:0 nvidia-settings -a CurrentMetaMode="DPY-3: 2560x1440_180 +1920+360, DPY-0: nvidia-auto-select @1920x1080 +0+1080, DPY-2: nvidia-auto-select @1920x1080 +0+0"
+```
+- `DPY-3` = 2K (DP-2), `DPY-0` = HDMI-0, `DPY-2` = DP-1 (from `nvidia-settings -q CurrentMetaMode`).
+- `2560x1440_180` = explicit native mode + max refresh. `nvidia-auto-select` alone
+  picks 2560×1440 **@60 Hz** — always pass the explicit `_180` for the 2K.
+
+**Persistence files (all agree on the extended layout):**
+- `~/.local/share/kscreen/7e4d029d745cdf5a1dca27921cb24c4d` and
+  `~/.local/share/kscreen/f1361b63b2799b9fe433ad6359825602` — KScreen profiles:
+  HDMI-0 1920×1080@60 `{0,1080}`; DP-1 1920×1080@60 `{0,0}`; DP-2 2560×1440@180 `{1920,360}`.
+- `~/.config/kwinoutputconfig.json` — KWin per-output config. DP-2 mode
+  2560×1440@180000, scale 1.0; `setups` positions as above.
+- Optional belt-and-suspenders: `Option "MetaModes" "DPY-3: 2560x1440_180 +1920+360, DPY-0: nvidia-auto-select @1920x1080 +0+1080, DPY-2: nvidia-auto-select @1920x1080 +0+0"`
+  in the `Device0` section of `/etc/X11/xorg.conf`.
+
+**Symptom map:**
+- All three screens identical, right-click works everywhere but 2K looks soft →
+  mirror/clone mode is active (all positions `{0,0}` in the JSON files). Revert
+  to the extended layout above.
+- 2K "offset", right-click only works on the bit with the picture → KWin/KScreen
+  had the 2K at 2560×1440 but *un-centered* (`y`≈459 instead of 360), or a stale
+  scale-1.15 entry for DP-2.
+- Plymouth at boot shows hash marks / off-position → GRUB_GFXMODE=1024x768 plus
+  the fbcon virtual screen (2560×4320) spanning all 3 monitors. Fix in
+  `/etc/default/grub`:
+  ```
+  GRUB_GFXMODE=1920x1080
+  GRUB_GFXPAYLOAD_LINUX=keep
+  GRUB_CMDLINE_LINUX="nvidia-drm.modeset=1"
+  ```
+  then `sudo update-grub && sudo update-initramfs -u`.

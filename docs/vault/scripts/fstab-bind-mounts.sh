@@ -11,17 +11,15 @@ set -euo pipefail
 #  CONFIG — change these to match your drive layout
 # ═══════════════════════════════════════════════════════════
 
-DATA_DRIVE="/mnt/ssd_storage"   # <-- swap this: external drive, data-hdd, etc.
+DATA_DRIVE="/media/ssd_storage"   # <-- swap this: external drive, data-hdd, etc.
 USER="ken"                       # <-- swap this: your username
 
 # ═══════════════════════════════════════════════════════════
 #  fstab entries (drive UUIDs — update if drives change)
 # ═══════════════════════════════════════════════════════════
 
-# Don't re-append if entries already exist
-if grep -q 'UUID=51b4243d' /etc/fstab 2>/dev/null; then
-  echo "fstab entries already present, skipping."
-else
+# Don't re-append drive mounts if entries already exist
+if ! grep -q 'UUID=51b4243d' /etc/fstab 2>/dev/null; then
   sudo tee -a /etc/fstab << FSTAB
 
 # ssd_storage
@@ -32,18 +30,25 @@ UUID=f0b1d710-a0a6-4ef1-83ce-fc9e55d577d8 /media/HDD_Data btrfs defaults,x-gvfs-
 UUID=e070aea8-a128-4e6d-9e3f-da38a6604dbe /mnt/m2_storage btrfs defaults,nofail 0 2
 # nvme-workspace
 UUID=9a1cdd8a-3d81-468f-be70-aa00a01d7301 /mnt/workspace ext4 defaults,nofail 0 2
-
-# Bind mounts — source is DATA_DRIVE above
-$DATA_DRIVE/$USER/Documents /home/$USER/Documents none bind,nofail 0 0
-$DATA_DRIVE/$USER/Downloads /home/$USER/Downloads none bind,nofail 0 0
-$DATA_DRIVE/$USER/Pictures /home/$USER/Pictures none bind,nofail 0 0
-$DATA_DRIVE/$USER/Videos /home/$USER/Videos none bind,nofail 0 0
-$DATA_DRIVE/$USER/Desktop /home/$USER/Desktop none bind,nofail 0 0
-$DATA_DRIVE/$USER/Music /home/$USER/Music none bind,nofail 0 0
-$DATA_DRIVE/$USER/go /home/$USER/go none bind,nofail 0 0
-$DATA_DRIVE/$USER/MEGA /home/$USER/MEGA none bind,nofail 0 0
 FSTAB
 fi
+
+# Add bind mounts (always, idempotent check per entry)
+for pair in \
+  "$DATA_DRIVE/$USER/Documents /home/$USER/Documents" \
+  "$DATA_DRIVE/$USER/Downloads /home/$USER/Downloads" \
+  "$DATA_DRIVE/$USER/Pictures /home/$USER/Pictures" \
+  "$DATA_DRIVE/$USER/Videos /home/$USER/Videos" \
+  "$DATA_DRIVE/$USER/Desktop /home/$USER/Desktop" \
+  "$DATA_DRIVE/$USER/Music /home/$USER/Music" \
+  "$DATA_DRIVE/$USER/go /home/$USER/go" \
+  "$DATA_DRIVE/$USER/MEGA /home/$USER/MEGA"; do
+  src="${pair%% *}"
+  dst="${pair##* }"
+  if ! grep -qF "$src $dst none bind" /etc/fstab 2>/dev/null; then
+    echo "$src $dst none bind,nofail 0 0" | sudo tee -a /etc/fstab
+  fi
+done
 
 # Create mount points
 sudo mkdir -p /mnt/{ssd_storage,data,m2_storage,workspace}
