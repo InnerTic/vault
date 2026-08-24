@@ -15,6 +15,14 @@ modified: 2026-07-17
 - Breaking architectural shifts are marked as milestones.
 - Detailed implementation notes belong in Raw Changelog.
 
+## 2026-08-24
+
+- **GW2 loader launch fixed after KDE regression**: KIO ≥6.28 (CachyOS update 2026-08-23) executes
+  `.exe` files with +x directly instead of honoring the protontricks MIME association, breaking the
+  desktop-symlink workflow. Fix: `chmod -x` on the loader target. New note
+  `software/gaming/gw2-loader-symlink-fix.md`; [[workarounds]] updated. Upstream: no KDE bug report;
+  loader repo has related-but-different panic reports (#20, #47).
+
 ## 2026-07-17
 
 milestone:

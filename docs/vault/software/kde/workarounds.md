@@ -12,7 +12,22 @@ Check each entry's **Review-By** date and remove the workaround when fixed.
 
 ---
 
+## KDE 6.7.4 / KIO 6.28+: double-click on executable .exe bypasses "Open With" association (2026-08-24)
+
+- **Symptom**: GW2 loader desktop symlink silently does nothing. KIO now executes any `.exe`
+  with the execute bit directly (binfmt_misc) instead of using the MIME handler
+  (`protontricks-launch.desktop`). The exe then runs with the *link's* directory as CWD and crashes.
+- **Cause**: KIO commit b358a742, first shipped in KIO v6.28.0 ("treat x-ms-dos-executable as a
+  native binary if the executable bit is set"). Arrived via CachyOS update 2026-08-23
+  (`kio 6.27→6.29`, `plasma-desktop 6.6.5→6.7.4`).
+- **Fix**: `chmod -x` the target `.exe`; Wine needs no exec bit and KIO falls back to the
+  MIME association again. Full details: [[gw2-loader-symlink-fix]].
+- No upstream KDE bug report exists yet as of 2026-08-24.
+
 ## KDE 6.6.3: Dolphin refuses to launch .exe files via double-click
+
+> Superseded by the KIO ≥6.28 behavior above (Plasma 6.7.4 / KIO 6.29): refusal was replaced by
+> direct execution of executables with +x; without +x the old association path works again.
 
 **Status**: Not fixed — KDE bug, no config key workaround exists.
 
