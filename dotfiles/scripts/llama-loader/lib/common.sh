@@ -7,9 +7,8 @@
 shopt -s nullglob
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-MODELS_DIR="$HOME/Downloads/llm_models"
-MODEL_STORAGE="$MODELS_DIR/model_storage"
-SSD_DIR="$MODELS_DIR"
+MODEL_STORAGE="/mnt/data/model_storage"
+SSD_DIR="$HOME/Downloads/llm_models"
 HDD_DIR="$MODEL_STORAGE"
 LLAMA_SERVER="$HOME/infra/llama-server.sh"
 STATE_DIR="$HOME/.config/llama-loader"
