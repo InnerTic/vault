@@ -2,7 +2,7 @@
 title: "CHANGELOG"
 tags:
   - changelog
-modified: 2026-07-17
+modified: 2026-10-15
 ---
 
 # Changelog (Curated)
@@ -14,6 +14,16 @@ modified: 2026-07-17
 - Older entries are condensed.
 - Breaking architectural shifts are marked as milestones.
 - Detailed implementation notes belong in Raw Changelog.
+
+## 2026-10-15
+
+milestone:
+    SSH key recovery + dotfiles consolidation — shared-workspace `.ssh` loss, keys re-issued, mirror reabsorbed
+
+- fix(ssh): `~/.ssh` on the shared workspace drive was lost. Recovered both RSA private keys (`sEg3y` = GitHub, `gq5Y7b` = ken@Akuma) from `/mnt/data` + ssd backups; the ed25519 private key was in no rescue image, so a new one was generated and registered on GitHub (`InnerTic`) and on Proxmox CT 303 (Quartz) + CT 108 (searxng). Backup: `/mnt/data/ssh-backup-Akuma-20261015-171435/`.
+- feat(infra): cross-mount workspace alias — `bootstrap/modules/15-workspace-alias.sh` plus a hardened `link-workspace.sh` (`--ignore-existing --copy-unsafe-links`) so `/media/workspace` (Debian) and `/mnt/workspace` (CachyOS) resolve to the same drive.
+- infra(dotfiles): reabsorbed the dotfiles mirror into `vault/dotfiles/` — librewolf, llama-loader-v2, opencode docs, `config.fish` PATHs, `.gitconfig` (→ InnerTic), ssh/alias fixes. vault `f403af04` (master), mirror `358b82c` (main).
+- docs(vault): Quartz wiki rebuilt on the LXC after `git pull` → `f403af04`.
 
 ## 2026-08-24
 
